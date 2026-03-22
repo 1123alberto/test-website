@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-blue: #509cce;
+  --color-brand-light: #dcdcdc;
+  --font-julius: "Julius Sans One";
+  --font-open: "Open Sans";
+  --font-noto: "Noto Sans";
+}
+
+@layer base {
+  body {
+    @apply font-open text-gray-800 tracking-wide;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-julius tracking-wide;
+  }
+}
