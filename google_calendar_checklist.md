@@ -9,9 +9,9 @@ Follow these steps to connect your website's booking system to your Google Calen
 4.  Copy the code from the **Google Apps Script Backend** section in your `calendar_export_plan.md` file and paste it into the script editor.
 5.  **Note on Alias**: In the configuration section (Line 337), make sure `SENDER_ALIAS` is set to `'1123alberto@gmail.com'`. This is your primary Gmail address.
 6.  **Important**: In the `CLINIC_HOURS` section, make sure the hours match your clinic's actual availability.
-7.  **Enter Calendar Names**: In the `CALENDAR_NAMES` array, enter your three calendars: `['Dental Clinic', "M's calendar", 'Online appointment']`.
+7.  **Enter Calendar Names**: In the `CALENDAR_NAMES` array, enter your three calendars: `['Online Appointment', 'Dental Office', "M's calendar"]`.
     - The system will check all three for "Busy" times.
-    - New bookings will be saved to the **Dental Clinic** calendar.
+    - New bookings will be saved to the **Online Appointment** calendar.
 
 ### Step 2: Deploy as a Web App
 1.  Click **Deploy** > **New deployment**.

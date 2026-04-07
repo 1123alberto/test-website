@@ -320,7 +320,7 @@ Paste this into a new Google Apps Script deployed as a Web App to enable live AP
 ```javascript
 // --- CONFIGURATION ---
 const SERVICE_DURATION = 60; 
-const CALENDAR_NAMES = ['Dental Clinic', "M's calendar", 'Online appointment']; // The first one acts as primary
+const CALENDAR_NAMES = ['Online Appointment', 'Dental Office', "M's calendar"]; // 'Online Appointment' is now primary
 
 // Military time: 10 = 10:00 AM, 20 = 8:00 PM
 const CLINIC_HOURS = {
@@ -424,6 +424,9 @@ function doPost(e) {
       
       getPrimaryCalendar().createEvent(title, startTime, endTime, { description: description });
       
+      // Notify Admin (1123alberto@gmail.com)
+      sendAdminNotification(name, email, phone, `${date} ${time}`, services);
+      
       // Send immediate confirmation
       sendInitialConfirmationEmail(email, name, startTime);
       
@@ -513,6 +516,30 @@ H Ομάδα του Dentplant Clinic.`;
     GmailApp.sendEmail(email, subject, body, { from: SENDER_ALIAS });
   } else {
     MailApp.sendEmail(email, subject, body);
+  }
+}
+
+/**
+ * Sends a notification email to the clinic owner about the new appointment.
+ */
+function sendAdminNotification(name, email, phone, slotStr, services) {
+  const adminEmail = '1123alberto@gmail.com'; 
+  const subject = "★ IMPORTANT: New Booking - " + name;
+  const body = `You have a new online appointment!
+
+DETAILS:
+- Name: ${name}
+- Email: ${email}
+- Phone: ${phone}
+- Date/Time: ${slotStr}
+- Services: ${services || 'None'}
+
+Go to your Google Calendar to view more details.`;
+
+  if (SENDER_ALIAS !== '') {
+    GmailApp.sendEmail(adminEmail, subject, body, { from: SENDER_ALIAS });
+  } else {
+    MailApp.sendEmail(adminEmail, subject, body);
   }
 }
 ```
