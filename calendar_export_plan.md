@@ -335,6 +335,7 @@ const CLINIC_HOURS = {
 
 const BLOCKED_DATES = [];
 const SENDER_ALIAS = '1123alberto@gmail.com'; 
+const SENDER_NAME = "Οδοντιατρείο - A. Moshopoulos - Dental Clinic"; 
 // ----------------------
 
 function getCalendars() {
@@ -488,9 +489,9 @@ This is a reminder for your appointment at our clinic today.
 H Ομάδα του Dentplant Clinic.`;
 
   if (SENDER_ALIAS !== '') {
-    GmailApp.sendEmail(email, subject, body, { from: SENDER_ALIAS });
+    GmailApp.sendEmail(email, subject, body, { from: SENDER_ALIAS, name: SENDER_NAME });
   } else {
-    MailApp.sendEmail(email, subject, body);
+    MailApp.sendEmail(email, subject, body, { name: SENDER_NAME });
   }
 }
 
@@ -513,9 +514,9 @@ Thank you for your booking! Your appointment is confirmed for: ${dateStr}.
 H Ομάδα του Dentplant Clinic.`;
 
   if (SENDER_ALIAS !== '') {
-    GmailApp.sendEmail(email, subject, body, { from: SENDER_ALIAS });
+    GmailApp.sendEmail(email, subject, body, { from: SENDER_ALIAS, name: SENDER_NAME });
   } else {
-    MailApp.sendEmail(email, subject, body);
+    MailApp.sendEmail(email, subject, body, { name: SENDER_NAME });
   }
 }
 
@@ -524,7 +525,7 @@ H Ομάδα του Dentplant Clinic.`;
  */
 function sendAdminNotification(name, email, phone, slotStr, services) {
   const adminEmail = '1123alberto@gmail.com'; 
-  const subject = "★ IMPORTANT: New Booking - " + name;
+  const subject = "★ New Appointment - " + name;
   const body = `You have a new online appointment!
 
 DETAILS:
@@ -537,9 +538,9 @@ DETAILS:
 Go to your Google Calendar to view more details.`;
 
   if (SENDER_ALIAS !== '') {
-    GmailApp.sendEmail(adminEmail, subject, body, { from: SENDER_ALIAS });
+    GmailApp.sendEmail(adminEmail, subject, body, { from: SENDER_ALIAS, name: SENDER_NAME });
   } else {
-    MailApp.sendEmail(adminEmail, subject, body);
+    MailApp.sendEmail(adminEmail, subject, body, { name: SENDER_NAME });
   }
 }
 ```
