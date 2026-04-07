@@ -1,4 +1,4 @@
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx5VCzSHjTQwD-tHG-XQtaKjANYNbUaOrY_YWlBa0u1EHnAMXrQnyefygMqWcfeqmP8/exec';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyFFb53qyNdBBPDifTrGT3nHhdeWjEXzrpkxXCcDhPL9hwLAtnwqnLOKsHKKLduwSQB/exec';
 
 /**
  * Local Blocking Configuration
@@ -6,7 +6,7 @@ const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx5VCzSHjTQwD
  * slots: Object with YYYY-MM-DD keys and arrays of HH:MM strings to block specific slots.
  */
 const BLOCKED_CONFIG = {
-    dates: [], // e.g. ['2026-04-20', '2026-05-01']
+    dates: [], // e.g. ['2026-04-10', '2026-04-13', '2026-04-14', '2026-05-01']
     slots: {}  // e.g. { '2026-04-10': ['10:00', '13:00'] }
 };
 
