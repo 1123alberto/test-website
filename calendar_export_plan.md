@@ -354,6 +354,13 @@ function getPrimaryCalendar() {
 }
 
 function doGet(e) {
+  const action = e.parameter.action;
+  
+  if (action === 'getAppointment') {
+    return handleGetAppointment(e.parameter.uid);
+  }
+
+  // Default action: getSlots
   const dateStr = e.parameter.date; 
   if (!dateStr) return respondJSON({ error: "No date provided." });
 
@@ -408,11 +415,68 @@ function doGet(e) {
   return respondJSON({ date: dateStr, slots: availableSlots });
 }
 
+function handleGetAppointment(uid) {
+  if (!uid) return respondJSON({ error: "No UID provided." });
+  
+  const now = new Date();
+  const future = new Date(now.getTime() + 60 * 24 * 60 * 60 * 1000); // Look 60 days ahead
+  const allCals = getCalendars();
+  
+  for (const cal of allCals) {
+    const events = cal.getEvents(now, future);
+    for (const ev of events) {
+      const desc = ev.getDescription();
+      if (desc.includes(`UID: ${uid}`)) {
+        return respondJSON({
+          success: true,
+          event: {
+            title: ev.getTitle(),
+            start: ev.getStartTime(),
+            description: desc,
+            id: ev.getId()
+          }
+        });
+      }
+    }
+  }
+  return respondJSON({ error: "Appointment not found." });
+}
+
 function doPost(e) {
   try {
     const postData = JSON.parse(e.postData.contents);
+    
+    // --- Cancel Action ---
+    if (postData.action === 'cancel') {
+      const { uid } = postData;
+      const now = new Date();
+      const future = new Date(now.getTime() + 60 * 24 * 60 * 60 * 1000);
+      const allCals = getCalendars();
+      
+      for (const cal of allCals) {
+        const events = cal.getEvents(now, future);
+        for (const ev of events) {
+          if (ev.getDescription().includes(`UID: ${uid}`)) {
+            const dateStr = Utilities.formatDate(ev.getStartTime(), Session.getScriptTimeZone(), "yyyy-MM-dd");
+            ev.deleteEvent();
+            
+            // Cleanup Trigger
+            cleanupTriggerByUID(uid);
+            
+            // Notify Admin
+            sendAdminCancellationAlert(uid, ev.getTitle(), ev.getStartTime());
+            
+            return respondJSON({ success: true, message: "Appointment cancelled." });
+          }
+        }
+      }
+      return respondJSON({ error: "Appointment not found." });
+    }
+
+    // --- Book Action ---
     if (postData.action === 'book') {
       const { date, time, name, email, phone, services } = postData;
+      const uid = Math.random().toString(36).substring(2, 10).toUpperCase();
       
       const [year, month, day] = date.split('-').map(Number);
       const [hour, minute] = time.split(':').map(Number);
@@ -421,20 +485,20 @@ function doPost(e) {
       const endTime = new Date(startTime.getTime() + SERVICE_DURATION * 60000);
       
       const title = `Ραντεβού - ${name}`;
-      const description = `Νέο Ραντεβού από Website\n\nΌνομα: ${name}\nΤηλέφωνο: ${phone}\nEmail: ${email}\nΥπηρεσίες: ${services || 'Δεν επιλέχθηκε καμία'}`;
+      const description = `Νέο Ραντεβού από Website\n\nΌνομα: ${name}\nΤηλέφωνο: ${phone}\nEmail: ${email}\nΥπηρεσίες: ${services || 'Δεν επιλέχθηκε καμία'}\n\nUID: ${uid}`;
       
       getPrimaryCalendar().createEvent(title, startTime, endTime, { description: description });
       
-      // Notify Admin (1123alberto@gmail.com)
-      sendAdminNotification(name, email, phone, `${date} ${time}`, services);
+      // Notify Admin
+      sendAdminNotification(name, email, phone, `${date} ${time}`, services, uid);
       
-      // Send immediate confirmation
-      sendInitialConfirmationEmail(email, name, startTime);
+      // Send immediate confirmation with Manage link
+      sendInitialConfirmationEmail(email, name, startTime, uid);
       
-      // Schedule reminder for 9:00 AM on the day of the appointment
-      scheduleReminderEmail(email, name, startTime);
+      // Schedule reminder
+      scheduleReminderEmail(email, name, startTime, uid);
       
-      return respondJSON({ success: true, message: "Appointment created." });
+      return respondJSON({ success: true, message: "Appointment created.", uid: uid });
     }
   } catch (error) { return respondJSON({ error: error.toString() }); }
 }
@@ -444,25 +508,45 @@ function respondJSON(data) {
 }
 
 // -- Scheduled Email Engine --
-function scheduleReminderEmail(email, name, dateObj) {
+function scheduleReminderEmail(email, name, dateObj, uid) {
   const reminderTime = new Date(dateObj.getFullYear(), dateObj.getMonth(), dateObj.getDate(), 9, 0, 0);
   if (reminderTime <= new Date()) {
-    sendReminderEmail(email, name);
+    // If it's already past 9am on that day, no reminder
+    return;
   } else {
     const trigger = ScriptApp.newTrigger('processReminderEmail').timeBased().at(reminderTime).create();
-    PropertiesService.getScriptProperties().setProperty('reminder_' + trigger.getUniqueId(), JSON.stringify({email: email, name: name}));
+    PropertiesService.getScriptProperties().setProperty('trigger_' + uid, trigger.getUniqueId());
+    PropertiesService.getScriptProperties().setProperty('data_' + trigger.getUniqueId(), JSON.stringify({email: email, name: name}));
+  }
+}
+
+function cleanupTriggerByUID(uid) {
+  const props = PropertiesService.getScriptProperties();
+  const triggerId = props.getProperty('trigger_' + uid);
+  if (triggerId) {
+    const triggers = ScriptApp.getProjectTriggers();
+    for (let i = 0; i < triggers.length; i++) {
+      if (triggers[i].getUniqueId() === triggerId) {
+        ScriptApp.deleteTrigger(triggers[i]);
+        break;
+      }
+    }
+    props.deleteProperty('trigger_' + uid);
+    props.deleteProperty('data_' + triggerId);
   }
 }
 
 function processReminderEmail(e) {
   const triggerId = e.triggerUid;
   const props = PropertiesService.getScriptProperties();
-  const dataStr = props.getProperty('reminder_' + triggerId);
+  const dataStr = props.getProperty('data_' + triggerId);
   
   if (dataStr) {
     const data = JSON.parse(dataStr);
     sendReminderEmail(data.email, data.name);
-    props.deleteProperty('reminder_' + triggerId);
+    props.deleteProperty('data_' + triggerId);
+    // Note: To truly cleanup, we'd need to reverse lookup the UID to delete 'trigger_UID' property, 
+    // but it's not strictly necessary for functionality.
   }
   
   const triggers = ScriptApp.getProjectTriggers();
@@ -495,23 +579,31 @@ H Ομάδα του Dentplant Clinic.`;
   }
 }
 
-function sendInitialConfirmationEmail(email, name, dateObj) {
+function sendInitialConfirmationEmail(email, name, dateObj, uid) {
   const subject = "Επιβεβαίωση Ραντεβού (Dentplant Clinic) / Appointment Confirmation";
   const dateStr = Utilities.formatDate(dateObj, Session.getScriptTimeZone(), "dd/MM/yyyy HH:mm");
+  const manageUrl = `https://dentplant.gr/manage.html?uid=${uid}`;
   
   const body = `Γεια σας ${name},
 
 Ευχαριστούμε για την κράτησή σας! Το ραντεβού σας επιβεβαιώθηκε για τις: ${dateStr}.
+
+Μπορείτε να διαχειριστείτε ή να ακυρώσετε το ραντεβού σας εδώ:
+${manageUrl}
+
+Με εκτίμηση,
+H Ομάδα του Dentplant Clinic
 
 ---
 Hello ${name},
 
 Thank you for your booking! Your appointment is confirmed for: ${dateStr}.
 
-Σας περιμένουμε / We look forward to seeing you.
+You can manage or cancel your appointment here:
+${manageUrl}
 
-Με εκτίμηση / Sincerely,
-H Ομάδα του Dentplant Clinic.`;
+Sincerely,
+The Dentplant Clinic Team`;
 
   if (SENDER_ALIAS !== '') {
     GmailApp.sendEmail(email, subject, body, { from: SENDER_ALIAS, name: SENDER_NAME });
@@ -523,7 +615,7 @@ H Ομάδα του Dentplant Clinic.`;
 /**
  * Sends a notification email to the clinic owner about the new appointment.
  */
-function sendAdminNotification(name, email, phone, slotStr, services) {
+function sendAdminNotification(name, email, phone, slotStr, services, uid) {
   const adminEmail = '1123alberto@gmail.com'; 
   const subject = "★ New Appointment - " + name;
   const body = `You have a new online appointment!
@@ -534,8 +626,29 @@ DETAILS:
 - Phone: ${phone}
 - Date/Time: ${slotStr}
 - Services: ${services || 'None'}
+- UID: ${uid}
 
 Go to your Google Calendar to view more details.`;
+
+  if (SENDER_ALIAS !== '') {
+    GmailApp.sendEmail(adminEmail, subject, body, { from: SENDER_ALIAS, name: SENDER_NAME });
+  } else {
+    MailApp.sendEmail(adminEmail, subject, body, { name: SENDER_NAME });
+  }
+}
+
+function sendAdminCancellationAlert(uid, title, startTime) {
+  const adminEmail = '1123alberto@gmail.com';
+  const dateStr = Utilities.formatDate(startTime, Session.getScriptTimeZone(), "dd/MM/yyyy HH:mm");
+  const subject = "⚠️ Appointment CANCELLED - " + title;
+  const body = `The appointment has been cancelled by the patient.
+
+DETAILS:
+- Title: ${title}
+- Original Time: ${dateStr}
+- UID: ${uid}
+
+The event and its 9:00 AM reminder have been removed from the system.`;
 
   if (SENDER_ALIAS !== '') {
     GmailApp.sendEmail(adminEmail, subject, body, { from: SENDER_ALIAS, name: SENDER_NAME });

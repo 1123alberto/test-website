@@ -33,9 +33,11 @@ document.addEventListener('DOMContentLoaded', () => {
     modal.classList.add('modal-open');
     document.body.style.overflow = 'hidden';
   }
+  window.openModal = openModal;
 
   function closeModal(modal) {
     modal.classList.remove('modal-open');
     document.body.style.overflow = '';
   }
+  window.closeModal = closeModal;
 });

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Manage Appointment - Dentplant Clinic</title>
+    <link rel="stylesheet" href="css/output.css?v=10">
+    <link rel="icon" href="images/dental-implant-circle-256-torqued.png" type="image/png">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Julius+Sans+One%7CNoto+Sans:400,b%7COpen+Sans:400,600,600i,b,i">
+    <style>
+        .fade-in { animation: fadeIn 0.6s ease-out forwards; opacity: 0; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .bg-mesh {
+            background-color: #fafafa;
+            background-image: radial-gradient(at 0% 0%, hsla(210,100%,98%,1) 0, transparent 50%), 
+                              radial-gradient(at 50% 0%, hsla(202,100%,94%,1) 0, transparent 50%), 
+                              radial-gradient(at 100% 0%, hsla(210,100%,98%,1) 0, transparent 50%);
+        }
+    </style>
+</head>
+
+<body class="bg-mesh min-h-screen font-open text-gray-800 flex flex-col">
+
+    <!-- Simple Nav -->
+    <nav class="w-full bg-brand-blue shadow-md px-6 py-3 flex items-center justify-between z-50">
+        <a href="index.html" class="w-10 h-10 rounded-full bg-white overflow-hidden shadow-sm flex-shrink-0">
+            <img alt="implant logo" class="w-full h-full object-contain" src="images/dental-implant-circle-256-torqued.png">
+        </a>
+        <div class="flex items-center gap-4">
+            <a href="index.html" class="text-white text-xs font-bold uppercase tracking-widest hover:text-yellow-300 transition-colors" data-i18n="nav.home">Αρχικη</a>
+            <button onclick="i18n.toggleLanguage()"
+                class="lang-toggle text-white border border-white/50 rounded px-2 py-0.5 text-[10px] font-bold uppercase hover:bg-white/20 transition-all">EN</button>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <main class="flex-grow flex items-center justify-center p-6">
+        <div class="max-w-md w-full bg-white rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] p-8 md:p-10 fade-in border border-gray-100">
+            
+            <div id="mg-loading-state" class="text-center py-12">
+                <div class="w-12 h-12 border-4 border-t-[#0284c7] border-gray-100 rounded-full animate-spin mx-auto mb-4"></div>
+                <p class="text-gray-500 font-bold" data-i18n="mg.loading">Αναζήτηση ραντεβού...</p>
+            </div>
+
+            <div id="mg-not-found-state" class="text-center py-8 hidden">
+                <div class="text-red-400 text-5xl mb-4 font-bold">!</div>
+                <h2 class="text-xl font-bold text-[#1a365d] mb-4" data-i18n="mg.notfound">Το ραντεβού δεν βρέθηκε.</h2>
+                <a href="index.html#booking" class="inline-block bg-brand-blue text-white font-bold py-3 px-8 rounded-full shadow-md hover:bg-blue-600 transition tracking-wide text-sm uppercase" data-i18n="bm.step4.new">Νέο Ραντεβού</a>
+            </div>
+
+            <div id="mg-details-state" class="hidden">
+                <h2 class="text-2xl font-bold text-[#1a365d] mb-1 text-center font-julius" data-i18n="mg.appointment">Το Ραντεβού σας</h2>
+                <p class="text-gray-400 text-center text-xs uppercase tracking-widest mb-8" data-i18n="mg.subtitle">Δείτε ή ακυρώστε την κράτησή σας.</p>
+                
+                <div class="bg-gray-50 rounded-2xl p-6 mb-8 border border-gray-100 shadow-inner">
+                    <div id="mg-event-title" class="font-bold text-[#1a365d] text-lg mb-2">...</div>
+                    <div id="mg-event-time" class="text-brand-blue font-bold text-base mb-4 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-brand-blue"></span>
+                        <span id="mg-display-time">...</span>
+                    </div>
+                    <div id="mg-event-desc" class="text-xs text-gray-500 leading-relaxed border-t border-gray-200 mt-4 pt-4 whitespace-pre-wrap small-desc">...</div>
+                </div>
+
+                <div class="flex flex-col gap-3">
+                    <button id="reschedule-btn" class="w-full bg-[#1a365d] text-white font-bold py-4 rounded-2xl shadow-lg hover:bg-blue-900 transition tracking-wide text-sm uppercase" data-i18n="mg.reschedule_btn">Αλλαγή Ραντεβού</button>
+                    <button id="confirm-cancel-trigger" class="w-full bg-white text-red-500 border border-red-50 px-4 py-4 rounded-2xl hover:bg-red-50 transition text-sm font-bold uppercase tracking-wide" data-i18n="mg.cancel_btn">Ακύρωση Ραντεβού</button>
+                </div>
+            </div>
+
+            <!-- Cancellation Confirmation -->
+            <div id="mg-cancel-confirm-state" class="hidden text-center py-4">
+                <h3 class="text-xl font-bold text-red-600 mb-4" data-i18n="mg.confirm_title">Επιβεβαίωση Ακύρωσης</h3>
+                <p class="text-gray-600 mb-8 text-sm leading-relaxed" data-i18n="mg.confirm_text">Είστε σίγουροι ότι θέλετε να ακυρώσετε το ραντεβού σας? Αυτή η ενέργεια δεν αναιρείται.</p>
+                <div class="flex flex-col gap-3">
+                    <button id="final-cancel-btn" class="w-full bg-red-500 text-white font-bold py-4 rounded-2xl shadow-lg hover:bg-red-600 transition tracking-wide text-sm uppercase" data-i18n="mg.confirm_yes">Ναι, Ακύρωση</button>
+                    <button id="cancel-cancel-btn" class="w-full bg-gray-100 text-gray-500 font-bold py-4 rounded-2xl hover:bg-gray-200 transition tracking-wide text-sm uppercase" data-i18n="mg.confirm_no">Όχι, Πίσω</button>
+                </div>
+            </div>
+
+            <!-- Success State -->
+            <div id="mg-success-state" class="hidden text-center py-8">
+                <div class="w-20 h-20 bg-green-50 text-green-500 rounded-full flex items-center justify-center text-4xl mx-auto mb-6 shadow-sm">✓</div>
+                <h3 class="text-2xl font-bold text-[#1a365d] mb-4" data-i18n="mg.cancel_success">Το ραντεβού σας ακυρώθηκε.</h3>
+                <p class="text-gray-500 text-sm mb-2" data-i18n="mg.redirecting">Θα μεταφερθείτε στην αρχική σελίδα σε λίγα δευτερόλεπτα...</p>
+                <div class="mt-8 border-t border-gray-100 pt-8">
+                    <a href="index.html" class="text-brand-blue font-bold text-sm uppercase tracking-widest hover:underline flex items-center justify-center gap-2">
+                        &larr; <span data-i18n="nav.home">Αρχικη</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="py-12 bg-gray-50 border-t border-gray-200 mt-auto">
+        <p class="text-gray-500 text-center font-noto text-xs" data-i18n-html="footer.copyright">
+            Copyright 2026. A. Moshopoulos Dental Implant Clinic. <br>All Rights Reserved.
+        </p>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/manage.js" defer></script>
+</body>
+
+</html>
