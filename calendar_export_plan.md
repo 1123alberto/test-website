@@ -566,13 +566,16 @@ function sendReminderEmail(email, name) {
 
 Σας υπενθυμίζουμε το σημερινό σας ραντεβού στο ιατρείο μας. 
 
+Με εκτίμηση,
+H Ομάδα του Dentplant Clinic
+
 ---
 Hello ${name},
 
 This is a reminder for your appointment at our clinic today.
 
-Με εκτίμηση / Sincerely,
-H Ομάδα του Dentplant Clinic.`;
+Sincerely,
+The Dentplant Clinic Team`;
 
   if (SENDER_ALIAS !== '') {
     GmailApp.sendEmail(email, subject, body, { from: SENDER_ALIAS, name: SENDER_NAME });
