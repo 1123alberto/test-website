@@ -94,6 +94,7 @@ function renderCalendar() {
     monthLabel.textContent = monthName;
 }
 
+
 function selectDate(date) {
     selectedDate = date;
     fetchAndShowSlots(date);
@@ -261,4 +262,63 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* Re-render calendar day-headers when language switches */
     document.addEventListener('languageChanged', () => renderCalendar());
+
+    /* Pre-fill logic for rescheduling */
+    prefillBookingForm();
 });
+
+function prefillBookingForm() {
+    const urlParams = new URLSearchParams(window.location.search);
+
+    // Check for lang parameter
+    const lang = urlParams.get('lang');
+    if (lang && (lang === 'en' || lang === 'el')) {
+        if (window.i18n) window.i18n.applyLanguage(lang);
+    }
+
+    if (!urlParams.has('reschedule')) return;
+
+    // Pre-fill fields
+    const fields = { 'name': 'b-name', 'email': 'b-email', 'phone': 'b-phone' };
+    for (const [param, id] of Object.entries(fields)) {
+        const val = urlParams.get(param);
+        if (val) {
+            const el = document.getElementById(id);
+            if (el) el.value = val;
+        }
+    }
+
+    // Pre-fill services
+    const servicesStr = urlParams.get('services');
+    if (servicesStr) {
+        const services = servicesStr.split(',').map(s => s.trim());
+        const checkboxes = document.querySelectorAll('input[name="services"]');
+        checkboxes.forEach(cb => {
+            if (services.includes(cb.value)) {
+                cb.checked = true;
+            }
+        });
+
+        // Handle "Other"
+        const standardValues = Array.from(checkboxes).map(cb => cb.value);
+        const otherServices = services.filter(s => s && !standardValues.includes(s) && s !== 'other' && s !== 'Άλλο');
+        if (otherServices.length > 0) {
+            const otherCb = document.getElementById('other-service-checkbox');
+            const otherInput = document.getElementById('other-service-input');
+            if (otherCb) otherCb.checked = true;
+            if (otherInput) otherInput.value = otherServices.join(', ');
+        }
+    }
+
+    // Open Modal and scroll to booking
+    const modal = document.getElementById('booking-modal');
+    if (modal && window.openModal) {
+        window.openModal(modal);
+        // Step 1 is default, which is correct for rescheduling
+    }
+
+    const bookingSection = document.getElementById('booking');
+    if (bookingSection) {
+        bookingSection.scrollIntoView({ behavior: 'smooth' });
+    }
+}

@@ -103,6 +103,21 @@
       'js.error': 'Σφάλμα συστήματος. Παρακαλώ δοκιμάστε ξανά.',
       'js.noservice': 'Καμία υπηρεσία επιλεγμένη',
       'js.other': 'Άλλο',
+
+      /* ── Management Portal ───────────────────── */
+      'mg.title': 'Διαχείριση Ραντεβού',
+      'mg.subtitle': 'Δείτε ή ακυρώστε την κράτησή σας.',
+      'mg.loading': 'Αναζήτηση ραντεβού...',
+      'mg.notfound': 'Το ραντεβού δεν βρέθηκε. Ελέγξτε αν το ραντεβού έχει ήδη ακυρωθεί ή αν το UID είναι σωστό.',
+      'mg.appointment': 'Το Ραντεβού σας',
+      'mg.cancel_btn': 'Ακύρωση Ραντεβού',
+      'mg.reschedule_btn': 'Αλλαγή Ραντεβού',
+      'mg.confirm_title': 'Επιβεβαίωση Ακύρωσης',
+      'mg.confirm_text': 'Είστε σίγουροι ότι θέλετε να ακυρώσετε το ραντεβού σας; Αυτή η ενέργεια δεν αναιρείται.',
+      'mg.confirm_yes': 'Ναι, Ακύρωση',
+      'mg.confirm_no': 'Όχι, Πίσω',
+      'mg.cancel_success': 'Το ραντεβού σας ακυρώθηκε επιτυχώς.',
+      'mg.redirecting': 'Θα μεταφερθείτε στην αρχική σελίδα σε λίγα δευτερόλεπτα...',
     },
 
     en: {
@@ -204,6 +219,21 @@
       'js.error': 'System error. Please try again.',
       'js.noservice': 'No service selected',
       'js.other': 'Other',
+
+      /* ── Management Portal ───────────────────── */
+      'mg.title': 'Manage Appointment',
+      'mg.subtitle': 'View or cancel your booking.',
+      'mg.loading': 'Searching for appointment...',
+      'mg.notfound': 'Appointment not found. Please check if it was already cancelled or if the link is correct.',
+      'mg.appointment': 'Your Appointment',
+      'mg.cancel_btn': 'Cancel Appointment',
+      'mg.reschedule_btn': 'Reschedule',
+      'mg.confirm_title': 'Confirm Cancellation',
+      'mg.confirm_text': 'Are you sure you want to cancel your appointment? This action cannot be undone.',
+      'mg.confirm_yes': 'Yes, Cancel',
+      'mg.confirm_no': 'No, Go Back',
+      'mg.cancel_success': 'Your appointment has been successfully cancelled.',
+      'mg.redirecting': 'Redirecting to home page in a few seconds...',
     }
   };
 
