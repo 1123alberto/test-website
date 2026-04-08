@@ -26,37 +26,36 @@
                 transform: translateY(0);
             }
         }
-
-        .bg-mesh {
-            background-color: #fafafa;
-            background-image: radial-gradient(at 0% 0%, hsla(210, 100%, 98%, 1) 0, transparent 50%),
-                radial-gradient(at 50% 0%, hsla(202, 100%, 94%, 1) 0, transparent 50%),
-                radial-gradient(at 100% 0%, hsla(210, 100%, 98%, 1) 0, transparent 50%);
-        }
     </style>
 </head>
 
-<body class="bg-mesh min-h-screen font-open text-gray-800 flex flex-col">
+<body class="bg-white overflow-x-hidden font-open text-gray-800 flex flex-col">
 
-    <!-- Simple Nav -->
-    <nav class="w-full bg-brand-blue shadow-md px-6 py-3 flex items-center justify-between z-50">
-        <a href="index.html" class="w-10 h-10 rounded-full bg-white overflow-hidden shadow-sm flex-shrink-0">
+    <!-- Fixed Nav -->
+    <nav
+        class="fixed top-0 w-full bg-brand-blue shadow-md z-50 px-6 py-3 flex items-center justify-between transition-transform duration-300">
+        <a href="index.html" class="w-12 h-12 rounded-full shadow-strong overflow-hidden flex-shrink-0 bg-white">
             <img alt="implant logo" class="w-full h-full object-contain"
                 src="images/dental-implant-circle-256-torqued.png">
         </a>
         <div class="flex items-center gap-4">
-            <a href="index.html"
-                class="text-white text-xs font-bold uppercase tracking-widest hover:text-yellow-300 transition-colors"
-                data-i18n="nav.home">Αρχικη</a>
+            <div
+                class="flex items-center space-x-4 md:space-x-8 text-white text-[11px] leading-tight md:text-xs md:leading-normal font-medium uppercase font-noto">
+                <a class="text-yellow-300 transition-colors" href="index.html" data-i18n="nav.home">Αρχικη</a>
+            </div>
             <button onclick="i18n.toggleLanguage()"
-                class="lang-toggle text-white border border-white/50 rounded px-2 py-0.5 text-[10px] font-bold uppercase hover:bg-white/20 transition-all">EN</button>
+                class="lang-toggle text-white border border-white/50 rounded px-2 py-0.5 text-[10px] font-bold tracking-widest uppercase hover:bg-white/20 transition-all duration-300 flex-shrink-0">EN</button>
         </div>
     </nav>
 
-    <!-- Content -->
-    <main class="flex-grow flex items-center justify-center p-6">
-        <div
-            class="max-w-[500px] w-full bg-white rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.15)] p-8 md:p-12 fade-in border border-gray-100">
+    <!-- Header Background -->
+    <header
+        class="min-h-[700px] h-screen bg-brand-blue bg-[url('../images/tools_wallpaper.jpg')] bg-cover bg-scroll md:bg-fixed bg-center bg-no-repeat flex flex-col justify-center items-center relative pt-20">
+        
+        <!-- Content Area (Management Card) -->
+        <main class="w-full flex items-center justify-center p-6 z-10">
+            <div
+                class="max-w-[500px] w-full bg-white rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.3)] p-8 md:p-12 fade-in border border-gray-100 relative">
 
             <div id="mg-loading-state" class="text-center py-12">
                 <div
@@ -136,12 +135,13 @@
 
         </div>
     </main>
+</header>
 
-    <footer class="py-12 bg-gray-50 border-t border-gray-200 mt-auto">
-        <p class="text-gray-500 text-center font-noto text-xs" data-i18n-html="footer.copyright">
-            Copyright 2026. A Dentplant Clinic. <br>All Rights Reserved.
-        </p>
-    </footer>
+<footer class="py-12 bg-gray-50 border-t border-gray-200 mt-auto">
+    <p class="text-gray-500 text-center font-noto text-sm" data-i18n-html="footer.copyright">
+        Copyright 2026. A Dentplant Clinic. <br>All Rights Reserved.
+    </p>
+</footer>
 
     <script src="js/i18n.js"></script>
     <script src="js/manage.js" defer></script>

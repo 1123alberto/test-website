@@ -569,7 +569,8 @@ function sendReminderEmail(email, name) {
 Με εκτίμηση,
 H Ομάδα του Dentplant Clinic
 
----
+---------------------------------------
+
 Hello ${name},
 
 This is a reminder for your appointment at our clinic today.
@@ -599,7 +600,8 @@ ${manageUrl}
 Με εκτίμηση,
 H Ομάδα του Dentplant Clinic
 
----
+----------------------------------------
+
 Hello ${name},
 
 Thank you for your booking! Your appointment is confirmed for: ${dateStr}.
