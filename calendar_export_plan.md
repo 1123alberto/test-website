@@ -484,7 +484,7 @@ function doPost(e) {
       const startTime = new Date(year, month - 1, day, hour, minute);
       const endTime = new Date(startTime.getTime() + SERVICE_DURATION * 60000);
       
-      const title = `Ραντεβού - ${name}`;
+      const title = name;
       const description = `Νέο Ραντεβού από Website\n\nΌνομα: ${name}\nΤηλέφωνο: ${phone}\nEmail: ${email}\nΥπηρεσίες: ${services || 'Δεν επιλέχθηκε καμία'}\n\nUID: ${uid}`;
       
       getPrimaryCalendar().createEvent(title, startTime, endTime, { description: description });

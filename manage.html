@@ -37,7 +37,7 @@
 
     <!-- Content -->
     <main class="flex-grow flex items-center justify-center p-6">
-        <div class="max-w-md w-full bg-white rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] p-8 md:p-10 fade-in border border-gray-100">
+        <div class="max-w-[600px] w-full bg-white rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.15)] p-8 md:p-12 fade-in border border-gray-100">
             
             <div id="mg-loading-state" class="text-center py-12">
                 <div class="w-12 h-12 border-4 border-t-[#0284c7] border-gray-100 rounded-full animate-spin mx-auto mb-4"></div>
@@ -63,9 +63,13 @@
                     <div id="mg-event-desc" class="text-xs text-gray-500 leading-relaxed border-t border-gray-200 mt-4 pt-4 whitespace-pre-wrap small-desc">...</div>
                 </div>
 
-                <div class="flex flex-col gap-3">
-                    <button id="reschedule-btn" class="w-full bg-[#1a365d] text-white font-bold py-4 rounded-2xl shadow-lg hover:bg-blue-900 transition tracking-wide text-sm uppercase" data-i18n="mg.reschedule_btn">Αλλαγή Ραντεβού</button>
-                    <button id="confirm-cancel-trigger" class="w-full bg-white text-red-500 border border-red-50 px-4 py-4 rounded-2xl hover:bg-red-50 transition text-sm font-bold uppercase tracking-wide" data-i18n="mg.cancel_btn">Ακύρωση Ραντεβού</button>
+                <div class="flex flex-col gap-4 mt-10">
+                    <button id="reschedule-btn" class="w-full bg-[#1a365d] text-white font-bold py-5 rounded-2xl shadow-lg hover:bg-blue-900 transition-all transform hover:-translate-y-1 tracking-wide text-sm uppercase flex items-center justify-center gap-2">
+                        <span data-i18n="mg.reschedule_btn">Αλλαγή Ραντεβού</span>
+                    </button>
+                    <button id="confirm-cancel-trigger" class="w-full bg-white text-red-500 border-2 border-red-50 py-4 rounded-2xl hover:bg-red-50 hover:border-red-100 transition-all text-sm font-bold uppercase tracking-wide flex items-center justify-center gap-2">
+                        <span data-i18n="mg.cancel_btn">Ακύρωση Ραντεβού</span>
+                    </button>
                 </div>
             </div>
 
@@ -73,9 +77,9 @@
             <div id="mg-cancel-confirm-state" class="hidden text-center py-4">
                 <h3 class="text-xl font-bold text-red-600 mb-4" data-i18n="mg.confirm_title">Επιβεβαίωση Ακύρωσης</h3>
                 <p class="text-gray-600 mb-8 text-sm leading-relaxed" data-i18n="mg.confirm_text">Είστε σίγουροι ότι θέλετε να ακυρώσετε το ραντεβού σας? Αυτή η ενέργεια δεν αναιρείται.</p>
-                <div class="flex flex-col gap-3">
-                    <button id="final-cancel-btn" class="w-full bg-red-500 text-white font-bold py-4 rounded-2xl shadow-lg hover:bg-red-600 transition tracking-wide text-sm uppercase" data-i18n="mg.confirm_yes">Ναι, Ακύρωση</button>
-                    <button id="cancel-cancel-btn" class="w-full bg-gray-100 text-gray-500 font-bold py-4 rounded-2xl hover:bg-gray-200 transition tracking-wide text-sm uppercase" data-i18n="mg.confirm_no">Όχι, Πίσω</button>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+                    <button id="final-cancel-btn" class="w-full bg-red-500 text-white font-bold py-4 rounded-2xl shadow-lg hover:bg-red-600 transition-all tracking-wide text-sm uppercase" data-i18n="mg.confirm_yes">Ναι, Ακύρωση</button>
+                    <button id="cancel-cancel-btn" class="w-full bg-gray-100 text-gray-500 font-bold py-4 rounded-2xl hover:bg-gray-200 transition-all tracking-wide text-sm uppercase" data-i18n="mg.confirm_no">Όχι, Πίσω</button>
                 </div>
             </div>
 

@@ -8,6 +8,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     const lang = urlParams.get('lang');
     if (lang && (lang === 'en' || lang === 'el')) {
         i18n.applyLanguage(lang);
+    } else {
+        // Ensure UI is translated with current/default lang
+        i18n.applyLanguage(i18n.getCurrentLang());
     }
 
     if (!uid) {
