@@ -476,6 +476,8 @@ function processReminderEmail(e) {
 
 function sendReminderEmail(email, name) {
   const subject = "Υπενθύμιση Ραντεβού (Dentplant Clinic) / Appointment Reminder";
+  const dateStr = Utilities.formatDate(dateObj, Session.getScriptTimeZone(), "dd/MM/yyyy HH:mm");
+  
   const body = `Γεια σας ${name},
 
 Σας υπενθυμίζουμε το σημερινό σας ραντεβού στο ιατρείο μας. 
