@@ -17,7 +17,7 @@
       /* ── index.html — article cards ──────────── */
       'card1.title': 'Είμαι κατάλληλος υποψήφιος για οδοντικά εμφυτεύματα;',
       'card1.excerpt': 'Οι περισσότεροι ενήλικες που έχουν χάσει ένα ή περισσότερα δόντια είναι κατάλληλοι για εμφυτεύματα. Τα υγιή ούλα και η επαρκής οστική μάζα αποτελούν τους βασικούς παράγοντες επιτυχίας.',
-      'card2.title': 'Το χρονοδιάγραμμα της θεραπείας οδοντικών εμφυτευμάτων',
+      'card2.title': 'Από τη Διάγνωση στην Ολοκλήρωση: Κατανοώντας τη Διαδικασία',
       'card2.excerpt': 'Η διαδικασία τοποθέτησης εμφυτεύματος είναι ξεκάθαρη αλλά απαιτεί χρόνο. Από την αρχική ενημέρωση μέχρι την τοποθέτηση της στεφάνης, η διαδρομή διαρκεί συνήθως 3-6 μήνες.',
       'card3.title': 'Εμφυτεύματα, Γέφυρες ή Τεχνητές Οδοντοστοιχίες',
       'card3.excerpt': 'Τα οδοντικά εμφυτεύματα υπερτερούν σαφώς. Προστατεύουν το οστό της γνάθου και δεν απαιτούν τρόχισμα των διπλανών δοντιών, προσφέροντας την πιο φυσική λύση.',
@@ -36,7 +36,7 @@
       'modal2.p4': 'Ο καλύτερος τρόπος για να μάθετε με σιγουριά είναι μια απλή διαγνωστική επίσκεψη. Η ομάδα μας θα αξιολογήσει το ιστορικό σας, θα λάβει ένα 3D scan και θα σας δώσει μια ξεκάθαρη και ειλικρινή απάντηση. Οι περισσότεροι ασθενείς εκπλήσσονται ευχάριστα όταν μαθαίνουν ότι πληρούν τις προϋποθέσεις.',
 
       /* ── index.html — modal 3 (Timeline) ── */
-      'modal3.title': 'Το χρονοδιάγραμμα της θεραπείας οδοντικών εμφυτευμάτων: Τι να περιμένετε',
+      'modal3.title': 'Από τη Διάγνωση στην Ολοκλήρωση: Κατανοώντας τη Διαδικασία',
       'modal3.p1': 'Η διαδικασία των εμφυτευμάτων είναι μια καλά σχεδιασμένη διαδρομή που απαιτεί χρόνο για να διασφαλιστεί η μόνιμη σταθερότητα. Ας δούμε τα βασικά βήματα:',
       'modal3.p2': '<span class="font-bold text-gray-900">1. Διάγνωση & Σχεδιασμός:</span> Αξιολογούμε την κατάσταση των δοντιών, των ούλων και του οστού σας, δημιουργώντας ένα απόλυτα εξατομικευμένο πλάνο θεραπείας.',
       'modal3.p3': '<span class="font-bold text-gray-900">2. Τοποθέτηση Εμφυτεύματος:</span> Ένας μικρός πείρος τιτανίου τοποθετείται στη γνάθο με τοπική αναισθησία. Οι περισσότεροι ασθενείς αναφέρουν ελάχιστη έως καθόλου ενόχληση μετά τη διαδικασία.',
@@ -74,13 +74,13 @@
 
       /* ── Quotes ───────────────────────────────── */
       'quote.index': '&quot; Η υγεία και η λειτουργικότητα του χαμόγελού σας αποτελούν για εμάς κορυφαία προτεραιότητα.<br>Στο υπερσύγχρονο ιατρείο μας, συνδυάζουμε την επιστημονική αρτιότητα με την ανθρώπινη προσέγγιση. Σας καλωσορίζουμε σε ένα περιβάλλον όπου η προσωπική φροντίδα συναντά την καινοτομία. &quot;',
-      'quote.about': '&quot; Στόχος μου είναι να γεφυρώσω το χάσμα ανάμεσα στην εξατομικευμένη, ήπια φροντίδα ενός οικογενειακού ιατρείου και στην πολυπλοκότητα της σύγχρονης χειρουργικής. Είτε πρόκειται για μια απλή προληπτική εξέταση είτε για μια σύνθετη επέμβαση, η προσοχή μας είναι πάντα στραμμένη στη μακροπρόθεσμη υγεία και την αυτοπεποίθηση των ασθενών μας. &quot;',
+      'quote.about': '&quot; Η αφοσίωσή μας στην επιστήμη της οδοντιατρικής μεταφράζεται σε εξατομικευμένη και ουσιαστική φροντίδα για κάθε ασθενή. <br>Με οδηγό τη συνεχή εξέλιξη και το σεβασμό στις ανάγκες σας, χτίζουμε σχέσεις εμπιστοσύνης που διαρκούν. Αποτελεί τιμή μας να αναλαμβάνουμε τη φροντίδα του χαμόγελού σας. &quot;',
       'quote.services': '&quot; Προσφέρουμε ένα πλήρες φάσμα σύγχρονων οδοντιατρικών θεραπειών, καθεμία από τις οποίες είναι προσαρμοσμένη στις πραγματικές σας ανάγκες.<br>Με την υποστήριξη της τελευταίας λέξης της τεχνολογίας και πολυετή εμπειρία, στοχεύουμε σε αποτελέσματα που φαίνονται φυσικά και αντέχουν στον χρόνο. Κάθε μας απόφαση οδηγείται από τη δική σας στοματική υγεία. &quot;',
 
       /* ── about.html — biography sections ──────── */
-      'about.p1': '<strong class="text-gray-900">Δρ. Αλβέρτος Μοσχόπουλος</strong> αποφοίτησε από την Ιατρική Σχολή Semmelweis το 1993, έχοντας ήδη θέσει τις βάσεις για μια καριέρα αφιερωμένη στην επιστημονική εξέλιξη.',
+      'about.p1': 'Με βαθιά αφοσίωση στην επιστήμη και τον άνθρωπο, ο <strong class="text-gray-900">Δρ. Άγγελος Μοσχόπουλος</strong> ξεκίνησε την ακαδημαϊκή του πορεία στο Πανεπιστήμιο McGill, ολοκληρώνοντας το 1992 τις σπουδές του στη Βιολογία, με εξειδίκευση στη Μικροβιολογία και την Ανοσολογία.',
       'about.p2': 'Η αγάπη του για την έρευνα τον οδήγησε στο Ελληνικό Ινστιτούτο Παστέρ, όπου εργάστηκε ως ερευνητής για δύο χρόνια, προτού αφοσιωθεί στην Οδοντιατρική, λαμβάνοντας το πτυχίο του από το Πανεπιστήμιο Semmelweis το 1999.',
-      'about.p3': 'Ο Δρ. Μοσχόπουλος ασκεί την οδοντιατρική στα νότια προάστια από το 2002, καλωσορίζοντας τους ασθενείς του στην προσωπική του κλινική εμφυτευμάτων στο Παλαιό Φαλήρου. Παράλληλα, από το 2003 αποτελεί Επιστημονικό Σύμβουλο στο τμήμα Στοματικής και Γναθοπροσωπικής Χειρουργικής του Νοσοκομείου Metropolitan.',
+      'about.p3': 'Ο Δρ. Μοσχόπουλος ασκεί την οδοντιατρική στα νότια προάστια από το 2002, καλωσορίζοντας τους ασθενείς του στην προσωπική του κλινική εμφυτευμάτων στο Παλαιό Φάληρο. Παράλληλα, από το 2003 αποτελεί Επιστημονικό Σύμβουλο στο τμήμα Στοματικής και Γναθοπροσωπικής Χειρουργικής του Νοσοκομείου Metropolitan.',
       'about.p4': 'Εκεί έχει αναπτύξει υψηλή εξειδίκευση και εμπειρία στις θεραπείες με οδοντικά εμφυτεύματα, δίνοντας ιδιαίτερη έμφαση στην άρτια διαχείριση και την πλήρη αισθητική και λειτουργική αποκατάσταση του χαμόγελου.',
       'about.p5': 'Με όραμα την προσφορά στην κοινωνία, το 2001 συνέβαλε καθοριστικά στην ίδρυση της Οδοντιατρικής Κλινικής των Δημοτικών Ιατρείων Παλαιού Φαλήρου.',
       'about.p6': 'Εδώ και περισσότερες από δύο δεκαετίες, φροντίζει με χαρά και υπευθυνότητα την προληπτική οδοντιατρική των παιδιών του δήμου. Η πολύτιμη εθελοντική του δράση τιμήθηκε το 2015 σε ειδική τελετή από τους Δήμους Παλαιού Φαλήρου και Πειραιά.',
@@ -96,7 +96,7 @@
 
       /* ── Footer ───────────────────────────────── */
       'footer.address': 'Πλατεία Ντάβαρη 2, Παλαιό Φάληρο<br>τηλ. 210 931 2651',
-      'footer.copyright': 'Copyright 2026. A. Moshopoulos Dental Implant Clinic. <br>All Rights Reserved.',
+      'footer.copyright': 'Copyright 2026. Dentplant Clinic. <br>All Rights Reserved.',
 
       /* ── Booking Modal ────────────────────────── */
       'bm.title': 'Κλείστε το Ραντεβού σας',
@@ -162,7 +162,7 @@
       /* ── index.html — article cards ──────────── */
       'card1.title': 'Am I a Candidate for Dental Implants?',
       'card1.excerpt': 'Most adults who are missing one or more teeth are good candidates for dental implants. Healthy gums and sufficient jawbone are key.',
-      'card2.title': 'The Dental Implant Timeline',
+      'card2.title': 'From Consultation to Completion: Understanding the Process',
       'card2.excerpt': 'The implant process is straightforward but takes time. From consultation to final crown, the journey typically takes 3–6 months.',
       'card3.title': 'Implants vs. Bridges vs. Dentures',
       'card3.excerpt': 'Dental implants stand alone. They replace the root as well as the tooth, preserve your jawbone, and require no damage to surrounding teeth, unlike bridges or dentures.',
@@ -181,7 +181,7 @@
       'modal2.p4': 'The best way to find out is a simple consultation. Our team will evaluate your mouth, take a scan, and give you a clear, honest answer. Most patients are surprised to learn they qualify.',
 
       /* ── index.html — modal 3 (Timeline) ── */
-      'modal3.title': 'The Dental Implant Timeline: What to Expect from Start to Finish',
+      'modal3.title': 'From Consultation to Completion: Understanding the Process',
       'modal3.p1': 'The implant process is straightforward, though it does take time for permanent stability. Here\'s a simple overview of what to expect:',
       'modal3.p2': '<span class="font-bold text-gray-900">1. Consultation & planning:</span> We assess your teeth, gums, and bone structure and create a personalised treatment plan.',
       'modal3.p3': '<span class="font-bold text-gray-900">2. Implant placement:</span> A small titanium post is placed into the jawbone under local anaesthesia. Most patients report minimal discomfort.',
@@ -218,16 +218,16 @@
 
       /* ── Quotes ───────────────────────────────── */
       'quote.index': '&quot; The health and functionality of your smile are our top priority.<br>In our state-of-the-art practice, we combine scientific excellence with a human touch. We welcome you to an environment where personalised care meets innovation. &quot;',
-      'quote.about': '&quot; My goal is to bridge the gap between personalized, gentle care of a family practice and the complexities of surgery. Whether we are performing a surgical procedure or a routine check-up, our focus is always on the long-term well-being and confidence of our patients. &quot;',
+      'quote.about': '&quot; Our dedication to the science of dentistry is rooted in providing personalized, meaningful care for every individual. By embracing continuous innovation and maintaining a deep respect for our patients\' needs, we build relationships of trust that last a lifetime. It is a true honor to be entrusted with your smile. &quot;',
       'quote.services': '&quot; We provide a full range of modern dental treatments, each one tailored to what you actually need.<br>Backed by the latest technology and years of hands-on expertise, we aim for results that look natural and last. Your oral health drives every decision we make. &quot;',
 
       /* ── about.html — biography sections ──────── */
-      'about.p1': '<strong class="text-gray-900">Dr. Albert Moshopoulos</strong> graduated from Semmelweis Medical School in 1993, already laying the groundwork for a career dedicated to scientific progress.',
-      'about.p2': 'His passion for research led him to the Hellenic Pasteur Institute, where he worked as a researcher for two years before focusing on Dentistry, receiving his degree from Semmelweis University in 1999.',
-      'about.p3': 'Dr. Moshopoulos has been practicing dentistry in the southern suburbs since 2002, welcoming his patients to his personal implant clinic in Paleo Faliro. Since 2003, he has also served as a Scientific Consultant in the Oral and Maxillofacial Surgery Department of Metropolitan Hospital.',
-      'about.p4': 'There, he has developed high expertise and experience in dental implant treatments, with a particular focus on meticulous management and the complete aesthetic and functional restoration of the smile.',
-      'about.p5': 'With a vision of contributing to society, in 2001 he played a key role in founding the Dental Clinic of the Municipal Clinics of Paleo Faliro.',
-      'about.p6': 'For over two decades, he has joyfully and responsibly overseen the preventive dentistry of the municipality\'s children. His valuable volunteer work was honored in 2015 at a special ceremony by the Municipalities of Paleo Faliro and Piraeus.',
+      'about.p1': 'Combining a deep commitment to scientific progress with a patient-centered approach, <strong class="text-gray-900">Dr. Angelo Moshopoulos</strong> began his academic career at McGill University. He graduated in 1992 with a degree in Biology, specializing in Microbiology and Immunology.',
+      'about.p2': 'His early passion for research led him to a two-year tenure as a researcher at the Hellenic Pasteur Institute, after which he dedicated himself to clinical dentistry, earning his degree from Semmelweis University in 1999.',
+      'about.p3': 'Dr. Moshopoulos has served the southern suburbs since 2002, welcoming patients to his private practice in Paleo Faliro. Since 2003, he has also served as a Consultant in the Oral and Maxillofacial Surgery Department at Metropolitan Hospital.',
+      'about.p4': 'In these roles, he has developed extensive expertise in dental implantology, with a focus on precision-led treatments that achieve both aesthetic harmony and complete functional restoration.',
+      'about.p5': 'Driven by a vision of community service, he played a key role in the 2001 founding of the Paleo Faliro Municipal Dental Clinic.',
+      'about.p6': 'For over two decades, he has voluntarily overseen preventive dental care for the municipality’s children. His dedication to community service was honored in 2015 at a special ceremony by the Municipalities of Paleo Faliro and Piraeus.',
 
       /* ── services.html ────────────────────────── */
       'services.p1': 'At our practice, we believe that exceptional dentistry is built on a foundation of trust and meticulous planning. Our core philosophy is simple: your long-term oral health is our primary metric of success. We eschew transient solutions in favor of comprehensive treatment protocols. This means every procedure is backed by thorough diagnostic planning, education regarding daily hygiene, and an unwavering commitment to preventive care. We don\'t just restore teeth; we protect your future health.',
@@ -240,7 +240,7 @@
 
       /* ── Footer ───────────────────────────────── */
       'footer.address': 'Plateia Ntavari 2, Paleo Faliro<br>tel. 210 931 2651',
-      'footer.copyright': 'Copyright 2026. A. Moshopoulos Dental Implant Clinic. <br>All Rights Reserved.',
+      'footer.copyright': 'Copyright 2026. Dentplant Clinic. <br>All Rights Reserved.',
 
       /* ── Booking Modal ────────────────────────── */
       'bm.title': 'Book Your Appointment',

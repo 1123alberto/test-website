@@ -70,21 +70,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const items = slot.querySelectorAll('.article-item');
     if (items.length < 2) return;
 
-    // Staggered start for a more dynamic feel
+    const rotate = () => {
+      const currentItem = items[currentIdx];
+      currentIdx = (currentIdx + 1) % items.length;
+      const nextItem = items[currentIdx];
+
+      // Fade out current
+      currentItem.classList.remove('active-article');
+      currentItem.classList.add('inactive-article');
+
+      // Fade in next
+      nextItem.classList.remove('inactive-article');
+      nextItem.classList.add('active-article');
+    };
+
+    // Staggered start: First change happens at 4s + stagger
     setTimeout(() => {
-      setInterval(() => {
-        const currentItem = items[currentIdx];
-        currentIdx = (currentIdx + 1) % items.length;
-        const nextItem = items[currentIdx];
-
-        // Fade out current
-        currentItem.classList.remove('active-article');
-        currentItem.classList.add('inactive-article');
-
-        // Fade in next
-        nextItem.classList.remove('inactive-article');
-        nextItem.classList.add('active-article');
-      }, 8000); // Rotate every 8 seconds
-    }, index * 2000);
+      rotate();
+      // Subsequent rotations every 12 seconds
+      setInterval(rotate, 12000);
+    }, 4000 + (index * 1500));
   });
 });
