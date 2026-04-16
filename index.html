@@ -100,6 +100,53 @@
     .btn-primary:hover {
         background: var(--clr-accent-blue) !important;
     }
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      " @type": "MedicalBusiness",
+      "name": "Dr. Angelo Moshopoulos Dental Implant Clinic",
+      "image": "https://dentplant.gr/images/dental-implant-circle-256-torqued.png",
+      "@id": "https://dentplant.gr",
+      "url": "https://dentplant.gr",
+      "telephone": "+302109312651",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Plateia Ntavari 2",
+        "addressLocality": "Paleo Faliro",
+        "postalCode": "17564",
+        "addressCountry": "GR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 37.9254,
+        "longitude": 23.6932
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "10:00",
+          "closes": "20:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/dentplant",
+        "https://www.instagram.com/dentplant"
+      ],
+      "medicalSpecialty": "Dentistry",
+      "memberOf": {
+        "@type": "Organization",
+        "name": "Dental Association of Piraeus"
+      }
+    }
+    </script>
   </style>
 </head>
 
@@ -538,8 +585,42 @@
       ιατρείο μας, συνδυάζουμε την επιστημονική αρτιότητα με την ανθρώπινη προσέγγιση. Σας καλωσορίζουμε σε ένα
       περιβάλλον όπου η προσωπική φροντίδα συναντά την καινοτομία. &quot;
     </div>
-    <hr class="w-4/5 mx-auto border-gray-200">
+  <section class="py-20 bg-gray-50 overflow-hidden">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+        <div class="max-w-xl text-center md:text-left">
+          <h2 class="text-3xl md:text-4xl font-display text-brand-blue mb-6" data-i18n="reviews.title">Φροντίδα που Εμπνέει Εμπιστοσύνη</h2>
+          <p class="text-gray-600 mb-8 leading-relaxed text-lg" data-i18n="reviews.text">Η ικανοποίηση των ασθενών μας είναι η μεγαλύτερη ανταμοιβή μας. Δείτε γιατί εκατοντάδες ασθενείς εμπιστεύονται τον Δρ. Μοσχόπουλο για την υγεία του χαμόγελού τους.</p>
+          <div class="flex flex-col md:flex-row items-center gap-6">
+            <div class="flex items-center gap-2">
+              <div class="flex text-yellow-400 text-xl">
+                ★★★★★
+              </div>
+              <span class="font-bold text-brand-blue text-lg">5.0 / 5.0</span>
+            </div>
+            <a href="https://www.google.com/search?q=A.+Moshopoulos+Dental+Implant+Clinic+Paleo+Faliro+Google+Reviews" target="_blank" class="inline-block px-8 py-4 bg-brand-blue text-white rounded-full font-bold uppercase tracking-widest text-xs hover:bg-blue-600 transition-all shadow-xl hover:-translate-y-1" data-i18n="reviews.btn">Δειτε τις κριτικες στο Google</a>
+          </div>
+        </div>
+        <div class="relative w-full max-w-md mx-auto md:mx-0">
+          <div class="absolute -top-10 -left-10 w-48 h-48 bg-blue-100 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-pulse"></div>
+          <div class="absolute -bottom-10 -right-10 w-48 h-48 bg-yellow-100 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-pulse animation-delay-2000"></div>
+          <div class="relative bg-white p-8 md:p-10 rounded-3xl shadow-premium border border-gray-100">
+            <div class="mb-6 text-brand-blue text-4xl">"</div>
+            <p class="italic text-gray-700 mb-8 font-open text-lg leading-relaxed">"Επαγγελματισμός και φροντίδα στο ύψιστο επίπεδο. Η διαδικασία ήταν ανώδυνη και το αποτέλεσμα εκπληκτικό. Συστήνω τον Δρ. Μοσχόπουλο ανεπιφύλακτα."</p>
+            <div class="flex items-center gap-4">
+              <div class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center font-bold text-brand-blue text-lg shadow-inner">G.P.</div>
+              <div>
+                <p class="font-bold text-brand-blue">Γιώργος Π.</p>
+                <p class="text-gray-400 text-xs uppercase tracking-widest">Επιβεβαιωμένος Ασθενής</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
+
+  <hr class="w-4/5 mx-auto border-gray-200">
 
   <div class="text-center mt-8 mb-12 fade-in flex justify-center space-x-6">
     <a href="#" class="bg-brand-blue rounded-full p-2 hover:opacity-75 transition-opacity"><img class="w-10 h-10"
@@ -550,13 +631,28 @@
         src="socialicons/webicon-linkedin.png" alt="linkedin"></a>
   </div>
 
-  <footer class="py-12 bg-brand-blue">
-    <p class="text-white text-center font-bold tracking-wide text-lg mb-4 font-noto" data-i18n-html="footer.address">
-      Πλατεία Ντάβαρη 2, Παλαιό Φάληρο<br>τηλ. 210 931 2651
-    </p>
-    <p class="text-white/70 text-center font-noto text-sm" data-i18n-html="footer.copyright">
-      Copyright 2026. Dentplant Clinic. <br>All Rights Reserved.
-    </p>
+  <footer class="py-12 bg-brand-blue border-t border-white/10">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col items-center text-center space-y-6">
+        <p class="text-white font-bold tracking-wide text-lg font-noto" data-i18n-html="footer.address">
+          Πλατεία Ντάβαρη 2, Παλαιό Φάληρο<br>τηλ. 210 931 2651
+        </p>
+
+        <div class="max-w-2xl text-white/60 text-xs leading-relaxed font-open space-y-2">
+          <p data-i18n="footer.disclaimer"></p>
+          <p class="font-bold text-white/80" data-i18n="footer.membership"></p>
+          <p class="italic" data-i18n="footer.medical_review"></p>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-6 text-white/70 text-sm font-medium uppercase tracking-widest">
+          <a href="privacy.html" class="hover:text-white transition-colors" data-i18n="footer.privacy">Πολιτική Απορρήτου</a>
+        </div>
+
+        <p class="text-white/40 font-noto text-[10px] uppercase tracking-tighter" data-i18n-html="footer.copyright">
+          Copyright 2026. Dentplant Clinic. <br>All Rights Reserved.
+        </p>
+      </div>
+    </div>
   </footer>
 
   <script src="js/i18n.js"></script>

@@ -283,13 +283,28 @@
         src="socialicons/webicon-linkedin.png" alt="linkedin"></a>
   </div>
 
-  <footer class="py-12 bg-brand-blue">
-    <p class="text-white text-center font-bold tracking-wide text-lg mb-4 font-noto" data-i18n-html="footer.address">
-      Πλατεία Ντάβαρη 2, Παλαιό Φάληρο<br>τηλ. 210 931 2651
-    </p>
-    <p class="text-white/70 text-center font-noto text-sm" data-i18n-html="footer.copyright">
-      Copyright 2026. Dentplant Clinic. <br>All Rights Reserved.
-    </p>
+  <footer class="py-12 bg-brand-blue border-t border-white/10 mt-auto">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col items-center text-center space-y-6">
+        <p class="text-white font-bold tracking-wide text-lg font-noto" data-i18n-html="footer.address">
+          Πλατεία Ντάβαρη 2, Παλαιό Φάληρο<br>τηλ. 210 931 2651
+        </p>
+
+        <div class="max-w-2xl text-white/60 text-xs leading-relaxed font-open space-y-2">
+          <p data-i18n="footer.disclaimer"></p>
+          <p class="font-bold text-white/80" data-i18n="footer.membership"></p>
+          <p class="italic" data-i18n="footer.medical_review"></p>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-6 text-white/70 text-sm font-medium uppercase tracking-widest">
+          <a href="privacy.html" class="hover:text-white transition-colors" data-i18n="footer.privacy">Πολιτική Απορρήτου</a>
+        </div>
+
+        <p class="text-white/40 font-noto text-[10px] uppercase tracking-tighter" data-i18n-html="footer.copyright">
+          Copyright 2026. Dentplant Clinic. <br>All Rights Reserved.
+        </p>
+      </div>
+    </div>
   </footer>
 
   <script src="js/i18n.js"></script>

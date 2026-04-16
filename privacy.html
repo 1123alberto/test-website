@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title data-i18n="privacy.title">Πολιτική Απορρήτου - Dr. Angelo Moshopoulos Dental Implant Clinic</title>
+    <link rel="stylesheet" href="css/output.css?v=11">
+    <link rel="icon" href="images/dental-implant-circle-256-torqued.png" type="image/png">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Julius+Sans+One%7CNoto+Sans:400,b%7COpen+Sans:400,600,600i,b,i">
+    <style>
+        html {
+            overflow-y: scroll;
+        }
+        :root {
+            --clr-brand-blue: #1a365d;
+            --clr-accent-blue: #0284c7;
+            --clr-bg-white: #FFFFFF;
+            --clr-text-main: #334155;
+            --clr-text-muted: #64748b;
+            
+            --font-display: 'Julius Sans One', sans-serif;
+            --font-body: 'Open Sans', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--clr-text-main);
+        }
+
+        .privacy-content h2 {
+            font-family: var(--font-display);
+            color: var(--clr-brand-blue);
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .privacy-content h3 {
+            font-family: var(--font-body);
+            color: var(--clr-brand-blue);
+            font-size: 1.15rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-weight: bold;
+        }
+
+        .privacy-content p, .privacy-content li {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .privacy-content ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .privacy-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+
+        .privacy-content th, .privacy-content td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        .privacy-content th {
+            background-color: #f8fafc;
+        }
+    </style>
+</head>
+
+<body class="bg-white overflow-x-hidden pt-20 min-h-screen flex flex-col">
+
+    <nav class="fixed top-0 w-full bg-brand-blue shadow-md z-50 px-6 py-3 flex items-center justify-between transition-transform duration-300">
+        <a href="index.html" class="w-12 h-12 rounded-full shadow-strong overflow-hidden flex-shrink-0 bg-white">
+            <img alt="implant logo" class="w-full h-full object-contain" src="images/dental-implant-circle-256-torqued.png" loading="lazy">
+        </a>
+        <div class="flex items-center gap-4">
+            <div class="flex items-center space-x-4 md:space-x-8 text-white text-[11px] leading-tight md:text-xs md:leading-normal font-medium uppercase font-noto">
+                <a class="hover:text-gray-200 transition-colors" href="index.html" data-i18n="nav.home">Αρχικη</a>
+                <a class="hover:text-gray-200 transition-colors" href="about.html" data-i18n="nav.doctor">Ο Ιατρος</a>
+                <a class="hover:text-gray-200 transition-colors" href="services.html" data-i18n="nav.services">Υπηρεσιες</a>
+                <a class="hover:text-gray-200 transition-colors" href="contact.html" data-i18n="nav.contact">Επικοινωνια</a>
+            </div>
+            <button onclick="i18n.toggleLanguage()"
+                class="lang-toggle text-white border border-white/50 rounded px-2 py-0.5 text-[10px] font-bold tracking-widest uppercase hover:bg-white/20 transition-all duration-300">EN</button>
+        </div>
+    </nav>
+
+    <main class="flex-grow container mx-auto px-6 py-16 max-w-4xl">
+        <h1 class="text-4xl font-display text-brand-blue mb-8 border-b pb-4" data-i18n="privacy.title">Πολιτική Απορρήτου</h1>
+        <div class="privacy-content" data-i18n-html="privacy.body">
+            <!-- Content will be injected by i18n.js -->
+        </div>
+    </main>
+
+    <footer class="py-12 bg-brand-blue border-t border-white/10 mt-auto">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col items-center text-center space-y-6">
+                <p class="text-white font-bold tracking-wide text-lg font-noto" data-i18n-html="footer.address">
+                    Πλατεία Ντάβαρη 2, Παλαιό Φάληρο<br>τηλ. 210 931 2651
+                </p>
+
+                <div class="max-w-2xl text-white/60 text-xs leading-relaxed font-open space-y-2">
+                    <p data-i18n="footer.disclaimer"></p>
+                    <p class="font-bold text-white/80" data-i18n="footer.membership"></p>
+                    <p class="italic" data-i18n="footer.medical_review"></p>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-6 text-white/70 text-sm font-medium uppercase tracking-widest">
+                    <a href="privacy.html" class="hover:text-white transition-colors" data-i18n="footer.privacy">Πολιτική Απορρήτου</a>
+                </div>
+
+                <p class="text-white/40 font-noto text-[10px] uppercase tracking-tighter" data-i18n-html="footer.copyright">
+                    Copyright 2026. Dentplant Clinic. <br>All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/outofview.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

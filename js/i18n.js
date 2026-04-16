@@ -101,6 +101,92 @@
       /* ── Footer ───────────────────────────────── */
       'footer.address': 'Πλατεία Ντάβαρη 2, Παλαιό Φάληρο<br>τηλ. 210 931 2651',
       'footer.copyright': 'Copyright 2026. Dentplant Clinic. <br>All Rights Reserved.',
+      'footer.disclaimer': 'Η ενημέρωση σε αυτόν τον ιστότοπο παρέχεται αποκλειστικά για εκπαιδευτικούς σκοπούς και δεν υποκαθιστά την επαγγελματική ιατρική συμβουλή.',
+      'footer.membership': 'Μέλος του Οδοντιατρικού Συλλόγου Πειραιά',
+      'footer.medical_review': 'Ελέγχθηκε ιατρικά από τον Δρ. Άγγελο Μοσχόπουλο, DDS | Ενημέρωση: Απρίλιος 2026',
+      'footer.privacy': 'Πολιτική Απορρήτου',
+
+      /* ── privacy.html ─────────────────────────── */
+      'privacy.title': 'Πολιτική Απορρήτου',
+      'privacy.body': `<p><strong>Τελευταία ενημέρωση: 13 Απριλίου 2026</strong></p>
+      <p>Η παρούσα Πολιτική Απορρήτου περιγράφει τον τρόπο με τον οποίο η Dentplant Clinic συλλέγει, χρησιμοποιεί, αποθηκεύει και προστατεύει τα προσωπικά σας δεδομένα όταν επισκέπτεστε τους ιστότοπούς μας (dentplant.gr) ή κάνετε χρήση των οδοντιατρικών μας υπηρεσιών. Έχει συνταχθεί σε συμμόρφωση με τον Γενικό Κανονισμό Προστασίας Δεδομένων (ΕΕ) 2016/679 (ΓΚΠΔ/GDPR) και τον Ελληνικό Νόμο 4624/2019.</p>
+      <p>Παρακαλούμε να διαβάσετε προσεκτικά την παρούσα Πολιτική. Με τη χρήση των ιστοτόπων μας ή την πραγματοποίηση ραντεβού, αναγνωρίζετε ότι έχετε διαβάσει και κατανοήσει τον τρόπο με τον οποίο διαχειριζόμαστε τα προσωπικά σας δεδομένα.</p>
+
+      <h2>1. Υπεύθυνος Επεξεργασίας</h2>
+      <p>Υπεύθυνος επεξεργασίας των προσωπικών σας δεδομένων είναι:</p>
+      <table>
+        <tr><th>Επωνυμία</th><td>Dentplant Clinic</td></tr>
+        <tr><th>Ιστότοποι</th><td>dentplant.gr / i-smile.gr</td></tr>
+        <tr><th>Διεύθυνση</th><td>Πλατεία Νταβάρη 2, Παλαιό Φάληρο, 17564, Ελλάδα</td></tr>
+        <tr><th>Email</th><td>info@dentplant.gr / info@i-smile.gr</td></tr>
+        <tr><th>Τηλέφωνο</th><td>+30 210 9312651</td></tr>
+        <tr><th>ΑΦΜ</th><td>077118016</td></tr>
+      </table>
+
+      <h2>2. Ποια Προσωπικά Δεδομένα Συλλέγουμε</h2>
+      <h3>2.1 Επισκέπτες Ιστοτόπου</h3>
+      <ul>
+        <li>Διεύθυνση IP και κατά προσέγγιση γεωγραφική τοποθεσία</li>
+        <li>Τύπο και έκδοση προγράμματος περιήγησης (browser) και λειτουργικό σύστημα</li>
+        <li>Σελίδες που επισκεφθήκατε, χρόνο παραμονής και διαδρομή πλοήγησης</li>
+        <li>Ιστότοπο παραπομπής ή αναζητούμενο όρο</li>
+      </ul>
+      <h3>2.2 Φόρμες Κρατήσεων και Επικοινωνίας</h3>
+      <ul>
+        <li>Ονοματεπώνυμο</li>
+        <li>Διεύθυνση ηλεκτρονικού ταχυδρομείου</li>
+        <li>Αριθμό τηλεφώνου</li>
+        <li>Προτιμώμενη ημερομηνία και ώρα ραντεβού</li>
+        <li>Οποιοδήποτε μήνυμα ή σχόλιο επιθυμείτε να συμπεριλάβετε</li>
+      </ul>
+      <h3>2.3 Ασθενείς (Ιατρικά / Δεδομένα Υγείας)</h3>
+      <p>Στο πλαίσιο παροχής οδοντιατρικής περίθαλψης, συλλέγουμε και επεξεργαζόμαστε δεδομένα ειδικής κατηγορίας (ευαίσθητα δεδομένα υγείας), όπως:</p>
+      <ul>
+        <li>Ιατρικό και οδοντιατρικό ιστορικό</li>
+        <li>Ακτινογραφίες και κλινικές φωτογραφίες</li>
+        <li>Θεραπευτικά σχέδια, εκτελεσθείσες πράξεις και κλινικές σημειώσεις</li>
+        <li>Πληροφορίες για φαρμακευτική αγωγή και αλλεργίες</li>
+        <li>Έντυπα συναίνεσης και υπογεγραμμένες εξουσιοδοτήσεις</li>
+      </ul>
+
+      <h2>3. Νομική Βάση Επεξεργασίας</h2>
+      <ul>
+        <li><strong>Εκτέλεση σύμβασης:</strong> για την παροχή οδοντιατρικής θεραπείας και τη διαχείριση των ραντεβού σας.</li>
+        <li><strong>Συμμόρφωση με έννομη υποχρέωση:</strong> για την τήρηση των υποχρεώσεων φύλαξης ιατρικών αρχείων βάσει της ελληνικής νομοθεσίας.</li>
+        <li><strong>Έννομο συμφέρον:</strong> για στατιστική ανάλυση επισκεψιμότητας και βελτίωση της λειτουργίας των ιστοτόπων μας.</li>
+        <li><strong>Ρητή συγκατάθεση:</strong> για την επεξεργασία δεδομένων υγείας και για τη χρήση φωτογραφιών πριν και μετά τη θεραπεία σε διαφημιστικό πλαίσιο.</li>
+      </ul>
+
+      <h2>4. Πώς Χρησιμοποιούμε τα Δεδομένα σας</h2>
+      <ul>
+        <li>Τον προγραμματισμό, επιβεβαίωση και διαχείριση οδοντιατρικών ραντεβού</li>
+        <li>Την παροχή ασφαλούς και αποτελεσματικής οδοντιατρικής θεραπείας</li>
+        <li>Την αποστολή υπενθυμίσεων ραντεβού μέσω SMS ή ηλεκτρονικού ταχυδρομείου</li>
+        <li>Την τήρηση και ενημέρωση του ατομικού ιατρικού σας φακέλου</li>
+        <li>Την απάντηση σε ερωτήματα που υποβάλλονται μέσω των ιστοτόπων μας</li>
+      </ul>
+
+      <h2>5. Cookies και Τεχνολογίες Παρακολούθησης</h2>
+      <p>Οι ιστότοποί μας χρησιμοποιούν cookies. Μπορείτε να διαχειριστείτε τις προτιμήσεις cookies ανά πάσα στιγμή μέσω των ρυθμίσεων του προγράμματος περιήγησής σας.</p>
+
+      <h2>6. Αποδέκτες των Δεδομένων σας</h2>
+      <ul>
+        <li><strong>Οδοντοτεχνικά εργαστήρια:</strong> για την κατασκευή οδοντικών προσθετικών.</li>
+        <li><strong>Παρόχους υπηρεσιών πληροφορικής:</strong> που υποστηρίζουν τα συστήματα διαχείρισης ιατρείου.</li>
+        <li><strong>Αρμόδιες αρχές:</strong> όταν απαιτείται από τη νομοθεσία (π.χ. φορολογικές αρχές, ΕΟΠΥΥ).</li>
+      </ul>
+
+      <h2>7. Χρόνος Διατήρησης Δεδομένων</h2>
+      <table>
+        <tr><th>Κατηγορία δεδομένων</th><th>Περίοδος διατήρησης</th></tr>
+        <tr><td>Ιατρικοί φάκελοι ασθενών</td><td>Τουλάχιστον 10 έτη από την τελευταία θεραπεία</td></tr>
+        <tr><td>Δεδομένα ραντεβού</td><td>3 έτη από την τελευταία αλληλεπίδραση</td></tr>
+      </table>
+
+      <h2>8. Τα Δικαιώματά σας</h2>
+      <p>Έχετε το δικαίωμα πρόσβασης, διόρθωσης, διαγραφής, περιορισμού, φορητότητας και εναντίωσης στην επεξεργασία των δεδομένων σας.</p>
+      <p>Για την άσκηση των δικαιωμάτων σας, επικοινωνήστε μαζί μας στο <strong>info@dentplant.gr</strong>.</p>
+      <p>Εάν θεωρείτε ότι τα δικαιώματά σας έχουν παραβιαστεί, μπορείτε να προσφύγετε στην Αρχή Προστασίας Δεδομένων Προσωπικού Χαρακτήρα (www.dpa.gr).</p>`,
 
       /* ── Booking Modal ────────────────────────── */
       'bm.title': 'Κλείστε το Ραντεβού σας',
@@ -137,6 +223,11 @@
       'js.error': 'Σφάλμα συστήματος. Παρακαλώ δοκιμάστε ξανά.',
       'js.noservice': 'Καμία υπηρεσία επιλεγμένη',
       'js.other': 'Άλλο',
+
+      /* ── Social Proof / Reviews ──────────────── */
+      'reviews.title': 'Φροντίδα που Εμπνέει Εμπιστοσύνη',
+      'reviews.text': 'Η ικανοποίηση των ασθενών μας είναι η μεγαλύτερη ανταμοιβή μας. Δείτε γιατί εκατοντάδες ασθενείς εμπιστεύονται τον Δρ. Μοσχόπουλο για την υγεία του χαμόγελού τους.',
+      'reviews.btn': 'Δειτε τις κριτικες στο Google',
 
       /* ── Management Portal ───────────────────── */
       'mg.title': 'Διαχείριση Ραντεβού',
@@ -249,6 +340,90 @@
       /* ── Footer ───────────────────────────────── */
       'footer.address': 'Plateia Ntavari 2, Paleo Faliro<br>tel. 210 931 2651',
       'footer.copyright': 'Copyright 2026. Dentplant Clinic. <br>All Rights Reserved.',
+      'footer.disclaimer': 'Information provided on this site is for educational purposes only and does not substitute for professional medical consultation.',
+      'footer.membership': 'Member of the Dental Association of Piraeus',
+      'footer.medical_review': 'Medically reviewed by Dr. Angelo Moshopoulos, DDS | Updated: April 2026',
+      'footer.privacy': 'Privacy Policy',
+
+      /* ── privacy.html ─────────────────────────── */
+      'privacy.title': 'Privacy Policy',
+      'privacy.body': `<p><strong>Last updated: 13 April 2026</strong></p>
+      <p>This Privacy Policy explains how Dentplant Clinic collects, uses, stores, and protects your personal data when you visit our website (dentplant.gr) or use our dental services. It has been prepared in accordance with the General Data Protection Regulation (EU) 2016/679 (GDPR) and Greek Law 4624/2019.</p>
+      <p>Please read this Policy carefully. By using our websites or booking an appointment, you acknowledge that you have read and understood how we handle your personal data.</p>
+
+      <h2>1. Data Controller</h2>
+      <p>The data controller responsible for your personal data is:</p>
+      <table>
+        <tr><th>Business Name</th><td>Dentplant Clinic</td></tr>
+        <tr><th>Websites</th><td>dentplant.gr / i-smile.gr</td></tr>
+        <tr><th>Address</th><td>Plateia Ntavari 2, Paleo Faliro, 17564, Greece</td></tr>
+        <tr><th>Email</th><td>info@dentplant.gr / info@i-smile.gr</td></tr>
+        <tr><th>Phone</th><td>+30 210 9312651</td></tr>
+        <tr><th>Tax number</th><td>077118016</td></tr>
+      </table>
+
+      <h2>2. What Personal Data We Collect</h2>
+      <h3>2.1 Website Visitors</h3>
+      <ul>
+        <li>IP address and approximate geographic location</li>
+        <li>Browser type and version and operating system</li>
+        <li>Pages visited, time spent, and navigation path</li>
+        <li>Referring website or search query</li>
+      </ul>
+      <h3>2.2 Booking & Contact Forms</h3>
+      <ul>
+        <li>Full name</li>
+        <li>Email address</li>
+        <li>Phone number</li>
+        <li>Preferred appointment date and time</li>
+        <li>Any message or notes you choose to include</li>
+      </ul>
+      <h3>2.3 Patients (Medical / Health Data)</h3>
+      <p>As part of providing dental care, we collect and process special category (sensitive) health data, including:</p>
+      <ul>
+        <li>Medical and dental history</li>
+        <li>X-ray images and clinical photographs</li>
+        <li>Treatment plans, procedures, and clinical notes</li>
+        <li>Medication and allergy information</li>
+      </ul>
+
+      <h2>3. Legal Basis for Processing</h2>
+      <ul>
+        <li><strong>Contractual necessity:</strong> to provide dental treatment and manage appointments.</li>
+        <li><strong>Legal obligation:</strong> to comply with medical record-keeping requirements under Greek law.</li>
+        <li><strong>Legitimate interest:</strong> for website analytics and improvements.</li>
+        <li><strong>Explicit consent:</strong> for processing health data and marketing photos.</li>
+      </ul>
+
+      <h2>4. How We Use Your Data</h2>
+      <ul>
+        <li>Schedule, confirm, and manage dental appointments</li>
+        <li>Deliver safe and effective dental treatment</li>
+        <li>Send appointment reminders via SMS or email</li>
+        <li>Maintain and update your patient medical record</li>
+      </ul>
+
+      <h2>5. Cookies and Tracking Technologies</h2>
+      <p>Our websites use cookies. You can manage preferences in your browser settings.</p>
+
+      <h2>6. Who We Share Your Data With</h2>
+      <ul>
+        <li><strong>Dental laboratories:</strong> for prosthetics fabrication.</li>
+        <li><strong>IT service providers:</strong> who support our practice management systems.</li>
+        <li><strong>Competent authorities:</strong> when required by law (e.g. tax authorities).</li>
+      </ul>
+
+      <h2>7. Data Retention</h2>
+      <table>
+        <tr><th>Data Type</th><th>Retention Period</th></tr>
+        <tr><td>Patient medical records</td><td>Minimum 10 years after last treatment</td></tr>
+        <tr><td>Appointment data</td><td>3 years from last interaction</td></tr>
+      </table>
+
+      <h2>8. Your Rights Under GDPR</h2>
+      <p>You have the right to access, rectify, erase, restrict, and object to the processing of your data, as well as the right to data portability.</p>
+      <p>To exercise any of these rights, please contact us at <strong>info@dentplant.gr</strong>.</p>
+      <p>If you believe your rights have been violated, you have the right to lodge a complaint with the Hellenic Data Protection Authority (www.dpa.gr).</p>`,
 
       /* ── Booking Modal ────────────────────────── */
       'bm.title': 'Book Your Appointment',
@@ -285,6 +460,11 @@
       'js.error': 'System error. Please try again.',
       'js.noservice': 'No service selected',
       'js.other': 'Other',
+
+      /* ── Social Proof / Reviews ──────────────── */
+      'reviews.title': 'Care That Inspires Confidence',
+      'reviews.text': "Our patients' satisfaction is our greatest reward. Discover why hundreds of patients trust Dr. Moshopoulos for their dental health.",
+      'reviews.btn': 'View Google Reviews',
 
       /* ── Management Portal ───────────────────── */
       'mg.title': 'Manage Appointment',
