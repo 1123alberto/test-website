@@ -688,11 +688,15 @@
         </div>
       </div>
 
-      <div class="text-center">
+      <div class="flex flex-col md:flex-row justify-center items-center gap-4">
         <a href="https://www.google.com/maps/place/%CE%86%CE%B3%CE%B3%CE%B5%CE%BB%CE%BF%CF%82+%CE%9C%CE%BF%CF%83%CF%87%CF%8C%CF%80%CE%BF%CF%85%CE%BB%CE%BF%CF%82+%7C+i-smile+%26+Dentplant/@37.9302695,23.7035553,17.51z/data=!4m6!3m5!1s0x14a1bc37b5d18049:0x429c5800724d6f8d!8m2!3d37.9308807!4d23.7035164!16s%2Fg%2F1td3_grq?entry=ttu&g_ep=EgoyMDI2MDQxNC4wIKXMDSoASAFQAw%3D%3D" 
            target="_blank" 
-           class="inline-block px-10 py-5 bg-brand-blue text-white rounded-full font-bold uppercase tracking-widest text-xs hover:bg-blue-600 transition-all shadow-xl hover:-translate-y-1" 
+           class="inline-block px-10 py-4 border-2 border-brand-blue text-brand-blue rounded-full font-bold uppercase tracking-widest text-xs hover:bg-brand-blue hover:text-white transition-all shadow-lg" 
            data-i18n="reviews.btn">Δειτε τις κριτικες στο Google</a>
+        <a href="https://search.google.com/local/writereview?placeid=ChIJSYXRtTe8oRQRjW9NcuBYnEI" 
+           target="_blank" 
+           class="inline-block px-10 py-4 bg-yellow-400 text-brand-blue rounded-full font-bold uppercase tracking-widest text-xs hover:bg-yellow-500 transition-all shadow-xl hover:-translate-y-1" 
+           data-i18n="footer.review_btn">ΑΞΙΟΛΟΓΗΣΤΕ ΜΑΣ ΣΤΟ GOOGLE</a>
       </div>
     </div>
   </section>
@@ -714,6 +718,14 @@
         <p class="text-white font-bold tracking-wide text-lg font-noto" data-i18n-html="footer.address">
           Πλατεία Ντάβαρη 2, Παλαιό Φάληρο<br>τηλ. 210 931 2651
         </p>
+        <div class="pt-2">
+          <a href="https://search.google.com/local/writereview?placeid=ChIJSYXRtTe8oRQRjW9NcuBYnEI" 
+             target="_blank" 
+             class="text-yellow-400 font-bold hover:text-yellow-300 text-sm flex items-center justify-center gap-2 group transition-all underline decoration-yellow-400/30 underline-offset-4">
+            <span data-i18n="contact.review_cta">Γράψτε μια Αξιολόγηση</span>
+            <span class="group-hover:translate-x-1 transition-transform">→</span>
+          </a>
+        </div>
 
         <div class="max-w-2xl text-white/60 text-xs leading-relaxed font-open space-y-2">
           <p data-i18n="footer.disclaimer"></p>

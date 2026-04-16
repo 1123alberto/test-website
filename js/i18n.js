@@ -109,11 +109,13 @@
       /* ── services.html ────────────────────────── */
       'services.p1': 'Στο επίκεντρο της φιλοσοφίας μας βρίσκεται η ευημερία και το χαμόγελο κάθε ασθενούς. Πιστεύουμε ακράδαντα πως ο προσεκτικός σχεδιασμός της θεραπείας, η συστηματική εκπαίδευση στη σωστή στοματική υγιεινή και η προληπτική φροντίδα αποτελούν τα ισχυρότερα θεμέλια για υγιείς και ανθεκτικές αποκαταστάσεις που αντέχουν στον χρόνο.',
       'services.p2': 'Το ταξίδι προς ένα τέλειο χαμόγελο ξεκινά πάντα από ένα υγιές θεμέλιο. Μέσα από σχολαστικό καθαρισμό, άμεση αντιμετώπιση της τερηδόνας και στοχευμένες θεραπείες, διασφαλίζουμε την ιδανική κατάσταση της στοματικής κοιλότητας. Μόνο τότε προχωράμε με σιγουριά και ασφάλεια στο επόμενο στάδιο της αποκατάστασης των δοντιών μέσω της σύγχρονης εμφυτευματολογίας.',
-      'services.p3': 'Γνωρίζοντας πως η επίσκεψη στον οδοντίατρο μπορεί να προκαλεί άγχος, έχουμε διαμορφώσει έναν χώρο ζεστό, φιλόξενο και απόλυτα άνετο. Με εύκολη πρόσβαση, μεγάλη ευελιξία στα ραντεβού —ακόμα και τα Σάββατα— και πρωταρχικό μας μέλημα τον απόλυτο σεβασμό στην ευαισθησία και τις ανάγκες σας, φροντίζουμε η εμπειρία σας μαζί μας να είναι πάντα ήρεμη, ανώδυνη και θετική.',
+      'services.p3': 'Γνωρίζοντας πως η επίσκεψη στον οδοντίατρο μπορεί να προκαλεί άγχος, έχουμε διαμορφούμε έναν χώρο ζεστό, φιλόξενο και απόλυτα άνετο. Με εύκολη πρόσβαση, μεγάλη ευελιξία στα ραντεβού και πρωταρχικό μας μέλημα τον απόλυτο σεβασμό στην ευαισθησία και τις ανάγκες σας, φροντίζουμε η εμπειρία σας μαζί μας να είναι πάντα ήρεμη, ανώδυνη και θετική.',
 
       /* ── contact.html — phone labels ─────────── */
       'contact.landline': 'τηλ. 210 931 2651',
-      'contact.email': '1123alberto@gmail.com',
+      'contact.address.l1': 'Πλατεία Ντάβαρη 2',
+      'contact.address.l2': 'Παλαιό Φάληρο',
+      'contact.address.l3': '17564',
 
       /* ── Footer ───────────────────────────────── */
       'footer.address': 'Πλατεία Ντάβαρη 2, Παλαιό Φάληρο<br>τηλ. 210 931 2651',
@@ -299,6 +301,14 @@
       'alt.fb': 'Επισκεφθείτε την Dentplant Clinic στο Facebook',
       'alt.ig': 'Ακολουθήστε τον Άγγελο Μοσχόπουλο στο Instagram',
       'alt.li': 'Επαγγελματικό προφίλ του Άγγελου Μοσχόπουλου στο LinkedIn',
+      'footer.review_btn': 'ΑΞΙΟΛΟΓΗΣΤΕ ΜΑΣ ΣΤΟ GOOGLE',
+      'contact.review_cta': 'Γράψτε μια Αξιολόγηση',
+      'contact.hours.title': 'Ωράριο Λειτουργίας',
+      'days.mon_fri': 'Δευτέρα - Παρασκευή',
+      'days.sat': 'Σάββατο',
+      'days.sun': 'Κυριακή',
+      'hours.mon_fri': '10:00 – 20:00',
+      'hours.closed': 'Κλειστά',
     },
     en: {
     'title.home': 'Dental Implants | Paleo Faliro | Dr. Angelo Moshopoulos',
@@ -404,11 +414,13 @@
       /* ── services.html ────────────────────────── */
       'services.p1': 'At our practice, we believe that exceptional dentistry is built on a foundation of trust and meticulous planning. Our core philosophy is simple: your long-term oral health is our primary metric of success. We eschew transient solutions in favor of comprehensive treatment protocols. This means every procedure is backed by thorough diagnostic planning, education regarding daily hygiene, and an unwavering commitment to preventive care. We don\'t just restore teeth; we protect your future health.',
       'services.p2': 'A beautiful smile is only as strong as the structures supporting it. To ensure the highest success rates for restorative and cosmetic work, we follow a strictly phased approach to care:<ul class="list-none space-y-6 mt-6"><li><strong class="text-gray-900">Phase I: Stabilization & Prevention</strong><div class="mt-2">Every journey begins with a comprehensive assessment and professional cleaning. We prioritize the health of your supporting tissues, addressing periodontal (gum) health and early-stage decay before proceeding to advanced treatments.</div></li><li><strong class="text-gray-900">Phase II: Restorative Excellence</strong><div class="mt-2">Once a healthy foundation is established, we move toward specialized interventions. From precision fillings to complex implant placement, our procedures are performed with a focus on structural durability and aesthetic harmony.</div></li><li><strong class="text-gray-900">Phase III: Maintenance & Education</strong><div class="mt-2">We empower our patients with the knowledge and tools necessary to maintain their results at home, ensuring that your investment in your smile lasts for a lifetime.</div></li></ul>',
-      'services.p3': 'We understand that for many, a visit to the dentist can be a source of apprehension. We have intentionally designed our practice to redefine that experience, blending clinical professionalism with a welcoming, stress-free environment.<div class="mt-10 space-y-6"><div class="font-bold text-xl text-gray-900 mb-4">Why Choose Our Practice?</div><ul class="list-none space-y-6"><li><strong class="text-gray-900">A Calming Environment:</strong><div class="mt-2">Our clinic is designed to be a tranquil space where you can feel at ease from the moment you arrive.</div></li><li><strong class="text-gray-900">A Compassionate Team:</strong><div class="mt-2">Our staff is specifically trained to support patients with dental anxiety, offering a gentle touch and clear communication at every step.</div></li><li><strong class="text-gray-900">Modern Convenience:</strong><div class="mt-2">We respect your time. To accommodate busy professional and family schedules, we offer flexible appointment times, including Saturday availability.</div></li></ul></div>',
+      'services.p3': 'We understand that for many, a visit to the dentist can be a source of apprehension. We have intentionally designed our practice to redefine that experience, blending clinical professionalism with a welcoming, stress-free environment.<div class="mt-10 space-y-6"><div class="font-bold text-xl text-gray-900 mb-4">Why Choose Our Practice?</div><ul class="list-none space-y-6"><li><strong class="text-gray-900">A Calming Environment:</strong><div class="mt-2">Our clinic is designed to be a tranquil space where you can feel at ease from the moment you arrive.</div></li><li><strong class="text-gray-900">A Compassionate Team:</strong><div class="mt-2">Our staff is specifically trained to support patients with dental anxiety, offering a gentle touch and clear communication at every step.</div></li><li><strong class="text-gray-900">Modern Convenience:</strong><div class="mt-2">We respect your time. To accommodate busy professional and family schedules, we offer flexible appointment times tailored to your needs.</div></li></ul></div>',
 
       /* ── contact.html — phone labels ─────────── */
       'contact.landline': 'tel. 210 931 2651',
-      'contact.email': '1123alberto@gmail.com',
+      'contact.address.l1': 'Plateia Ntavari 2',
+      'contact.address.l2': 'Paleo Faliro',
+      'contact.address.l3': '17564',
 
       /* ── Footer ───────────────────────────────── */
       'footer.address': 'Plateia Ntavari 2, Paleo Faliro<br>tel. 210 931 2651',
@@ -592,6 +604,14 @@
       'alt.fb': 'Visit Dentplant Clinic on Facebook',
       'alt.ig': 'Follow Dr. Angelo Moshopoulos on Instagram',
       'alt.li': 'Dr. Angelo Moshopoulos professional LinkedIn profile',
+      'footer.review_btn': 'REVIEW US ON GOOGLE',
+      'contact.review_cta': 'Write a Review',
+      'contact.hours.title': 'Opening Hours',
+      'days.mon_fri': 'Monday - Friday',
+      'days.sat': 'Saturday',
+      'days.sun': 'Sunday',
+      'hours.mon_fri': '10:00 – 20:00',
+      'hours.closed': 'Closed',
     }
   };
 
