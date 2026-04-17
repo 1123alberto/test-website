@@ -130,9 +130,11 @@
 
       /* ── Footer ───────────────────────────────── */
       'footer.address': 'Πλατεία Ντάβαρη 2, Παλαιό Φάληρο<br>τηλ. 210 931 2651',
-      'footer.copyright': 'Copyright 2026. Dentplant Clinic. <br>All Rights Reserved.',
+      'footer.copyright': 'Copyright 2026. Dentplant Clinic. <br>Με την επιφύλαξη παντός δικαιώματος.',
       'footer.disclaimer': 'Η ενημέρωση σε αυτόν τον ιστότοπο παρέχεται αποκλειστικά για εκπαιδευτικούς σκοπούς και δεν υποκαθιστά την επαγγελματική ιατρική συμβουλή.',
-      'footer.membership': 'Μέλος του Οδοντιατρικού Συλλόγου Πειραιά',
+      'footer.metropolitan': '<a href="https://www.metropolitan-hospital.gr/el/" target="_blank" class="hover:text-white group transition-colors inline-flex items-center gap-1">Metropolitan Hospital <span class="group-hover:translate-x-0.5 transition-transform text-[10px] opacity-70">→</span></a>',
+      'footer.membership': 'Μέλος του <a href="https://www.osp.gr/odontiatros/%ce%bc%ce%bf%cf%83%cf%87%ce%bf%cf%80%ce%bf%cf%85%ce%bb%ce%bf%cf%83-%ce%b1%ce%b3%ce%b3%ce%b5%ce%bb%ce%bf%cf%83-2/#" target="_blank" class="hover:text-white group transition-colors inline-flex items-center gap-1">Οδοντιατρικού Συλλόγου Πειραιώς <span class="group-hover:translate-x-0.5 transition-transform text-[10px] opacity-70">→</span></a>',
+      'footer.doctoranytime': '<a href="https://www.doctoranytime.gr/d/Odontiatros/moshopoulos-aggelos" target="_blank" class="hover:text-white group transition-colors inline-flex items-center gap-1">Doctoranytime Προφίλ <span class="group-hover:translate-x-0.5 transition-transform text-[10px] opacity-70">→</span></a>',
       'footer.medical_review': 'Ελέγχθηκε ιατρικά από τον Άγγελο Μοσχόπουλο, DMD | Ενημέρωση: Απρίλιος 2026',
       'footer.privacy': 'Πολιτική Απορρήτου',
 
@@ -446,7 +448,9 @@
       'footer.address': 'Plateia Ntavari 2, Paleo Faliro<br>tel. 210 931 2651',
       'footer.copyright': 'Copyright 2026. Dentplant Clinic. <br>All Rights Reserved.',
       'footer.disclaimer': 'Information provided on this site is for educational purposes only and does not substitute for professional medical consultation.',
-      'footer.membership': 'Member of the Dental Association of Piraeus',
+      'footer.metropolitan': '<a href="https://www.metropolitan-hospital.gr/el/" target="_blank" class="hover:text-white group transition-colors inline-flex items-center gap-1">Metropolitan Hospital <span class="group-hover:translate-x-0.5 transition-transform text-[10px] opacity-70">→</span></a>',
+      'footer.membership': 'Member of the <a href="https://www.osp.gr/odontiatros/%ce%bc%ce%bf%cf%83%cf%87%ce%bf%cf%80%ce%bf%cf%85%ce%bb%ce%bf%cf%83-%ce%b1%ce%b3%ce%b3%ce%b5%ce%bb%ce%bf%cf%83-2/#" target="_blank" class="hover:text-white group transition-colors inline-flex items-center gap-1">Dental Association of Piraeus <span class="group-hover:translate-x-0.5 transition-transform text-[10px] opacity-70">→</span></a>',
+      'footer.doctoranytime': '<a href="https://www.doctoranytime.gr/d/Odontiatros/moshopoulos-aggelos" target="_blank" class="hover:text-white group transition-colors inline-flex items-center gap-1">Doctoranytime Profile <span class="group-hover:translate-x-0.5 transition-transform text-[10px] opacity-70">→</span></a>',
       'footer.medical_review': 'Medically reviewed by Dr. Angelo Moshopoulos, DMD | Updated: April 2026',
       'footer.privacy': 'Privacy Policy',
 

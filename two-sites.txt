@@ -7,8 +7,11 @@ Here is a breakdown of why this works, the benefits, and the few rules you need 
 ### 🌟 The Benefits of a Two-Site Strategy
 
 1. **Hyper-Focused SEO Authority:** Google prefers websites that are highly specialized. A site dedicated 100% to dental implants (`dentplant.gr`) will rank much faster for "implant surgeon Palaio Faliro" than a generic dental site that only has one page about implants. 
+
 2. **No Keyword Cannibalization:** Because the sites offer different services, they aren't competing for the same search terms. `i-smile.gr` will capture people searching for "teeth whitening," while `dentplant.gr` will capture people searching for "bone grafting" or "implants."
+
 3. **Targeted Design & User Experience:** The psychology mapping is different. A patient looking for a cosmetic smile makeover wants to see a design that is bright, fresh, and modern. A patient looking for a surgical implant needs a design that feels clinical, authoritative, and trustworthy. Having two sites allows for distinct branding.
+
 4. **Cross-Linking Power:** You can use each site to boost the other. You can place a banner on `i-smile.gr` that says *"Need surgical solutions or implants? Visit our specialized implant center at Dentplant.gr,"* passing valuable SEO authority (link juice) between your own properties.
 
 ### ⚠️ The Rules to Prevent Them from Hindering Each Other
