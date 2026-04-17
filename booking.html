@@ -5,10 +5,68 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title data-i18n="title.booking">Online Ραντεβού | Παλαιό Φάληρο | Άγγελος Μοσχόπουλος</title>
-    <meta name="description"
-        content="Κλείστε το οδοντιατρικό σας ραντεβού online εύκολα και γρήγορα. Επιλέξτε την ημέρα και την ώρα που σας εξυπηρετεί στην κλινική μας στο Παλαιό Φάληρο. Σας περιμένουμε!"
-        data-i18n-content="desc.booking">
+    <meta name="description" content="Κλείστε το οδοντιατρικό σας ραντεβού online εύκολα και γρήγορα. Επιλέξτε την ημέρα και την ώρα που σας εξυπηρετεί στην κλινική μας στο Παλαιό Φάληρο. Σας περιμένουμε!" data-i18n-content="desc.booking">
     <link rel="stylesheet" href="css/output.css?v=11">
+    <link rel="canonical" href="https://www.dentplant.gr/booking.html">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Dentist",
+          "@id": "https://www.dentplant.gr/#dentist",
+          "name": "Άγγελος Μοσχόπουλος | Dentplant Clinic",
+          "alternateName": "Dr. Angelo Moshopoulos Dental Implant Clinic",
+          "url": "https://www.dentplant.gr",
+          "telephone": "+302109312651",
+          "priceRange": "$$",
+          "image": "https://www.dentplant.gr/images/dental-implant-circle-256-torqued.png",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Πλατεία Ντάβαρη 2",
+            "addressLocality": "Παλαιό Φάληρο",
+            "postalCode": "17564",
+            "addressCountry": "GR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 37.9308807,
+            "longitude": 23.7035164
+          },
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "10:00",
+            "closes": "20:00"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.dentplant.gr/booking.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Αρχική",
+              "item": "https://www.dentplant.gr/index.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Online Ραντεβού",
+              "item": "https://www.dentplant.gr/booking.html"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
     <link rel="icon" href="images/dental-implant-circle-256-torqued.png" type="image/png">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Julius+Sans+One%7CNoto+Sans:400,b%7COpen+Sans:400,600,600i,b,i">
@@ -331,17 +389,52 @@
         </div>
     </main>
 
+    <section class="py-12 bg-white">
+        <hr class="w-4/5 mx-auto border-gray-200">
+        <div class="w-11/12 md:w-3/4 mx-auto bg-brand-light text-brand-blue text-center rounded-lg p-8 italic tracking-wide text-lg font-open my-12 fade-in shadow-inner"
+            data-i18n-html="quote.index">
+            &quot; Η υγεία και η λειτουργικότητα του χαμόγελού σας αποτελούν για εμάς κορυφαία προτεραιότητα. <br>Στο
+            υπερσύγχρονο
+            ιατρείο μας, συνδυάζουμε την επιστημονική αρτιότητα με την ανθρώπινη προσέγγιση. Σας καλωσορίζουμε σε ένα
+            περιβάλλον όπου η προσωπική φροντίδα συναντά την καινοτομία. &quot;
+        </div>
+        <hr class="w-4/5 mx-auto border-gray-200">
+    </section>
+
+    <div class="text-center mt-8 mb-12 fade-in flex justify-center space-x-6">
+        <a href="https://www.facebook.com/dentplant/" target="_blank"
+            class="bg-brand-blue rounded-full p-2 hover:opacity-75 transition-opacity">
+            <img class="w-10 h-10" src="socialicons/webicon-facebook.png" alt="facebook">
+        </a>
+        <a href="https://www.instagram.com/i_smile.gr/" target="_blank"
+            class="bg-brand-blue rounded-full p-2 hover:opacity-75 transition-opacity">
+            <img class="w-10 h-10" src="socialicons/webicon-instagram.png" alt="Insta">
+        </a>
+        <a href="https://www.linkedin.com/in/angelo-moshopoulos-a93476403/" target="_blank"
+            class="bg-brand-blue rounded-full p-2 hover:opacity-75 transition-opacity">
+            <img class="w-10 h-10" src="socialicons/webicon-linkedin.png" alt="linkedin">
+        </a>
+    </div>
+
     <footer class="py-12 bg-brand-blue border-t border-white/10 mt-auto">
         <div class="container mx-auto px-6">
             <div class="flex flex-col items-center text-center space-y-6">
                 <p class="text-white font-bold tracking-wide text-lg font-noto" data-i18n-html="footer.address">
                     Πλατεία Ντάβαρη 2, Παλαιό Φάληρο<br>τηλ. 210 931 2651
                 </p>
+                <div class="pt-2">
+                    <a href="https://search.google.com/local/writereview?placeid=ChIJSYXRtTe8oRQRjW9NcuBYnEI"
+                        target="_blank"
+                        class="text-yellow-400 font-bold hover:text-yellow-300 text-sm flex items-center justify-center gap-2 group transition-all underline decoration-yellow-400/30 underline-offset-4">
+                        <span data-i18n="contact.review_cta">Γράψτε μια Αξιολόγηση</span>
+                        <span class="group-hover:translate-x-1 transition-transform">→</span>
+                    </a>
+                </div>
 
                 <div class="max-w-2xl text-white/60 text-xs leading-relaxed font-open space-y-2">
                     <p data-i18n="footer.disclaimer">Η ενημέρωση σε αυτόν τον ιστότοπο παρέχεται αποκλειστικά για εκπαιδευτικούς σκοπούς και δεν υποκαθιστά την επαγγελματική ιατρική συμβουλή.</p>
                     <p class="font-bold text-white/80" data-i18n="footer.membership">Μέλος του Οδοντιατρικού Συλλόγου Πειραιά</p>
-                    <p class="italic" data-i18n="footer.medical_review">Ελέγχθηκε ιατρικά από τον Άγγελο Μοσχόπουλο, DDS | Ενημέρωση: Απρίλιος 2026</p>
+                    <p class="italic" data-i18n="footer.medical_review">Ελέγχθηκε ιατρικά από τον Άγγελο Μοσχόπουλο, DMD | Ενημέρωση: Απρίλιος 2026</p>
                 </div>
 
                 <div class="flex flex-wrap justify-center gap-6 text-white/70 text-sm font-medium uppercase tracking-widest">

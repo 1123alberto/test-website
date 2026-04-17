@@ -133,7 +133,7 @@
       'footer.copyright': 'Copyright 2026. Dentplant Clinic. <br>All Rights Reserved.',
       'footer.disclaimer': 'Η ενημέρωση σε αυτόν τον ιστότοπο παρέχεται αποκλειστικά για εκπαιδευτικούς σκοπούς και δεν υποκαθιστά την επαγγελματική ιατρική συμβουλή.',
       'footer.membership': 'Μέλος του Οδοντιατρικού Συλλόγου Πειραιά',
-      'footer.medical_review': 'Ελέγχθηκε ιατρικά από τον Άγγελο Μοσχόπουλο, DDS | Ενημέρωση: Απρίλιος 2026',
+      'footer.medical_review': 'Ελέγχθηκε ιατρικά από τον Άγγελο Μοσχόπουλο, DMD | Ενημέρωση: Απρίλιος 2026',
       'footer.privacy': 'Πολιτική Απορρήτου',
 
       /* ── privacy.html ─────────────────────────── */
@@ -447,7 +447,7 @@
       'footer.copyright': 'Copyright 2026. Dentplant Clinic. <br>All Rights Reserved.',
       'footer.disclaimer': 'Information provided on this site is for educational purposes only and does not substitute for professional medical consultation.',
       'footer.membership': 'Member of the Dental Association of Piraeus',
-      'footer.medical_review': 'Medically reviewed by Dr. Angelo Moshopoulos, DDS | Updated: April 2026',
+      'footer.medical_review': 'Medically reviewed by Dr. Angelo Moshopoulos, DMD | Updated: April 2026',
       'footer.privacy': 'Privacy Policy',
 
       /* ── privacy.html ─────────────────────────── */
