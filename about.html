@@ -10,7 +10,7 @@
     {
       "@context": "https://schema.org",
       "@graph": [
-        {
+                {
           "@type": "Dentist",
           "@id": "https://www.dentplant.gr/#dentist",
           "name": "Άγγελος Μοσχόπουλος | Dentplant Clinic",
@@ -42,6 +42,23 @@
             ],
             "opens": "10:00",
             "closes": "20:00"
+          },
+          "sameAs": [
+            "https://www.facebook.com/dentplant/",
+            "https://www.instagram.com/i_smile.gr/",
+            "https://www.linkedin.com/in/angelo-moshopoulos-a93476403/"
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "bestRating": "5",
+            "worstRating": "1",
+            "ratingCount": "248"
+          },
+          "medicalSpecialty": "Dentistry",
+          "memberOf": {
+            "@type": "Organization",
+            "name": "Member of the Dental Association of Piraeus"
           }
         },
         {
@@ -67,7 +84,7 @@
               "@type": "ListItem",
               "position": 2,
               "name": "Ο Ιατρός",
-              "item": "https://i-smile.gr/about.html"
+              "item": "https://www.dentplant.gr/about.html"
             }
           ]
         }
@@ -102,7 +119,7 @@
   <main class="flex-grow container mx-auto px-6 py-12 max-w-6xl">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start mt-8">
       <div class="w-full rounded-2xl overflow-hidden shadow-2xl transition-transform hover:-translate-y-2">
-        <img alt="Ο ιατρός Άγγελος Μοσχόπουλος στο οδοντιατρείο του στο Παλαιό Φάληρο" data-i18n-alt="alt.doctor" class="w-full h-auto object-cover" src="images/selfie-office.jpg">
+        <img alt="Πάντα ένα χαλαρωτικό περιβάλλον στην κλινική οδοντικών εμφυτευμάτων του Δρ. Άγγελου Μοσχόπουλου στο Παλαιό Φάληρο" data-i18n-alt="alt.buddha" class="w-full h-auto object-cover" src="images/selfie-office.jpg">
       </div>
       <div class="text-gray-700 font-open text-lg leading-relaxed space-y-6">
         <p data-i18n-html="about.p1">Με βαθιά αφοσίωση στην επιστήμη και τον άνθρωπο, ο <strong class="text-gray-900">
@@ -142,13 +159,13 @@
   </section>
   <div class="text-center mt-8 mb-12 fade-in flex justify-center space-x-6">
     <a href="https://www.facebook.com/dentplant/" target="_blank" class="bg-brand-blue rounded-full p-2 hover:opacity-75 transition-opacity">
-      <img class="w-10 h-10" src="socialicons/webicon-facebook.png" alt="facebook">
+      <img class="w-10 h-10" src="socialicons/webicon-facebook.png" alt="Επισκεφθείτε την Dentplant Clinic στο Facebook" data-i18n-alt="alt.fb">
     </a>
     <a href="https://www.instagram.com/i_smile.gr/" target="_blank" class="bg-brand-blue rounded-full p-2 hover:opacity-75 transition-opacity">
-      <img class="w-10 h-10" src="socialicons/webicon-instagram.png" alt="Insta">
+      <img class="w-10 h-10" src="socialicons/webicon-instagram.png" alt="Ακολουθήστε τον Άγγελο Μοσχόπουλο στο Instagram" data-i18n-alt="alt.ig">
     </a>
     <a href="https://www.linkedin.com/in/angelo-moshopoulos-a93476403/" target="_blank" class="bg-brand-blue rounded-full p-2 hover:opacity-75 transition-opacity">
-      <img class="w-10 h-10" src="socialicons/webicon-linkedin.png" alt="linkedin">
+      <img class="w-10 h-10" src="socialicons/webicon-linkedin.png" alt="Επαγγελματικό προφίλ του Άγγελου Μοσχόπουλου στο LinkedIn" data-i18n-alt="alt.li">
     </a>
   </div>
   <footer class="py-12 bg-brand-blue border-t border-white/10 mt-auto">
