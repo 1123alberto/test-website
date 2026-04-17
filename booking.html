@@ -190,7 +190,8 @@
 
         input:focus {
             border-color: var(--clr-accent-blue) !important;
-            ring: 2px solid var(--clr-accent-blue);
+            box-shadow: 0 0 0 2px var(--clr-accent-blue);
+            outline: none;
         }
 
         .success-icon {
@@ -243,7 +244,7 @@
                         <div id="booking-step-1" class="booking-step active">
                             <div class="calendar-header flex justify-between items-center mb-5 px-4">
                                 <button id="prev-week" class="calendar-nav-btn w-8 h-8 border border-gray-100 rounded-full flex items-center justify-center text-gray-500 hover:bg-gray-50 hover:text-[#1a365d] transition shadow-sm">&larr;</button>
-                                <h3 id="calendar-month" class="calendar-month font-open font-bold text-lg text-[#1a365d]">...</h3>
+                                <h3 id="calendar-month" class="calendar-month font-open font-bold text-lg text-[#1a365d]">Απρίλιος 2026</h3>
                                 <button id="next-week" class="calendar-nav-btn w-8 h-8 border border-gray-100 rounded-full flex items-center justify-center text-gray-500 hover:bg-gray-50 hover:text-[#1a365d] transition shadow-sm">&rarr;</button>
                             </div>
                             <div class="calendar-grid grid grid-cols-7 gap-y-2 gap-x-1 text-center" id="calendar-grid">
@@ -259,7 +260,7 @@
                             <button class="back-btn text-[#64748b] hover:text-[#1a365d] mb-5 flex items-center text-xs tracking-wide uppercase font-bold" onclick="goToStep(1)" data-i18n="bm.step2.back">
                                 &larr; <span class="ml-1">Πίσω στο Ημερολόγιο</span>
                             </button>
-                            <h3 class="step-title font-open font-bold text-center text-xl mb-6 text-[#1a365d]" id="selected-date-display">...</h3>
+                            <h3 class="step-title font-open font-bold text-center text-xl mb-6 text-[#1a365d]" id="selected-date-display">Επιλέξτε Ώρα</h3>
                             <div class="time-slots-grid grid grid-cols-2 md:grid-cols-3 gap-3" id="time-slots-grid">
                                 <!-- JS will populate -->
                             </div>
@@ -272,7 +273,7 @@
                             </button>
                             <h3 class="step-title font-open font-bold text-xl text-center mb-3 text-[#1a365d]" data-i18n="bm.step3.title">Στοιχεία Επικοινωνίας</h3>
                             <p class="selected-slot-info mb-5 text-center text-[#475569] text-sm md:text-base border-b border-gray-100 pb-3">
-                                <strong id="final-date-time">...</strong>
+                                <strong id="final-date-time">Επιλεγμένο Ραντεβού</strong>
                             </p>
 
                             <form id="booking-form" class="custom-form w-full px-2">
@@ -362,9 +363,9 @@
                 </p>
 
                 <div class="max-w-2xl text-white/60 text-xs leading-relaxed font-open space-y-2">
-                    <p data-i18n="footer.disclaimer"></p>
-                    <p class="font-bold text-white/80" data-i18n="footer.membership"></p>
-                    <p class="italic" data-i18n="footer.medical_review"></p>
+                    <p data-i18n="footer.disclaimer">Η ενημέρωση σε αυτόν τον ιστότοπο παρέχεται αποκλειστικά για εκπαιδευτικούς σκοπούς και δεν υποκαθιστά την επαγγελματική ιατρική συμβουλή.</p>
+                    <p class="font-bold text-white/80" data-i18n="footer.membership">Μέλος του Οδοντιατρικού Συλλόγου Πειραιά</p>
+                    <p class="italic" data-i18n="footer.medical_review">Ελέγχθηκε ιατρικά από τον Άγγελο Μοσχόπουλο, DDS | Ενημέρωση: Απρίλιος 2026</p>
                 </div>
 
                 <div class="flex flex-wrap justify-center gap-6 text-white/70 text-sm font-medium uppercase tracking-widest">
