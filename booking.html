@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="el">
+
 <head>
     <meta charset="utf-8">
-  <script>
-    if (window.location.hostname === "dentplant.gr") {
-      window.location.replace("https://www.dentplant.gr" + window.location.pathname + window.location.search);
-    }
-  </script>
+    <script>
+        if (window.location.hostname === "dentplant.gr") {
+            window.location.replace("https://www.dentplant.gr" + window.location.pathname + window.location.search);
+        }
+    </script>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title data-i18n="title.booking">Online Ραντεβού | Παλαιό Φάληρο | Άγγελος Μοσχόπουλος</title>
-    <meta name="description" content="Κλείστε το οδοντιατρικό σας ραντεβού online εύκολα και γρήγορα. Επιλέξτε την ημέρα και την ώρα που σας εξυπηρετεί στην κλινική μας στο Παλαιό Φάληρο. Σας περιμένουμε!" data-i18n-content="desc.booking">
+    <meta name="description"
+        content="Κλείστε το οδοντιατρικό σας ραντεβού online εύκολα και γρήγορα. Επιλέξτε την ημέρα και την ώρα που σας εξυπηρετεί στην κλινική μας στο Παλαιό Φάληρο. Σας περιμένουμε!"
+        data-i18n-content="desc.booking">
     <link rel="stylesheet" href="css/output.css?v=11">
     <link rel="canonical" href="https://www.dentplant.gr/booking.html">
     <script type="application/ld+json">
@@ -133,6 +136,7 @@
         html {
             overflow-y: scroll;
         }
+
         :root {
             --clr-brand-blue: #1a365d;
             --clr-accent-blue: #0284c7;
@@ -145,10 +149,12 @@
             --shadow-premium: 0 40px 100px rgba(0, 0, 0, 0.15);
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
+
         body {
             font-family: var(--font-body);
             color: var(--clr-text-main);
         }
+
         .booking-hero {
             padding-top: 8rem;
             padding-bottom: 4rem;
@@ -156,6 +162,7 @@
             display: flex;
             align-items: center;
         }
+
         .booking-hero-grid {
             display: grid;
             grid-template-columns: 1.2fr 1fr;
@@ -165,10 +172,12 @@
             margin: 0 auto;
             width: 100%;
         }
+
         .hero-content {
             color: white;
             animation: reveal 1s ease-out forwards;
         }
+
         .hero-title {
             font-family: var(--font-display);
             font-size: 4.5rem;
@@ -176,16 +185,26 @@
             margin-bottom: 1.5rem;
             letter-spacing: -0.02em;
         }
+
         .hero-subtitle {
             font-size: 1.25rem;
             opacity: 0.9;
             max-width: 500px;
             line-height: 1.6;
         }
+
         @keyframes reveal {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
+
         /* Responsive */
         @media (max-width: 1024px) {
             .booking-hero-grid {
@@ -194,17 +213,28 @@
                 padding: 0 1.5rem;
                 text-align: center;
             }
+
             .hero-content {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
             }
-            .hero-title { font-size: 3.5rem; }
+
+            .hero-title {
+                font-size: 3.5rem;
+            }
         }
+
         @media (max-width: 768px) {
-            .booking-hero { padding-top: 6rem; }
-            .hero-title { font-size: 2.75rem; }
+            .booking-hero {
+                padding-top: 6rem;
+            }
+
+            .hero-title {
+                font-size: 2.75rem;
+            }
         }
+
         /* Widget Styling Overrides */
         .booking-standalone-wrapper {
             background: rgba(255, 255, 255, 0.98);
@@ -213,29 +243,35 @@
             border: 1px solid rgba(255, 255, 255, 0.2);
             font-family: var(--font-body);
         }
+
         .calendar-nav-btn {
             background: white;
             border: 1px solid #e2e8f0 !important;
             transition: var(--transition);
         }
+
         .calendar-nav-btn:hover {
             background: #f8fafc;
             border-color: var(--clr-accent-blue) !important;
             color: var(--clr-accent-blue) !important;
         }
+
         .date-btn {
             font-family: var(--font-body);
             transition: var(--transition);
             border-radius: 8px !important;
         }
+
         .date-btn:not(.disabled):hover {
             background: #f1f5f9;
             color: var(--clr-accent-blue);
         }
+
         .date-btn.bg-\[\#0284c7\] {
             background-color: var(--clr-accent-blue) !important;
             box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
         }
+
         .time-slot-btn {
             background: #f8fafc;
             border: 1px solid #e2e8f0 !important;
@@ -244,21 +280,25 @@
             font-weight: 500 !important;
             transition: var(--transition);
         }
+
         .time-slot-btn:hover {
             background: white;
             border-color: var(--clr-accent-blue) !important;
             color: var(--clr-accent-blue);
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
         }
+
         .back-btn {
             font-weight: 600 !important;
             letter-spacing: 0.05em;
             transition: var(--transition);
         }
+
         .back-btn:hover {
             transform: translateX(-4px);
         }
+
         .btn-primary {
             background: var(--clr-brand-blue) !important;
             border-radius: 50px !important;
@@ -269,22 +309,26 @@
             box-shadow: 0 10px 20px rgba(26, 54, 93, 0.2);
             transition: var(--transition);
         }
+
         .btn-primary:hover {
             background: var(--clr-accent-blue) !important;
             transform: translateY(-2px);
             box-shadow: 0 15px 30px rgba(2, 132, 199, 0.3);
         }
+
         input {
             border-radius: 10px !important;
             border: 1px solid #cbd5e1 !important;
             padding: 0.75rem 1rem !important;
             transition: var(--transition);
         }
+
         input:focus {
             border-color: var(--clr-accent-blue) !important;
             box-shadow: 0 0 0 2px var(--clr-accent-blue);
             outline: none;
         }
+
         .success-icon {
             background: #ecfdf5;
             width: 80px;
@@ -297,123 +341,188 @@
             color: #10b981;
             font-size: 2.5rem;
         }
-    .text-white { color: #ffffff !important; }
-  .border-white/50 { border-color: rgba(255, 255, 255, 0.5) !important; }
-    .bg-white/20 { background-color: rgba(255, 255, 255, 0.2) !important; }
-    .text-[10px] { font-size: 10px !important; }
-    .text-[11px] { font-size: 11px !important; }
-  </style>
+
+        .text-white {
+            color: #ffffff !important;
+        }
+
+        .border-white/50 {
+            border-color: rgba(255, 255, 255, 0.5) !important;
+        }
+
+        .bg-white/20 {
+            background-color: rgba(255, 255, 255, 0.2) !important;
+        }
+
+        .text-[10px] {
+            font-size: 10px !important;
+        }
+
+        .text-[11px] {
+            font-size: 11px !important;
+        }
+    </style>
 </head>
+
 <body class="bg-white min-h-screen overflow-x-hidden">
-    <nav class="fixed top-0 w-full bg-brand-blue shadow-md z-50 px-6 py-3 flex items-center justify-between transition-transform duration-300">
+    <nav
+        class="fixed top-0 w-full bg-brand-blue shadow-md z-50 px-6 py-3 flex items-center justify-between transition-transform duration-300">
         <a href="index.html" class="w-12 h-12 rounded-full shadow-strong overflow-hidden flex-shrink-0 bg-white">
-            <img alt="implant logo" class="w-full h-full object-contain" src="images/dental-implant-circle-256-torqued.webp" loading="lazy">
+            <img alt="implant logo" class="w-full h-full object-contain"
+                src="images/dental-implant-circle-256-torqued.webp" loading="lazy">
         </a>
         <div class="flex items-center">
             <button onclick="i18n.toggleLanguage()"
                 class="lang-toggle text-white border border-white/50 rounded px-3 py-1 text-[11px] font-bold tracking-widest uppercase hover:bg-white/20 transition-all duration-300">EL</button>
         </div>
     </nav>
-    <main style="background-image: url('../images/tools_wallpaper.jpg');" class="bg-brand-blue booking-hero bg-cover bg-scroll md:bg-fixed bg-center bg-no-repeat relative">
-    <h1 class="text-3xl md:text-4xl font-bold text-brand-blue text-center mt-8 mb-8 font-julius" data-i18n="title.booking">Online Ραντεβού για Οδοντικά Εμφυτεύματα στο Παλαιό Φάληρο</h1>
+    <main style="background-image: url('images/tools_wallpaper.jpg');"
+        class="bg-brand-blue booking-hero bg-cover bg-scroll md:bg-fixed bg-center bg-no-repeat relative">
         <div class="container booking-hero-grid">
             <!-- Left Side: Hero Content -->
             <div class="hero-content">
                 <h1 class="hero-title" data-i18n="bm.title">Κλείστε το Ραντεβού σας</h1>
-                <p class="hero-subtitle" data-i18n="bm.subtitle">Επιλέξτε ημερομηνία και ώρα για την επίσκεψή σας στην κλινική μας.</p>
+                <p class="hero-subtitle" data-i18n="bm.subtitle">Επιλέξτε ημερομηνία και ώρα για την επίσκεψή σας στην
+                    κλινική μας.</p>
             </div>
             <!-- Right Side: Widget -->
-            <div class="booking-standalone-wrapper w-full max-w-[500px] shadow-strong relative p-6 md:p-8 rounded-[1.5rem] transition-all duration-300 ease-in-out">
+            <div
+                class="booking-standalone-wrapper w-full max-w-[500px] shadow-strong relative p-6 md:p-8 rounded-[1.5rem] transition-all duration-300 ease-in-out">
                 <section id="booking" class="booking-section">
                     <div class="container mx-auto">
                         <!-- Header is hidden in new layout but kept for potential back-compat -->
                         <div id="booking-main-header" class="section-header text-center mb-6 hidden">
-                            <h2 class="text-xl font-bold text-[#1a365d] tracking-tight" data-i18n="bm.title">Κλείστε το Ραντεβού σας</h2>
-                            <p class="text-gray-500 mt-1 text-xs tracking-wide" data-i18n="bm.subtitle">Επιλέξτε ημερομηνία και ώρα.</p>
+                            <h2 class="text-xl font-bold text-[#1a365d] tracking-tight" data-i18n="bm.title">Κλείστε το
+                                Ραντεβού σας</h2>
+                            <p class="text-gray-500 mt-1 text-xs tracking-wide" data-i18n="bm.subtitle">Επιλέξτε
+                                ημερομηνία και ώρα.</p>
                         </div>
-                    <div class="booking-widget">
-                        <!-- Step 1: Calendar -->
-                        <div id="booking-step-1" class="booking-step active">
-                            <div class="calendar-header flex justify-between items-center mb-5 px-4">
-                                <button id="prev-week" class="calendar-nav-btn w-8 h-8 border border-gray-100 rounded-full flex items-center justify-center text-gray-500 hover:bg-gray-50 hover:text-[#1a365d] transition shadow-sm">&larr;</button>
-                                <h3 id="calendar-month" class="calendar-month font-open font-bold text-lg text-[#1a365d]">Απρίλιος 2026</h3>
-                                <button id="next-week" class="calendar-nav-btn w-8 h-8 border border-gray-100 rounded-full flex items-center justify-center text-gray-500 hover:bg-gray-50 hover:text-[#1a365d] transition shadow-sm">&rarr;</button>
-                            </div>
-                            <div class="calendar-grid grid grid-cols-7 gap-y-2 gap-x-1 text-center min-h-[300px]" id="calendar-grid">
-                                <!-- JS will populate -->
-                            </div>
-                            <div class="booking-loader absolute inset-0 z-[60] flex-col items-center justify-center bg-white/70 backdrop-blur-sm rounded-[1.5rem]" id="calendar-loader" style="display: none;">
-                                <div class="spinner w-10 h-10 border-4 border-t-[#0284c7] border-gray-100 shadow-sm rounded-full animate-spin"></div>
-                            </div>
-                        </div>
-                        <!-- Step 2: Time Slots -->
-                        <div id="booking-step-2" class="booking-step" style="display: none;">
-                            <button class="back-btn text-[#64748b] hover:text-[#1a365d] mb-5 flex items-center text-xs tracking-wide uppercase font-bold" onclick="goToStep(1)" data-i18n="bm.step2.back">
-                                &larr; <span class="ml-1">Πίσω στο Ημερολόγιο</span>
-                            </button>
-                            <h3 class="step-title font-open font-bold text-center text-xl mb-6 text-[#1a365d]" id="selected-date-display">Επιλέξτε Ώρα</h3>
-                            <div class="time-slots-grid grid grid-cols-2 md:grid-cols-3 gap-3" id="time-slots-grid">
-                                <!-- JS will populate -->
-                            </div>
-                        </div>
-                        <!-- Step 3: Details Form -->
-                        <div id="booking-step-3" class="booking-step" style="display: none;">
-                            <button class="back-btn text-[#64748b] hover:text-[#1a365d] mb-4 flex items-center text-xs tracking-wide uppercase font-bold" onclick="goToStep(2)" data-i18n="bm.step3.back">
-                                &larr; <span class="ml-1">Πίσω στις Ώρες</span>
-                            </button>
-                            <h3 class="step-title font-open font-bold text-xl text-center mb-3 text-[#1a365d]" data-i18n="bm.step3.title">Στοιχεία Επικοινωνίας</h3>
-                            <p class="selected-slot-info mb-5 text-center text-[#475569] text-sm md:text-base border-b border-gray-100 pb-3">
-                                <strong id="final-date-time">Επιλεγμένο Ραντεβού</strong>
-                            </p>
-                            <form id="booking-form" class="custom-form w-full px-2">
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-4">
-                                    <div class="flex flex-col space-y-4">
-                                        <div class="form-group flex flex-col items-start w-full">
-                                            <label for="b-name" class="font-bold text-[#1a365d] text-xs mb-1" data-i18n="bm.name.label">Ονοματεπώνυμο *</label>
-                                            <input type="text" id="b-name" required placeholder="π.χ. Μαρία Παπαδοπούλου" data-i18n-placeholder="bm.name.placeholder" class="w-full px-3 py-2 border border-gray-200 rounded focus:outline-none focus:border-[#0284c7] focus:ring-1 focus:ring-[#0284c7] text-gray-700 placeholder-gray-400 text-sm transition-all shadow-sm">
-                                        </div>
-                                        <div class="form-group flex flex-col items-start w-full">
-                                            <label for="b-email" class="font-bold text-[#1a365d] text-xs mb-1" data-i18n="bm.email.label">Email *</label>
-                                            <input type="email" id="b-email" required placeholder="maria@example.com" data-i18n-placeholder="bm.email.placeholder" class="w-full px-3 py-2 border border-gray-200 rounded focus:outline-none focus:border-[#0284c7] focus:ring-1 focus:ring-[#0284c7] text-gray-700 placeholder-gray-400 text-sm transition-all shadow-sm">
-                                        </div>
-                                        <div class="form-group flex flex-col items-start w-full">
-                                            <label for="b-phone" class="font-bold text-[#1a365d] text-xs mb-1" data-i18n="bm.phone.label">Κινητό Τηλέφωνο *</label>
-                                            <input type="tel" id="b-phone" required placeholder="6930000000" data-i18n-placeholder="bm.phone.placeholder" class="w-full px-3 py-2 border border-gray-200 rounded focus:outline-none focus:border-[#0284c7] focus:ring-1 focus:ring-[#0284c7] text-gray-700 placeholder-gray-400 text-sm transition-all shadow-sm">
-                                        </div>
-                                    </div>
-                                    <div class="flex flex-col mt-4 md:mt-0 border-t border-gray-100 pt-4 md:border-none md:pt-0">
-                                        <p class="font-bold text-[#1a365d] text-sm mb-1" data-i18n="bm.services.heading">Ενδιαφέρομαι για...</p>
-                                        <label class="flex items-center space-x-2 text-sm text-gray-700 cursor-pointer hover:bg-gray-50 py-1 rounded transition group">
-                                            <input type="checkbox" name="services" value="General Check" class="w-4 h-4 text-[#0284c7] rounded border-gray-300 cursor-pointer">
-                                            <span data-i18n="bm.svc.general_check">Γενικός Έλεγχος</span>
-                                        </label>
-                                        <label class="flex items-center space-x-2 text-sm text-gray-700 cursor-pointer hover:bg-gray-50 py-1 rounded transition group">
-                                            <input type="checkbox" name="services" value="Dental Consult" class="w-4 h-4 text-[#0284c7] rounded border-gray-300 cursor-pointer">
-                                            <span data-i18n="bm.svc.dental_consult">Οδοντιατρική Εκτίμηση</span>
-                                        </label>
-                                        <label class="flex items-center space-x-2 text-sm text-gray-700 cursor-pointer hover:bg-gray-50 py-1 rounded transition group">
-                                            <input type="checkbox" name="services" value="Surgical Consult" class="w-4 h-4 text-[#0284c7] rounded border-gray-300 cursor-pointer">
-                                            <span data-i18n="bm.svc.surgical_consult">Χειρουργική Εκτίμηση</span>
-                                        </label>
+                        <div class="booking-widget">
+                            <!-- Step 1: Calendar -->
+                            <div id="booking-step-1" class="booking-step active">
+                                <div class="calendar-header flex justify-between items-center mb-5 px-4">
+                                    <button id="prev-week"
+                                        class="calendar-nav-btn w-8 h-8 border border-gray-100 rounded-full flex items-center justify-center text-gray-500 hover:bg-gray-50 hover:text-[#1a365d] transition shadow-sm">&larr;</button>
+                                    <h3 id="calendar-month"
+                                        class="calendar-month font-open font-bold text-lg text-[#1a365d]">Απρίλιος 2026
+                                    </h3>
+                                    <button id="next-week"
+                                        class="calendar-nav-btn w-8 h-8 border border-gray-100 rounded-full flex items-center justify-center text-gray-500 hover:bg-gray-50 hover:text-[#1a365d] transition shadow-sm">&rarr;</button>
+                                </div>
+                                <div class="calendar-grid grid grid-cols-7 gap-y-2 gap-x-1 text-center min-h-[300px]"
+                                    id="calendar-grid">
+                                    <!-- JS will populate -->
+                                </div>
+                                <div class="booking-loader absolute inset-0 z-[60] flex-col items-center justify-center bg-white/70 backdrop-blur-sm rounded-[1.5rem]"
+                                    id="calendar-loader" style="display: none;">
+                                    <div
+                                        class="spinner w-10 h-10 border-4 border-t-[#0284c7] border-gray-100 shadow-sm rounded-full animate-spin">
                                     </div>
                                 </div>
-                                <div class="text-center mt-6">
-                                    <button type="submit" class="btn btn-primary inline-block bg-[#0284c7] text-white font-bold py-3 px-[20px] rounded-[2rem] hover:bg-blue-600 transition shadow-md text-sm uppercase tracking-wide" id="submit-booking-btn" data-i18n="bm.submit">Επιβεβαίωση Ραντεβού</button>
+                            </div>
+                            <!-- Step 2: Time Slots -->
+                            <div id="booking-step-2" class="booking-step" style="display: none;">
+                                <button
+                                    class="back-btn text-[#64748b] hover:text-[#1a365d] mb-5 flex items-center text-xs tracking-wide uppercase font-bold"
+                                    onclick="goToStep(1)" data-i18n="bm.step2.back">
+                                    &larr; <span class="ml-1">Πίσω στο Ημερολόγιο</span>
+                                </button>
+                                <h3 class="step-title font-open font-bold text-center text-xl mb-6 text-[#1a365d]"
+                                    id="selected-date-display">Επιλέξτε Ώρα</h3>
+                                <div class="time-slots-grid grid grid-cols-2 md:grid-cols-3 gap-3" id="time-slots-grid">
+                                    <!-- JS will populate -->
                                 </div>
-                                <div class="booking-loader mt-3 flex justify-center" id="submit-loader" style="display: none;">
-                                    <div class="spinner w-6 h-6 border-4 border-t-[#0284c7] border-gray-100 rounded-full animate-spin"></div>
-                                </div>
-                            </form>
-                        </div>
-                        <!-- Step 4: Success Message -->
-                        <div id="booking-step-4" class="booking-step text-center py-6" style="display: none;">
-                            <div class="success-icon text-5xl text-green-500 mb-4 font-bold">✓</div>
-                            <h3 class="step-title font-open text-xl font-bold text-[#1a365d] mb-3" data-i18n="bm.step4.title">Το ραντεβού σας προστέθηκε!</h3>
-                            <p class="text-gray-500 text-sm" data-i18n="bm.step4.text">Θα λάβετε σύντομα ένα email επιβεβαίωσης. Σας περιμένουμε.</p>
-                            <button class="btn btn-secondary mt-8 px-6 py-2 border border-gray-300 rounded-[2rem] text-gray-600 hover:bg-gray-50 transition text-sm font-bold shadow-sm" onclick="location.reload()" data-i18n="bm.step4.new">Νέο Ραντεβού</button>
+                            </div>
+                            <!-- Step 3: Details Form -->
+                            <div id="booking-step-3" class="booking-step" style="display: none;">
+                                <button
+                                    class="back-btn text-[#64748b] hover:text-[#1a365d] mb-4 flex items-center text-xs tracking-wide uppercase font-bold"
+                                    onclick="goToStep(2)" data-i18n="bm.step3.back">
+                                    &larr; <span class="ml-1">Πίσω στις Ώρες</span>
+                                </button>
+                                <h3 class="step-title font-open font-bold text-xl text-center mb-3 text-[#1a365d]"
+                                    data-i18n="bm.step3.title">Στοιχεία Επικοινωνίας</h3>
+                                <p
+                                    class="selected-slot-info mb-5 text-center text-[#475569] text-sm md:text-base border-b border-gray-100 pb-3">
+                                    <strong id="final-date-time">Επιλεγμένο Ραντεβού</strong>
+                                </p>
+                                <form id="booking-form" class="custom-form w-full px-2">
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-4">
+                                        <div class="flex flex-col space-y-4">
+                                            <div class="form-group flex flex-col items-start w-full">
+                                                <label for="b-name" class="font-bold text-[#1a365d] text-xs mb-1"
+                                                    data-i18n="bm.name.label">Ονοματεπώνυμο *</label>
+                                                <input type="text" id="b-name" required
+                                                    placeholder="π.χ. Μαρία Παπαδοπούλου"
+                                                    data-i18n-placeholder="bm.name.placeholder"
+                                                    class="w-full px-3 py-2 border border-gray-200 rounded focus:outline-none focus:border-[#0284c7] focus:ring-1 focus:ring-[#0284c7] text-gray-700 placeholder-gray-400 text-sm transition-all shadow-sm">
+                                            </div>
+                                            <div class="form-group flex flex-col items-start w-full">
+                                                <label for="b-email" class="font-bold text-[#1a365d] text-xs mb-1"
+                                                    data-i18n="bm.email.label">Email *</label>
+                                                <input type="email" id="b-email" required
+                                                    placeholder="maria@example.com"
+                                                    data-i18n-placeholder="bm.email.placeholder"
+                                                    class="w-full px-3 py-2 border border-gray-200 rounded focus:outline-none focus:border-[#0284c7] focus:ring-1 focus:ring-[#0284c7] text-gray-700 placeholder-gray-400 text-sm transition-all shadow-sm">
+                                            </div>
+                                            <div class="form-group flex flex-col items-start w-full">
+                                                <label for="b-phone" class="font-bold text-[#1a365d] text-xs mb-1"
+                                                    data-i18n="bm.phone.label">Κινητό Τηλέφωνο *</label>
+                                                <input type="tel" id="b-phone" required placeholder="6930000000"
+                                                    data-i18n-placeholder="bm.phone.placeholder"
+                                                    class="w-full px-3 py-2 border border-gray-200 rounded focus:outline-none focus:border-[#0284c7] focus:ring-1 focus:ring-[#0284c7] text-gray-700 placeholder-gray-400 text-sm transition-all shadow-sm">
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="flex flex-col mt-4 md:mt-0 border-t border-gray-100 pt-4 md:border-none md:pt-0">
+                                            <p class="font-bold text-[#1a365d] text-sm mb-1"
+                                                data-i18n="bm.services.heading">Ενδιαφέρομαι για...</p>
+                                            <label
+                                                class="flex items-center space-x-2 text-sm text-gray-700 cursor-pointer hover:bg-gray-50 py-1 rounded transition group">
+                                                <input type="checkbox" name="services" value="General Check"
+                                                    class="w-4 h-4 text-[#0284c7] rounded border-gray-300 cursor-pointer">
+                                                <span data-i18n="bm.svc.general_check">Γενικός Έλεγχος</span>
+                                            </label>
+                                            <label
+                                                class="flex items-center space-x-2 text-sm text-gray-700 cursor-pointer hover:bg-gray-50 py-1 rounded transition group">
+                                                <input type="checkbox" name="services" value="Dental Consult"
+                                                    class="w-4 h-4 text-[#0284c7] rounded border-gray-300 cursor-pointer">
+                                                <span data-i18n="bm.svc.dental_consult">Οδοντιατρική Εκτίμηση</span>
+                                            </label>
+                                            <label
+                                                class="flex items-center space-x-2 text-sm text-gray-700 cursor-pointer hover:bg-gray-50 py-1 rounded transition group">
+                                                <input type="checkbox" name="services" value="Surgical Consult"
+                                                    class="w-4 h-4 text-[#0284c7] rounded border-gray-300 cursor-pointer">
+                                                <span data-i18n="bm.svc.surgical_consult">Χειρουργική Εκτίμηση</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="text-center mt-6">
+                                        <button type="submit"
+                                            class="btn btn-primary inline-block bg-[#0284c7] text-white font-bold py-3 px-[20px] rounded-[2rem] hover:bg-blue-600 transition shadow-md text-sm uppercase tracking-wide"
+                                            id="submit-booking-btn" data-i18n="bm.submit">Επιβεβαίωση Ραντεβού</button>
+                                    </div>
+                                    <div class="booking-loader mt-3 flex justify-center" id="submit-loader"
+                                        style="display: none;">
+                                        <div
+                                            class="spinner w-6 h-6 border-4 border-t-[#0284c7] border-gray-100 rounded-full animate-spin">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- Step 4: Success Message -->
+                            <div id="booking-step-4" class="booking-step text-center py-6" style="display: none;">
+                                <div class="success-icon text-5xl text-green-500 mb-4 font-bold">✓</div>
+                                <h3 class="step-title font-open text-xl font-bold text-[#1a365d] mb-3"
+                                    data-i18n="bm.step4.title">Το ραντεβού σας προστέθηκε!</h3>
+                                <p class="text-gray-500 text-sm" data-i18n="bm.step4.text">Θα λάβετε σύντομα ένα email
+                                    επιβεβαίωσης. Σας περιμένουμε.</p>
+                                <button
+                                    class="btn btn-secondary mt-8 px-6 py-2 border border-gray-300 rounded-[2rem] text-gray-600 hover:bg-gray-50 transition text-sm font-bold shadow-sm"
+                                    onclick="location.reload()" data-i18n="bm.step4.new">Νέο Ραντεβού</button>
+                            </div>
                         </div>
                     </div>
-                </div>
                 </section>
             </div>
         </div>
@@ -432,15 +541,18 @@
     <div class="text-center mt-8 mb-12 fade-in flex justify-center space-x-6">
         <a href="https://www.facebook.com/dentplant/" target="_blank"
             class="bg-brand-blue rounded-full p-2 hover:opacity-75 transition-opacity">
-            <img class="w-10 h-10" src="socialicons/webicon-facebook.png" alt="Επισκεφθείτε την Dentplant Clinic στο Facebook" data-i18n-alt="alt.fb">
+            <img class="w-10 h-10" src="socialicons/webicon-facebook.png"
+                alt="Επισκεφθείτε την Dentplant Clinic στο Facebook" data-i18n-alt="alt.fb">
         </a>
         <a href="https://www.instagram.com/i_smile.gr/" target="_blank"
             class="bg-brand-blue rounded-full p-2 hover:opacity-75 transition-opacity">
-            <img class="w-10 h-10" src="socialicons/webicon-instagram.png" alt="Ακολουθήστε τον Άγγελο Μοσχόπουλο στο Instagram" data-i18n-alt="alt.ig">
+            <img class="w-10 h-10" src="socialicons/webicon-instagram.png"
+                alt="Ακολουθήστε τον Άγγελο Μοσχόπουλο στο Instagram" data-i18n-alt="alt.ig">
         </a>
         <a href="https://www.linkedin.com/in/angelo-moshopoulos-a93476403/" target="_blank"
             class="bg-brand-blue rounded-full p-2 hover:opacity-75 transition-opacity">
-            <img class="w-10 h-10" src="socialicons/webicon-linkedin.png" alt="Επαγγελματικό προφίλ του Άγγελου Μοσχόπουλου στο LinkedIn" data-i18n-alt="alt.li">
+            <img class="w-10 h-10" src="socialicons/webicon-linkedin.png"
+                alt="Επαγγελματικό προφίλ του Άγγελου Μοσχόπουλου στο LinkedIn" data-i18n-alt="alt.li">
         </a>
     </div>
     <footer class="py-12 bg-brand-blue border-t border-white/10 mt-auto">
@@ -450,23 +562,30 @@
                     Πλατεία Ντάβαρη 2, Παλαιό Φάληρο<br>τηλ. 210 931 2651
                 </p>
                 <div class="pt-2">
-                    <a href="https://g.page/r/CY1vTXIAWJxCEBM/review" target="_blank" class="text-yellow-400 font-bold hover:text-yellow-300 text-sm flex items-center justify-center gap-2 group transition-all underline decoration-yellow-400/30 underline-offset-4">
+                    <a href="https://g.page/r/CY1vTXIAWJxCEBM/review" target="_blank"
+                        class="text-yellow-400 font-bold hover:text-yellow-300 text-sm flex items-center justify-center gap-2 group transition-all underline decoration-yellow-400/30 underline-offset-4">
                         <span data-i18n="contact.review_cta">Γράψτε μια Αξιολόγηση</span>
                         <span class="group-hover:translate-x-1 transition-transform">→</span>
                     </a>
                 </div>
                 <div class="max-w-2xl text-white/60 text-xs leading-relaxed font-open space-y-2">
-                    <p data-i18n-html="footer.disclaimer">Η ενημέρωση σε αυτόν τον ιστότοπο παρέχεται αποκλειστικά για εκπαιδευτικούς σκοπούς και δεν υποκαθιστά την επαγγελματική ιατρική συμβουλή.</p>
-          <p class="font-bold text-white/80 pt-4" data-i18n-html="footer.metropolitan"></p>
-                    <p class="font-bold text-white/80 py-1" data-i18n-html="footer.membership">Μέλος του Οδοντιατρικού Συλλόγου Πειραιά</p>
-          <p class="font-bold text-white/80 pb-4" data-i18n-html="footer.doctoranytime"></p>
-                    <p class="italic" data-i18n="footer.medical_review">Ελέγχθηκε ιατρικά από τον Άγγελο Μοσχόπουλο, DMD | Ενημέρωση: Απρίλιος 2026</p>
+                    <p data-i18n-html="footer.disclaimer">Η ενημέρωση σε αυτόν τον ιστότοπο παρέχεται αποκλειστικά για
+                        εκπαιδευτικούς σκοπούς και δεν υποκαθιστά την επαγγελματική ιατρική συμβουλή.</p>
+                    <p class="font-bold text-white/80 pt-4" data-i18n-html="footer.metropolitan"></p>
+                    <p class="font-bold text-white/80 py-1" data-i18n-html="footer.membership">Μέλος του Οδοντιατρικού
+                        Συλλόγου Πειραιά</p>
+                    <p class="font-bold text-white/80 pb-4" data-i18n-html="footer.doctoranytime"></p>
+                    <p class="italic" data-i18n="footer.medical_review">Ελέγχθηκε ιατρικά από τον Άγγελο Μοσχόπουλο, DMD
+                        | Ενημέρωση: Απρίλιος 2026</p>
                 </div>
-                <div class="flex flex-wrap justify-center gap-6 text-white/70 text-sm font-medium uppercase tracking-widest">
-                    
-                    <a href="privacy.html" class="hover:text-white transition-colors" data-i18n="footer.privacy">Πολιτική Απορρήτου</a>
+                <div
+                    class="flex flex-wrap justify-center gap-6 text-white/70 text-sm font-medium uppercase tracking-widest">
+
+                    <a href="privacy.html" class="hover:text-white transition-colors"
+                        data-i18n="footer.privacy">Πολιτική Απορρήτου</a>
                 </div>
-                <p class="text-white/40 font-noto text-[10px] uppercase tracking-tighter" data-i18n-html="footer.copyright">
+                <p class="text-white/40 font-noto text-[10px] uppercase tracking-tighter"
+                    data-i18n-html="footer.copyright">
                     Copyright 2026. Dentplant Clinic. <br>All Rights Reserved.
                 </p>
             </div>
@@ -478,7 +597,7 @@
     <script src="js/booking.js?v=4" defer></script>
     <script>
         // Interaction: Click outside the booking widget to revert to originating page
-        document.addEventListener('mousedown', function(e) {
+        document.addEventListener('mousedown', function (e) {
             const widget = document.querySelector('.booking-standalone-wrapper');
             // If click is outside the white widget container
             if (widget && !widget.contains(e.target)) {
@@ -499,4 +618,5 @@
         });
     </script>
 </body>
+
 </html>

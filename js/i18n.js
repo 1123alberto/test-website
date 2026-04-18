@@ -246,7 +246,7 @@
       <p>Εάν θεωρείτε ότι τα δικαιώματά σας έχουν παραβιαστεί, μπορείτε να προσφύγετε στην Αρχή Προστασίας Δεδομένων Προσωπικού Χαρακτήρα (www.dpa.gr).</p>`,
 
       /* ── Booking Modal ────────────────────────── */
-      'bm.title': 'Κλείστε Ραντεβού για Οδοντικά Εμφυτεύματα στο Παλαιό Φάληρο',
+      'bm.title': 'Κλείστε το Ραντεβού σας',
       'bm.subtitle': 'Επιλέξτε ημερομηνία και ώρα.',
       'bm.step2.back': '← Πίσω στο Ημερολόγιο',
       'bm.step3.back': '← Πίσω στις Ώρες',
@@ -586,7 +586,7 @@
       <p>If you believe your rights have been violated, you have the right to lodge a complaint with the Hellenic Data Protection Authority (www.dpa.gr).</p>`,
 
       /* ── Booking Modal ────────────────────────── */
-      'bm.title': 'Book Your Appointment for Dental Implants in Paleo Faliro',
+      'bm.title': 'Book Your Appointment',
       'bm.subtitle': 'Select a date and time.',
       'bm.step2.back': '← Back to Calendar',
       'bm.step3.back': '← Back to Time Slots',

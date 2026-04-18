@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="el">
+
 <head>
-    <meta charset="utf-8">
+  <meta charset="utf-8">
   <script>
     if (window.location.hostname === "dentplant.gr") {
       window.location.replace("https://www.dentplant.gr" + window.location.pathname + window.location.search);
     }
   </script>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title data-i18n="title.manage">Διαχείριση Ραντεβού | Παλαιό Φάληρο | Άγγελος Μοσχόπουλος</title>
-    <meta name="description" content="Διαχειριστείτε το οδοντιατρικό σας ραντεβού στην κλινική Dentplant. Δείτε τις λεπτομέρειες, αλλάξτε την ημερομηνία ή ακυρώστε το ραντεβού σας εύκολα και γρήγορα online." data-i18n-content="desc.manage">
-    <script type="application/ld+json">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title data-i18n="title.manage">Διαχείριση Ραντεβού | Παλαιό Φάληρο | Άγγελος Μοσχόπουλος</title>
+  <meta name="description"
+    content="Διαχειριστείτε το οδοντιατρικό σας ραντεβού στην κλινική Dentplant. Δείτε τις λεπτομέρειες, αλλάξτε την ημερομηνία ή ακυρώστε το ραντεβού σας εύκολα και γρήγορα online."
+    data-i18n-content="desc.manage">
+  <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
@@ -124,195 +127,221 @@
       ]
     }
     </script>
-    <link rel="stylesheet" href="css/output.css?v=10">
-    <link rel="icon" href="images/dental-implant-circle-256-torqued.webp" type="image/png">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Julius+Sans+One%7CNoto+Sans:400,b%7COpen+Sans:400,600,600i,b,i">
-    <style>
-        .fade-in {
-            animation: fadeIn 0.6s ease-out forwards;
-            opacity: 0;
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    .text-white { color: #ffffff !important; }
-  .border-white/50 { border-color: rgba(255, 255, 255, 0.5) !important; }
-    .bg-white/20 { background-color: rgba(255, 255, 255, 0.2) !important; }
-    .text-[10px] { font-size: 10px !important; }
-    .text-[11px] { font-size: 11px !important; }
+  <link rel="stylesheet" href="css/output.css?v=10">
+  <link rel="icon" href="images/dental-implant-circle-256-torqued.webp" type="image/png">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Julius+Sans+One%7CNoto+Sans:400,b%7COpen+Sans:400,600,600i,b,i">
+  <style>
+    .fade-in {
+      animation: fadeIn 0.6s ease-out forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .text-white {
+      color: #ffffff !important;
+    }
+
+    .border-white/50 {
+      border-color: rgba(255, 255, 255, 0.5) !important;
+    }
+
+    .bg-white/20 {
+      background-color: rgba(255, 255, 255, 0.2) !important;
+    }
+
+    .text-[10px] {
+      font-size: 10px !important;
+    }
+
+    .text-[11px] {
+      font-size: 11px !important;
+    }
   </style>
 </head>
+
 <body class="bg-white overflow-x-hidden font-open text-gray-800 flex flex-col">
-    <!-- Fixed Nav -->
-    <nav
-        class="fixed top-0 w-full bg-brand-blue shadow-md z-50 px-6 py-3 flex items-center justify-between transition-transform duration-300">
-        <a href="index.html" class="w-12 h-12 rounded-full shadow-strong overflow-hidden flex-shrink-0 bg-white">
-            <img alt="Λογότυπο Dentplant Clinic - Άγγελος Μοσχόπουλος Εμφυτεύματα Παλαιό Φάληρο" data-i18n-alt="alt.logo" class="w-full h-full object-contain"
-                src="images/dental-implant-circle-256-torqued.webp">
-        </a>
-        <div class="flex items-center gap-4">
-            <div
-                class="flex items-center space-x-4 md:space-x-8 text-white text-[11px] leading-tight md:text-xs md:leading-normal font-medium uppercase font-noto">
-                <a class="text-yellow-300 transition-colors" href="index.html" data-i18n="nav.home">Αρχικη</a>
-                <a class="hover:text-gray-200 transition-colors" href="faq.html" data-i18n="nav.faq">ΣΥΧΝΕΣ ΕΡΩΤΗΣΕΙΣ</a>
-            </div>
-            <button onclick="i18n.toggleLanguage()"
-                class="lang-toggle text-white border border-white/50 rounded px-2 py-0.5 text-[10px] font-bold tracking-widest uppercase hover:bg-white/20 transition-all duration-300 flex-shrink-0">EN</button>
-        </div>
-    </nav>
-    <!-- Header Background -->
-    <header
-        class="min-h-[700px] h-screen bg-brand-blue bg-[url('../images/tools_wallpaper.jpg')] bg-cover bg-scroll md:bg-fixed bg-center bg-no-repeat flex flex-col justify-center items-center relative pt-20">
-        <!-- Content Area (Management Card) -->
-        <main class="w-full flex items-center justify-center p-6 z-10">
-            <div
-                class="max-w-[500px] w-full bg-white rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.3)] p-8 md:p-12 fade-in border border-gray-100 relative">
-                <div id="mg-loading-state" class="text-center py-12">
-                    <div
-                        class="w-12 h-12 border-4 border-t-[#0284c7] border-gray-100 rounded-full animate-spin mx-auto mb-4">
-                    </div>
-                    <p class="text-gray-500 font-bold" data-i18n="mg.loading">Αναζήτηση ραντεβού...</p>
-                </div>
-                <div id="mg-not-found-state" class="text-center py-8 hidden">
-                    <div class="text-red-400 text-5xl mb-4 font-bold">!</div>
-                    <h2 class="text-xl font-bold text-[#1a365d] mb-4 font-open" data-i18n="mg.notfound">Το ραντεβού δεν
-                        βρέθηκε.</h2>
-                    <div class="mt-8 flex justify-center">
-                        <a href="index.html#booking"
-                            class="w-full sm:w-1/2 h-12 bg-brand-blue text-white font-bold rounded-full shadow-md hover:bg-blue-600 transition tracking-widest text-xs uppercase flex items-center justify-center"
-                            data-i18n="bm.step4.new">Νεο Ραντεβου</a>
-                    </div>
-                </div>
-                <div id="mg-details-state" class="hidden">
-                    <h2 class="text-2xl font-bold text-[#1a365d] mb-1 text-center font-open" data-i18n="mg.appointment">
-                        Το
-                        Ραντεβού σας</h2>
-                    <p class="text-gray-400 text-center text-xs uppercase tracking-widest mb-8" data-i18n="mg.subtitle">
-                        Δειτε η ακυρωστε την κρατηση σας.</p>
-                    <div class="bg-gray-50 rounded-2xl p-6 mb-8 border border-gray-100 shadow-inner">
-                        <div id="mg-event-title" class="font-bold text-[#1a365d] text-lg mb-2">...</div>
-                        <div id="mg-event-time"
-                            class="text-brand-blue font-bold text-base mb-4 flex items-center gap-2">
-                            <span class="w-2 h-2 rounded-full bg-brand-blue"></span>
-                            <span id="mg-display-time">...</span>
-                        </div>
-                        <div id="mg-event-desc"
-                            class="text-xs text-gray-500 leading-relaxed border-t border-gray-200 mt-4 pt-4 whitespace-pre-wrap small-desc">
-                            ...</div>
-                    </div>
-                    <div class="flex flex-col gap-4 mt-10 items-center">
-                        <button id="reschedule-btn"
-                            class="w-full sm:w-1/2 h-12 bg-white text-brand-blue border-2 border-brand-blue/20 rounded-full shadow-sm hover:bg-gray-50 hover:border-brand-blue transition-all transform hover:-translate-y-0.5 tracking-widest text-xs font-bold uppercase flex items-center justify-center gap-2">
-                            <span data-i18n="mg.reschedule_btn">Αλλαγη Ραντεβου</span>
-                        </button>
-                        <button id="confirm-cancel-trigger"
-                            class="w-full sm:w-1/2 h-12 bg-white text-red-500 border-2 border-red-100 rounded-full hover:bg-red-50 hover:border-red-200 transition-all transform hover:-translate-y-0.5 text-xs font-bold uppercase tracking-widest flex items-center justify-center gap-2">
-                            <span data-i18n="mg.cancel_btn">Ακυρωση Ραντεβου</span>
-                        </button>
-                    </div>
-                </div>
-                <!-- Cancellation Confirmation -->
-                <div id="mg-cancel-confirm-state" class="hidden text-center py-4">
-                    <h3 class="text-xl font-bold text-red-600 mb-4 font-open" data-i18n="mg.confirm_title">Επιβεβαίωση
-                        Ακύρωσης</h3>
-                    <p class="text-gray-600 mb-8 text-sm leading-relaxed font-open" data-i18n="mg.confirm_text">Είστε
-                        σίγουροι ότι
-                        θέλετε να ακυρώσετε το ραντεβού σας? Αυτή η ενέργεια δεν αναιρείται.</p>
-                    <div class="flex flex-col gap-4 mt-10 items-center">
-                        <button id="final-cancel-btn"
-                            class="w-full sm:w-1/2 h-12 bg-red-600 text-white rounded-full shadow-md hover:bg-red-700 transition-all transform hover:-translate-y-0.5 tracking-widest text-xs font-bold uppercase flex items-center justify-center"
-                            data-i18n="mg.confirm_yes">Ναι, Ακυρωση</button>
-                        <button id="cancel-cancel-btn"
-                            class="w-full sm:w-1/2 h-12 bg-gray-100 text-gray-500 rounded-full hover:bg-gray-200 transition-all transform hover:-translate-y-0.5 text-xs font-bold uppercase tracking-widest flex items-center justify-center"
-                            data-i18n="mg.confirm_no">Οχι, Πισω</button>
-                    </div>
-                </div>
-                <!-- Success State -->
-                <div id="mg-success-state" class="hidden text-center py-8">
-                    <div
-                        class="w-20 h-20 bg-green-50 text-green-500 rounded-full flex items-center justify-center text-4xl mx-auto mb-6 shadow-sm">
-                        ✓</div>
-                    <h3 class="text-2xl font-bold text-[#1a365d] mb-4 font-open" data-i18n="mg.cancel_success">Το
-                        ραντεβού σας
-                        ακυρώθηκε.</h3>
-                    <p class="text-gray-500 text-sm mb-2 font-open" data-i18n="mg.redirecting">Θα μεταφερθείτε στην
-                        αρχική σελίδα σε
-                        λίγα δευτερόλεπτα...</p>
-                    <div class="mt-8 border-t border-gray-100 pt-8">
-                        <a href="index.html"
-                            class="text-brand-blue font-bold text-sm uppercase tracking-widest hover:underline flex items-center justify-center gap-2">
-                            &larr; <span data-i18n="nav.home">Αρχικη</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </main>
-    </header>
-    <section class="py-12 bg-white">
-        <hr class="w-4/5 mx-auto border-gray-200">
-        <div class="w-11/12 md:w-3/4 mx-auto bg-brand-light text-brand-blue text-center rounded-lg p-8 italic tracking-wide text-lg font-open my-12 fade-in shadow-inner"
-            data-i18n-html="quote.index">
-            &quot; Η υγεία και η λειτουργικότητα του χαμόγελού σας αποτελούν για εμάς κορυφαία προτεραιότητα. <br>Στο
-            υπερσύγχρονο
-            ιατρείο μας, συνδυάζουμε την επιστημονική αρτιότητα με την ανθρώπινη προσέγγιση. Σας καλωσορίζουμε σε ένα
-            περιβάλλον όπου η προσωπική φροντίδα συναντά την καινοτομία. &quot;
-        </div>
-        <hr class="w-4/5 mx-auto border-gray-200">
-    </section>
-    <div class="text-center mt-8 mb-12 fade-in flex justify-center space-x-6">
-        <a href="https://www.facebook.com/dentplant/" target="_blank"
-            class="bg-brand-blue rounded-full p-2 hover:opacity-75 transition-opacity">
-            <img class="w-10 h-10" src="socialicons/webicon-facebook.png" alt="Επισκεφθείτε την Dentplant Clinic στο Facebook" data-i18n-alt="alt.fb">
-        </a>
-        <a href="https://www.instagram.com/i_smile.gr/" target="_blank"
-            class="bg-brand-blue rounded-full p-2 hover:opacity-75 transition-opacity">
-            <img class="w-10 h-10" src="socialicons/webicon-instagram.png" alt="Ακολουθήστε τον Άγγελο Μοσχόπουλο στο Instagram" data-i18n-alt="alt.ig">
-        </a>
-        <a href="https://www.linkedin.com/in/angelo-moshopoulos-a93476403/" target="_blank"
-            class="bg-brand-blue rounded-full p-2 hover:opacity-75 transition-opacity">
-            <img class="w-10 h-10" src="socialicons/webicon-linkedin.png" alt="Επαγγελματικό προφίλ του Άγγελου Μοσχόπουλου στο LinkedIn" data-i18n-alt="alt.li">
-        </a>
+  <!-- Fixed Nav -->
+  <nav
+    class="fixed top-0 w-full bg-brand-blue shadow-md z-50 px-6 py-3 flex items-center justify-between transition-transform duration-300">
+    <a href="index.html" class="w-12 h-12 rounded-full shadow-strong overflow-hidden flex-shrink-0 bg-white">
+      <img alt="Λογότυπο Dentplant Clinic - Άγγελος Μοσχόπουλος Εμφυτεύματα Παλαιό Φάληρο" data-i18n-alt="alt.logo"
+        class="w-full h-full object-contain" src="images/dental-implant-circle-256-torqued.webp">
+    </a>
+    <div class="flex items-center gap-4">
+      <div
+        class="flex items-center space-x-4 md:space-x-8 text-white text-[11px] leading-tight md:text-xs md:leading-normal font-medium uppercase font-noto">
+        <a class="text-yellow-300 transition-colors" href="index.html" data-i18n="nav.home">Αρχικη</a>
+        <a class="hover:text-gray-200 transition-colors" href="faq.html" data-i18n="nav.faq">ΣΥΧΝΕΣ ΕΡΩΤΗΣΕΙΣ</a>
+      </div>
+      <button onclick="i18n.toggleLanguage()"
+        class="lang-toggle text-white border border-white/50 rounded px-2 py-0.5 text-[10px] font-bold tracking-widest uppercase hover:bg-white/20 transition-all duration-300 flex-shrink-0">EN</button>
     </div>
-    <footer class="py-12 bg-brand-blue border-t border-white/10 mt-auto">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col items-center text-center space-y-6">
-                <p class="text-white font-bold tracking-wide text-lg font-noto" data-i18n-html="footer.address">
-                    Πλατεία Ντάβαρη 2, Παλαιό Φάληρο<br>τηλ. 210 931 2651
-                </p>
-                <div class="pt-2">
-                    <a href="https://g.page/r/CY1vTXIAWJxCEBM/review" target="_blank" class="text-yellow-400 font-bold hover:text-yellow-300 text-sm flex items-center justify-center gap-2 group transition-all underline decoration-yellow-400/30 underline-offset-4">
-                        <span data-i18n="contact.review_cta">Γράψτε μια Αξιολόγηση</span>
-                        <span class="group-hover:translate-x-1 transition-transform">→</span>
-                    </a>
-                </div>
-                <div class="max-w-2xl text-white/60 text-xs leading-relaxed font-open space-y-2">
-                    <p data-i18n-html="footer.disclaimer">Η ενημέρωση σε αυτόν τον ιστότοπο παρέχεται αποκλειστικά για εκπαιδευτικούς σκοπούς και δεν υποκαθιστά την επαγγελματική ιατρική συμβουλή.</p>
-          <p class="font-bold text-white/80 pt-4" data-i18n-html="footer.metropolitan"></p>
-                    <p class="font-bold text-white/80 py-1" data-i18n-html="footer.membership">Μέλος του Οδοντιατρικού Συλλόγου Πειραιά</p>
-          <p class="font-bold text-white/80 pb-4" data-i18n-html="footer.doctoranytime"></p>
-                    <p class="italic" data-i18n="footer.medical_review">Ελέγχθηκε ιατρικά από τον Άγγελο Μοσχόπουλο, DMD | Ενημέρωση: Απρίλιος 2026</p>
-                </div>
-                <div class="flex flex-wrap justify-center gap-6 text-white/70 text-sm font-medium uppercase tracking-widest">
-                    
-                    <a href="privacy.html" class="hover:text-white transition-colors" data-i18n="footer.privacy">Πολιτική Απορρήτου</a>
-                </div>
-                <p class="text-white/40 font-noto text-[10px] uppercase tracking-tighter" data-i18n-html="footer.copyright">
-                    Copyright 2026. Dentplant Clinic. <br>All Rights Reserved.
-                </p>
-            </div>
+  </nav>
+  <!-- Header Background -->
+  <header
+    class="min-h-[700px] h-screen bg-brand-blue bg-[url('images/tools_wallpaper.jpg')] bg-cover bg-scroll md:bg-fixed bg-center bg-no-repeat flex flex-col justify-center items-center relative pt-20">
+    <!-- Content Area (Management Card) -->
+    <main class="w-full flex items-center justify-center p-6 z-10">
+      <div
+        class="max-w-[500px] w-full bg-white rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.3)] p-8 md:p-12 fade-in border border-gray-100 relative">
+        <div id="mg-loading-state" class="text-center py-12">
+          <div class="w-12 h-12 border-4 border-t-[#0284c7] border-gray-100 rounded-full animate-spin mx-auto mb-4">
+          </div>
+          <p class="text-gray-500 font-bold" data-i18n="mg.loading">Αναζήτηση ραντεβού...</p>
         </div>
-    </footer>
-    <script src="js/i18n.js"></script>
-    <script src="js/outofview.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/manage.js" defer></script>
+        <div id="mg-not-found-state" class="text-center py-8 hidden">
+          <div class="text-red-400 text-5xl mb-4 font-bold">!</div>
+          <h2 class="text-xl font-bold text-[#1a365d] mb-4 font-open" data-i18n="mg.notfound">Το ραντεβού δεν
+            βρέθηκε.</h2>
+          <div class="mt-8 flex justify-center">
+            <a href="index.html#booking"
+              class="w-full sm:w-1/2 h-12 bg-brand-blue text-white font-bold rounded-full shadow-md hover:bg-blue-600 transition tracking-widest text-xs uppercase flex items-center justify-center"
+              data-i18n="bm.step4.new">Νεο Ραντεβου</a>
+          </div>
+        </div>
+        <div id="mg-details-state" class="hidden">
+          <h2 class="text-2xl font-bold text-[#1a365d] mb-1 text-center font-open" data-i18n="mg.appointment">
+            Το
+            Ραντεβού σας</h2>
+          <p class="text-gray-400 text-center text-xs uppercase tracking-widest mb-8" data-i18n="mg.subtitle">
+            Δειτε η ακυρωστε την κρατηση σας.</p>
+          <div class="bg-gray-50 rounded-2xl p-6 mb-8 border border-gray-100 shadow-inner">
+            <div id="mg-event-title" class="font-bold text-[#1a365d] text-lg mb-2">...</div>
+            <div id="mg-event-time" class="text-brand-blue font-bold text-base mb-4 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-brand-blue"></span>
+              <span id="mg-display-time">...</span>
+            </div>
+            <div id="mg-event-desc"
+              class="text-xs text-gray-500 leading-relaxed border-t border-gray-200 mt-4 pt-4 whitespace-pre-wrap small-desc">
+              ...</div>
+          </div>
+          <div class="flex flex-col gap-4 mt-10 items-center">
+            <button id="reschedule-btn"
+              class="w-full sm:w-1/2 h-12 bg-white text-brand-blue border-2 border-brand-blue/20 rounded-full shadow-sm hover:bg-gray-50 hover:border-brand-blue transition-all transform hover:-translate-y-0.5 tracking-widest text-xs font-bold uppercase flex items-center justify-center gap-2">
+              <span data-i18n="mg.reschedule_btn">Αλλαγη Ραντεβου</span>
+            </button>
+            <button id="confirm-cancel-trigger"
+              class="w-full sm:w-1/2 h-12 bg-white text-red-500 border-2 border-red-100 rounded-full hover:bg-red-50 hover:border-red-200 transition-all transform hover:-translate-y-0.5 text-xs font-bold uppercase tracking-widest flex items-center justify-center gap-2">
+              <span data-i18n="mg.cancel_btn">Ακυρωση Ραντεβου</span>
+            </button>
+          </div>
+        </div>
+        <!-- Cancellation Confirmation -->
+        <div id="mg-cancel-confirm-state" class="hidden text-center py-4">
+          <h3 class="text-xl font-bold text-red-600 mb-4 font-open" data-i18n="mg.confirm_title">Επιβεβαίωση
+            Ακύρωσης</h3>
+          <p class="text-gray-600 mb-8 text-sm leading-relaxed font-open" data-i18n="mg.confirm_text">Είστε
+            σίγουροι ότι
+            θέλετε να ακυρώσετε το ραντεβού σας? Αυτή η ενέργεια δεν αναιρείται.</p>
+          <div class="flex flex-col gap-4 mt-10 items-center">
+            <button id="final-cancel-btn"
+              class="w-full sm:w-1/2 h-12 bg-red-600 text-white rounded-full shadow-md hover:bg-red-700 transition-all transform hover:-translate-y-0.5 tracking-widest text-xs font-bold uppercase flex items-center justify-center"
+              data-i18n="mg.confirm_yes">Ναι, Ακυρωση</button>
+            <button id="cancel-cancel-btn"
+              class="w-full sm:w-1/2 h-12 bg-gray-100 text-gray-500 rounded-full hover:bg-gray-200 transition-all transform hover:-translate-y-0.5 text-xs font-bold uppercase tracking-widest flex items-center justify-center"
+              data-i18n="mg.confirm_no">Οχι, Πισω</button>
+          </div>
+        </div>
+        <!-- Success State -->
+        <div id="mg-success-state" class="hidden text-center py-8">
+          <div
+            class="w-20 h-20 bg-green-50 text-green-500 rounded-full flex items-center justify-center text-4xl mx-auto mb-6 shadow-sm">
+            ✓</div>
+          <h3 class="text-2xl font-bold text-[#1a365d] mb-4 font-open" data-i18n="mg.cancel_success">Το
+            ραντεβού σας
+            ακυρώθηκε.</h3>
+          <p class="text-gray-500 text-sm mb-2 font-open" data-i18n="mg.redirecting">Θα μεταφερθείτε στην
+            αρχική σελίδα σε
+            λίγα δευτερόλεπτα...</p>
+          <div class="mt-8 border-t border-gray-100 pt-8">
+            <a href="index.html"
+              class="text-brand-blue font-bold text-sm uppercase tracking-widest hover:underline flex items-center justify-center gap-2">
+              &larr; <span data-i18n="nav.home">Αρχικη</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </header>
+  <section class="py-12 bg-white">
+    <hr class="w-4/5 mx-auto border-gray-200">
+    <div
+      class="w-11/12 md:w-3/4 mx-auto bg-brand-light text-brand-blue text-center rounded-lg p-8 italic tracking-wide text-lg font-open my-12 fade-in shadow-inner"
+      data-i18n-html="quote.index">
+      &quot; Η υγεία και η λειτουργικότητα του χαμόγελού σας αποτελούν για εμάς κορυφαία προτεραιότητα. <br>Στο
+      υπερσύγχρονο
+      ιατρείο μας, συνδυάζουμε την επιστημονική αρτιότητα με την ανθρώπινη προσέγγιση. Σας καλωσορίζουμε σε ένα
+      περιβάλλον όπου η προσωπική φροντίδα συναντά την καινοτομία. &quot;
+    </div>
+    <hr class="w-4/5 mx-auto border-gray-200">
+  </section>
+  <div class="text-center mt-8 mb-12 fade-in flex justify-center space-x-6">
+    <a href="https://www.facebook.com/dentplant/" target="_blank"
+      class="bg-brand-blue rounded-full p-2 hover:opacity-75 transition-opacity">
+      <img class="w-10 h-10" src="socialicons/webicon-facebook.png" alt="Επισκεφθείτε την Dentplant Clinic στο Facebook"
+        data-i18n-alt="alt.fb">
+    </a>
+    <a href="https://www.instagram.com/i_smile.gr/" target="_blank"
+      class="bg-brand-blue rounded-full p-2 hover:opacity-75 transition-opacity">
+      <img class="w-10 h-10" src="socialicons/webicon-instagram.png"
+        alt="Ακολουθήστε τον Άγγελο Μοσχόπουλο στο Instagram" data-i18n-alt="alt.ig">
+    </a>
+    <a href="https://www.linkedin.com/in/angelo-moshopoulos-a93476403/" target="_blank"
+      class="bg-brand-blue rounded-full p-2 hover:opacity-75 transition-opacity">
+      <img class="w-10 h-10" src="socialicons/webicon-linkedin.png"
+        alt="Επαγγελματικό προφίλ του Άγγελου Μοσχόπουλου στο LinkedIn" data-i18n-alt="alt.li">
+    </a>
+  </div>
+  <footer class="py-12 bg-brand-blue border-t border-white/10 mt-auto">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col items-center text-center space-y-6">
+        <p class="text-white font-bold tracking-wide text-lg font-noto" data-i18n-html="footer.address">
+          Πλατεία Ντάβαρη 2, Παλαιό Φάληρο<br>τηλ. 210 931 2651
+        </p>
+        <div class="pt-2">
+          <a href="https://g.page/r/CY1vTXIAWJxCEBM/review" target="_blank"
+            class="text-yellow-400 font-bold hover:text-yellow-300 text-sm flex items-center justify-center gap-2 group transition-all underline decoration-yellow-400/30 underline-offset-4">
+            <span data-i18n="contact.review_cta">Γράψτε μια Αξιολόγηση</span>
+            <span class="group-hover:translate-x-1 transition-transform">→</span>
+          </a>
+        </div>
+        <div class="max-w-2xl text-white/60 text-xs leading-relaxed font-open space-y-2">
+          <p data-i18n-html="footer.disclaimer">Η ενημέρωση σε αυτόν τον ιστότοπο παρέχεται αποκλειστικά για
+            εκπαιδευτικούς σκοπούς και δεν υποκαθιστά την επαγγελματική ιατρική συμβουλή.</p>
+          <p class="font-bold text-white/80 pt-4" data-i18n-html="footer.metropolitan"></p>
+          <p class="font-bold text-white/80 py-1" data-i18n-html="footer.membership">Μέλος του Οδοντιατρικού Συλλόγου
+            Πειραιά</p>
+          <p class="font-bold text-white/80 pb-4" data-i18n-html="footer.doctoranytime"></p>
+          <p class="italic" data-i18n="footer.medical_review">Ελέγχθηκε ιατρικά από τον Άγγελο Μοσχόπουλο, DMD |
+            Ενημέρωση: Απρίλιος 2026</p>
+        </div>
+        <div class="flex flex-wrap justify-center gap-6 text-white/70 text-sm font-medium uppercase tracking-widest">
+
+          <a href="privacy.html" class="hover:text-white transition-colors" data-i18n="footer.privacy">Πολιτική
+            Απορρήτου</a>
+        </div>
+        <p class="text-white/40 font-noto text-[10px] uppercase tracking-tighter" data-i18n-html="footer.copyright">
+          Copyright 2026. Dentplant Clinic. <br>All Rights Reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+  <script src="js/i18n.js"></script>
+  <script src="js/outofview.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/manage.js" defer></script>
 </body>
+
 </html>
