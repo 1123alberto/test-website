@@ -96,15 +96,41 @@
       font-weight: 300 !important;
     }
 
+    /* Mobile first: flex column with items unwrapped for reordering */
+    .about-grid {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 2.5rem !important;
+    }
+
+    .about-grid > .col-left,
+    .about-grid > .col-right {
+      display: contents !important;
+    }
+
+    .item-portrait { order: 1 !important; }
+    .item-p1 { order: 2 !important; }
+    .item-p2 { order: 3 !important; }
+    .item-p3 { order: 4 !important; }
+    .item-p4 { order: 5 !important; }
+    .item-social { order: 6 !important; }
+
+    /* Desktop: restore wrapper divs for independent column flow */
     @media (min-width: 768px) {
       .about-grid {
         display: grid !important;
         grid-template-columns: 1fr 1fr !important;
         column-gap: 4rem !important;
+        row-gap: 0 !important;
         align-items: start !important;
       }
 
-      /* Explicit vertical spacing between sections in columns */
+      .about-grid > .col-left,
+      .about-grid > .col-right {
+        display: block !important;
+      }
+
+      /* Vertical spacing between sections within each column */
       .about-grid > div > * {
         margin-bottom: 2.5rem !important;
       }
@@ -165,24 +191,24 @@
   </div>
 
   <main class="flex-grow container mx-auto px-6 py-12 max-w-6xl text-gray-700 font-open text-lg leading-relaxed">
-    <div class="about-grid mb-24 space-y-12 md:space-y-0">
+    <div class="about-grid mb-24">
       
       <!-- Left Column -->
-      <div>
+      <div class="col-left">
         <!-- Portrait -->
-        <div class="w-full rounded-2xl overflow-hidden shadow-2xl transition-transform hover:-translate-y-2">
+        <div class="item-portrait w-full rounded-2xl overflow-hidden shadow-2xl transition-transform hover:-translate-y-2">
           <img
             alt="Οδοντίατρος Άγγελος Μοσχόπουλος στην κλινική του στο Παλαιό Φάληρο - Εξειδικευμένη Εμφυτευματολογία και Χειρουργική Στόματος"
             data-i18n-alt="alt.doctor_portrait" class="w-full h-auto object-cover"
             src="images/dentist-dr-angelo-moshopoulos.webp">
         </div>
         
-        <p data-i18n-html="about.p3">Από το 2002, υπηρετεί με συνέπεια τη στοματική υγεία στα νότια προάστια,
+        <p class="item-p3" data-i18n-html="about.p3">Από το 2002, υπηρετεί με συνέπεια τη στοματική υγεία στα νότια προάστια,
           καλωσορίζοντας τους ασθενείς του στην <strong>προσωπική του κλινική στο Παλαιό Φάληρο</strong>. Παράλληλα, η
           επιστημονική του συγκρότηση αναγνωρίστηκε το 2003 με τον διορισμό του ως Οδοντιατρικός Σύμβουλος στο Τμήμα
           Στοματικής και Γναθοπροσωπικής Χειρουργικής του <strong>Νοσοκομείου Metropolitan στο Νέο Φάληρο</strong>.</p>
           
-        <p data-i18n-html="about.p4">Η πολυετής κλινική του εμπειρία επικεντρώνεται στην <strong>προηγμένη
+        <p class="item-p4" data-i18n-html="about.p4">Η πολυετής κλινική του εμπειρία επικεντρώνεται στην <strong>προηγμένη
             εμφυτευματολογία και τη χειρουργική στόματος</strong>, όπου αφιερώνει το χρόνο του. Η συνεχής του κατάρτιση
           μέσω προηγμένων σεμιναρίων και εξειδικευμένων προγραμμάτων σε όλο το φάσμα της οδοντιατρικής —με έμφαση στην
           αισθητική αποκατάσταση και κυρίως στις τελευταίες εξελίξεις της εμφυτευματολογίας— διασφαλίζει την εφαρμογή
@@ -192,14 +218,14 @@
       </div>
 
       <!-- Right Column -->
-      <div>
-        <p data-i18n-html="about.p1">Συνδυάζοντας την επιστημονική αρτιότητα με την ανθρωποκεντρική προσέγγιση, ο
+      <div class="col-right">
+        <p class="item-p1" data-i18n-html="about.p1">Συνδυάζοντας την επιστημονική αρτιότητα με την ανθρωποκεντρική προσέγγιση, ο
           Άγγελος Μοσχόπουλος διαθέτει μια πολυδιάστατη ακαδημαϊκή και κλινική διαδρομή. Ξεκίνησε τις σπουδές του στο
           <strong>Πανεπιστήμιο McGill</strong> του Καναδά, από όπου αποφοίτησε με τον τιμητικό τίλλο <strong>Bachelor of
             Science with Honours</strong>. Το 1992 ολοκλήρωσε τον κύκλο της Βιολογίας με εξειδίκευση στη Μικροβιολογία
           και την Ανοσολογία, θέτοντας τις βάσεις για τη βαθιά κατανόηση της βιολογικής απόκρισης των ιστών.</p>
           
-        <p data-i18n-html="about.p2">Η αφοσίωσή του στην έρευνα συνεχίστηκε στο <strong>Ελληνικό Ινστιτούτο
+        <p class="item-p2" data-i18n-html="about.p2">Η αφοσίωσή του στην έρευνα συνεχίστηκε στο <strong>Ελληνικό Ινστιτούτο
             Παστέρ</strong>, όπου προσέφερε το έργο του ως ερευνητής επί διετία, συμβάλλοντας ως συν-συγγραφέας σε
           δημοσιευμένη επιστημονική μελέτη σχετικά με τη νευροβιολογία (<a
             href="https://pubmed.ncbi.nlm.nih.gov/9026475/" target="_blank"
@@ -210,7 +236,7 @@
           (Rektori Pályamunka), μια διάκριση που αναδεικνύει την αριστεία στην επιστημονική έρευνα.</p>
 
         <!-- Social Section -->
-        <div class="area-social bg-gray-50 p-8 rounded-3xl shadow-inner border border-gray-100 space-y-6">
+        <div class="item-social area-social bg-gray-50 p-8 rounded-3xl shadow-inner border border-gray-100 space-y-6">
           <h3 class="text-3xl text-brand-blue philosophy-title text-center md:text-left" data-i18n="about.social_title">
             Κοινωνική Προσφορά</h3>
           <div class="space-y-4 italic text-base">
