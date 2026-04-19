@@ -128,7 +128,7 @@
   <link rel="stylesheet" href="css/output.css?v=11">
   <link rel="icon" href="images/dental-implant-circle-256-torqued.webp" type="image/png">
   <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Julius+Sans+One%7CNoto+Sans:400,b%7COpen+Sans:400,600,600i,b,i">
+    href="https://fonts.googleapis.com/css?family=Julius+Sans+One%7CNoto+Sans:400,b%7COpen+Sans:400,600,600i,b,i%7CNunito:300,400,700">
   <style>
     html {
       overflow-y: scroll;
@@ -173,6 +173,14 @@
     .bg-white\/20 { background-color: rgba(255, 255, 255, 0.2) !important; }
     .text-\[10px\] { font-size: 10px !important; }
     .text-\[11px\] { font-size: 11px !important; }
+      html[lang="el"] h1:not(.keep-style), html[lang="el"] h2:not(.keep-style), html[lang="el"] h3:not(.keep-style), html[lang="el"] h4:not(.keep-style), html[lang="el"] h5:not(.keep-style), html[lang="el"] h6:not(.keep-style) {
+        font-family: 'Nunito', sans-serif !important;
+        font-weight: 300 !important;
+    }
+    .keep-style {
+        font-family: 'Julius Sans One', sans-serif !important;
+        font-weight: 100 !important;
+    }
   </style>
 </head>
 <body class="bg-white overflow-x-hidden pt-20 min-h-screen flex flex-col">
@@ -225,9 +233,9 @@
 
     <div class="text-center w-full px-4">
       <h1
-        class="text-[#2e4d6d] text-center font-Julius Sans One font-thin text-3xl md:text-5xl max-w-4xl mx-auto leading-tight transition-transform delay-300">
-        <span class="text-4xl md:text-4xl font-medium">Άγγελος Μοσχόπουλος</span>
-        <span class="text-2xl md:text-2xl block mb-4 font-normal">Dental Implant Clinic</span>
+        class="text-[#2e4d6d] text-center font-thin text-3xl md:text-5xl max-w-4xl mx-auto leading-tight transition-transform delay-300">
+        <span class="text-4xl md:text-4xl font-thin keep-style" data-i18n="hero.name">Dr. Angelo Moshopoulos</span>
+        <span class="text-2xl md:text-2xl block mb-4 font-thin keep-style" data-i18n="hero.title">Dental Implant Clinic</span>
       </h1>
     </div>
     <hr class="w-full md:w-5/6 mx-auto border-gray-200 border-t-[1px] my-10">
