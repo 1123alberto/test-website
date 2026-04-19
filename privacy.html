@@ -1,6 +1,26 @@
 <!DOCTYPE html>
 <html lang="el">
-<head>
+<head>\n  <script>
+    (function() {
+      const lang = localStorage.getItem("lang") || "el";
+      document.documentElement.lang = lang;
+      if (lang === "en") document.documentElement.classList.add("i18n-loading");
+    })();
+  </script>
+  <style>
+    .i18n-loading body { opacity: 0 !important; }
+    body { transition: opacity 0.15s ease-in-out; }
+    html { overflow-y: scroll; }
+    html[lang="el"] h1:not(.keep-style), 
+    html[lang="el"] h2:not(.keep-style), 
+    html[lang="el"] h3:not(.keep-style), 
+    html[lang="el"] h4, html[lang="el"] h5, html[lang="el"] h6, 
+    html[lang="el"] .font-julius:not(.keep-style) {
+        font-family: 'Nunito', sans-serif !important;
+        font-weight: 300 !important;
+        letter-spacing: 0.05em !important;
+    }
+  </style>
     <meta charset="utf-8">
   <script>
     if (window.location.hostname === "dentplant.gr") {
@@ -127,7 +147,7 @@
     <link rel="stylesheet" href="css/output.css?v=11">
     <link rel="icon" href="images/dental-implant-circle-256-torqued.webp" type="image/png">
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Julius+Sans+One%7CNoto+Sans:400,b%7COpen+Sans:400,600,600i,b,i">
+        href="https://fonts.googleapis.com/css?family=Julius+Sans+One%7CNoto+Sans:400,700%7COpen+Sans:400,600,600i,700,i%7CNunito:300,400,700&display=swap">
     <style>
         html {
             overflow-y: scroll;
