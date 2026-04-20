@@ -264,6 +264,7 @@
       'bm.svc.dental_consult': 'Οδοντιατρική Εκτίμηση',
       'bm.svc.surgical_consult': 'Χειρουργική Εκτίμηση',
       'bm.submit': 'Επιβεβαίωση Ραντεβού',
+      'bm.privacy_notice': 'Επιβεβαιώνοντας το ραντεβού, συμφωνείτε με την <a href="privacy.html" class="underline hover:text-[#0284c7] transition-colors">Πολιτική Απορρήτου</a> μας.',
 
       'bm.step4.title': 'Το ραντεβού σας προστέθηκε!',
       'bm.step4.text': 'Θα λάβετε σύντομα ένα email επιβεβαίωσης. Σας περιμένουμε.',
@@ -345,6 +346,7 @@
       'hours.mon_fri': '10:00 – 20:00',
       'hours.closed': 'Κλειστά',
       'hours.by_phone': 'Τηλεφωνικά',
+      'contact.privacy_notice': 'Στέλνοντας το μήνυμα, συμφωνείτε με την <a href="privacy.html" class="underline hover:text-[#0284c7] transition-colors">Πολιτική Απορρήτου</a> μας.',
     },
     en: {
       'title.home': 'Dental Implants in Paleo Faliro | Dr. Angelo Moshopoulos',
@@ -606,6 +608,7 @@
       'bm.svc.dental_consult': 'Dental Consult',
       'bm.svc.surgical_consult': 'Surgical Consult',
       'bm.submit': 'Confirm Appointment',
+      'bm.privacy_notice': 'By confirming your appointment, you agree to our <a href="privacy.html" class="underline hover:text-[#0284c7] transition-colors">Privacy Policy</a>.',
 
       'bm.step4.title': 'Your appointment is confirmed!',
       'bm.step4.text': 'You will receive a confirmation email shortly. We look forward to seeing you.',
@@ -746,6 +749,7 @@
       'modal7.p4': 'If fear is stopping you from getting the smile you deserve, let\'s talk. A stress-free experience starts with a simple conversation.',
       'article.back_to_home': 'Return to Homepage',
       'quote.contact': '&quot; We are always at your disposal to listen to your needs and resolve any questions you may have. <br>Contact us today to schedule your next visit to the practice. It is our great pleasure to look forward to serving you in person. &quot;',
+      'contact.privacy_notice': 'By sending this message, you agree to our <a href="privacy.html" class="underline hover:text-[#0284c7] transition-colors">Privacy Policy</a>.',
     }
   };
 
