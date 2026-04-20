@@ -381,6 +381,15 @@ function doGet(e) {
   allCals.forEach(cal => {
     const events = cal.getEvents(startOfDay, endOfDay);
     events.forEach(ev => {
+      // 1. Skip All-day events unless they specifically intend to BLOCK the day
+      if (ev.isAllDayEvent()) {
+        if (ev.getTitle().toUpperCase().includes("[BLOCK]")) {
+          busyPeriods.push({ start: startOfDay, end: endOfDay });
+        }
+        return;
+      }
+
+      // 2. Add busy periods for timed events
       busyPeriods.push({
         start: ev.getStartTime(),
         end: ev.getEndTime()
