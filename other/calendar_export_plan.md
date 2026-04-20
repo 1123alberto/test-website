@@ -360,6 +360,10 @@ function doGet(e) {
     return handleGetAppointment(e.parameter.uid);
   }
 
+  if (action === 'getBusyDays') {
+    return handleGetBusyDays(e);
+  }
+
   // Default action: getSlots
   const dateStr = e.parameter.date; 
   if (!dateStr) return respondJSON({ error: "No date provided." });
@@ -422,6 +426,52 @@ function doGet(e) {
     }
   }
   return respondJSON({ date: dateStr, slots: availableSlots });
+}
+
+function handleGetBusyDays(e) {
+  const year = parseInt(e.parameter.year);
+  const month = parseInt(e.parameter.month);
+  if (!year || !month) return respondJSON({ error: "Year and Month required." });
+
+  const startOfMonth = new Date(year, month - 1, 1, 0, 0, 0);
+  const endOfMonth = new Date(year, month, 0, 23, 59, 59);
+  
+  const allCals = getCalendars();
+  let allEvents = [];
+  allCals.forEach(cal => {
+    allEvents = allEvents.concat(cal.getEvents(startOfMonth, endOfMonth));
+  });
+
+  let busyDays = [];
+  const lastDay = endOfMonth.getDate();
+  for (let d = 1; d <= lastDay; d++) {
+    const dStart = new Date(year, month - 1, d, 0, 0, 0);
+    const dEnd = new Date(year, month - 1, d, 23, 59, 59);
+    const dateStr = Utilities.formatDate(dStart, Session.getScriptTimeZone(), "yyyy-MM-dd");
+
+    const dayEvents = allEvents.filter(ev => ev.getStartTime() < dEnd && ev.getEndTime() > dStart);
+
+    // [BLOCK] check
+    if (dayEvents.some(ev => ev.isAllDayEvent() && ev.getTitle().toUpperCase().includes("[BLOCK]"))) {
+      busyDays.push(dateStr);
+      continue;
+    }
+
+    // Fully Booked check
+    const allowedHours = [10, 11, 12, 13, 17, 18, 19];
+    let busySlots = 0;
+    allowedHours.forEach(h => {
+      const slotStart = new Date(year, month - 1, d, h, 0, 0);
+      const slotEnd = new Date(slotStart.getTime() + SERVICE_DURATION * 60000);
+      if (dayEvents.some(ev => !ev.isAllDayEvent() && slotStart < ev.getEndTime() && slotEnd > ev.getStartTime())) {
+        busySlots++;
+      }
+    });
+
+    if (busySlots >= allowedHours.length) busyDays.push(dateStr);
+  }
+
+  return respondJSON({ busyDays: busyDays });
 }
 
 function handleGetAppointment(uid) {

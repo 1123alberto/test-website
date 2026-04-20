@@ -13,6 +13,8 @@ const BLOCKED_CONFIG = {
 let selectedDate = null;
 let selectedTime = null;
 let currentViewDate = new Date();
+let monthlyBusyData = {}; // Cache for { 'YYYY-MM': [dates] }
+let isFetchingBusyDays = false;
 
 // Initialize to the 1st of the current month
 currentViewDate.setDate(1);
@@ -41,10 +43,43 @@ function goToStep(stepNumber) {
 }
 window.goToStep = goToStep;
 
+async function fetchMonthlyBusyDays(year, month) {
+    if (isFetchingBusyDays || GOOGLE_SCRIPT_URL.includes("YOUR_GOOGLE_APPS_SCRIPT_URL")) return;
+    
+    isFetchingBusyDays = true;
+    const key = `${year}-${month}`;
+    const loader = document.getElementById('calendar-loader');
+    if (loader) loader.style.display = 'flex';
+
+    try {
+        const response = await fetch(`${GOOGLE_SCRIPT_URL}?action=getBusyDays&year=${year}&month=${month}`);
+        const data = await response.json();
+        monthlyBusyData[key] = data.busyDays || [];
+        renderCalendar(); // Re-render once data is in
+    } catch (e) {
+        console.error("Failed to fetch monthly data", e);
+        monthlyBusyData[key] = []; // Fallback to empty on error
+    } finally {
+        isFetchingBusyDays = false;
+        if (loader) loader.style.display = 'none';
+    }
+}
+
 function renderCalendar() {
     const grid = document.getElementById('calendar-grid');
     const monthLabel = document.getElementById('calendar-month');
     grid.innerHTML = '';
+
+    const year = currentViewDate.getFullYear();
+    const month = currentViewDate.getMonth() + 1;
+    const key = `${year}-${month}`;
+
+    // If we don't have data for this month, fetch it
+    if (!monthlyBusyData.hasOwnProperty(key)) {
+        fetchMonthlyBusyDays(year, month);
+    }
+
+    const busyDays = monthlyBusyData[key] || [];
 
     // Day Headers
     const days = (window.i18n ? window.i18n.t('js.days') : ['Δευ', 'Τρι', 'Τετ', 'Πεμ', 'Παρ', 'Σαβ', 'Κυρ']);
@@ -81,9 +116,9 @@ function renderCalendar() {
         const isPast = date < today;
         const isCurrentMonth = date.getMonth() === currentViewDate.getMonth();
         const isSunday = date.getDay() === 0;
-        const isBlocked = BLOCKED_CONFIG.dates.includes(dateStr);
+        const isBlocked = BLOCKED_CONFIG.dates.includes(dateStr) || busyDays.includes(dateStr);
 
-        // Disable if: past, Sunday, blocked, OR not in the current month view
+        // Disable if: past, Sunday, blocked (static or dynamic), OR not in the current month view
         if (isPast || isSunday || isBlocked || !isCurrentMonth) {
             btn.className = 'date-btn disabled p-1 w-9 h-9 mx-auto flex items-center justify-center font-normal text-sm text-gray-300 cursor-not-allowed';
             btn.disabled = true;
