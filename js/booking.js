@@ -68,8 +68,8 @@ function renderCalendar() {
     const locale = window.i18n ? window.i18n.t('js.locale') : 'el-GR';
     monthLabel.textContent = currentViewDate.toLocaleString(locale, { month: 'long', year: 'numeric' });
 
-    // Generate 42 days (6 weeks)
-    for (let i = 0; i < 42; i++) {
+    // Generate 35 days (5 weeks)
+    for (let i = 0; i < 35; i++) {
         const date = new Date(gridStart);
         date.setDate(date.getDate() + i);
 
