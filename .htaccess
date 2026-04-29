@@ -7,15 +7,6 @@ RewriteRule ^(.*)$ https://www.dentplant.gr/$1 [L,R=301]
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://www.dentplant.gr/$1 [L,R=301]
 
-# ------------------------------------------------------------------------------
-# | Legacy Article Redirects (moved to /article/ subfolder)
-# ------------------------------------------------------------------------------
-RewriteRule ^article-candidate\.html$ https://www.dentplant.gr/article/article-candidate.html [L,R=301]
-RewriteRule ^article-bone-graft\.html$ https://www.dentplant.gr/article/article-bone-graft.html [L,R=301]
-RewriteRule ^article-timeline\.html$ https://www.dentplant.gr/article/article-timeline.html [L,R=301]
-RewriteRule ^article-cost\.html$ https://www.dentplant.gr/article/article-cost.html [L,R=301]
-RewriteRule ^article-comparison\.html$ https://www.dentplant.gr/article/article-comparison.html [L,R=301]
-RewriteRule ^article-sedation\.html$ https://www.dentplant.gr/article/article-sedation.html [L,R=301]
 
 # ------------------------------------------------------------------------------
 # | URL Cleanup (Remove .html extension)
