@@ -8,8 +8,8 @@
     }
   </script>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title data-i18n="title.implants">Οδοντιατρικές Υπηρεσίες | Παλαιό Φάληρο | Άγγελος Μοσχόπουλος</title>
-  <meta name="description" content="Ολοκληρωμένες οδοντιατρικές υπηρεσίες στο Παλαιό Φάληρο: Εμφυτεύματα, αισθητική οδοντιατρική & πρόληψη. Ενημερωθείτε για όλες τις λύσεις μας. Κλείστε ραντεβού!" data-i18n-content="desc.implants">
+  <title data-i18n="title.implants">Οδοντικά Εμφυτεύματα | Παλαιό Φάληρο | Άγγελος Μοσχόπουλος</title>
+  <meta name="description" content="Συχνές ερωτήσεις και αναλυτικές πληροφορίες για τα οδοντικά εμφυτεύματα: κόστος, διαδικασία και αποτελέσματα στο Παλαιό Φάληρο." data-i18n-content="desc.implants">
   <link rel="canonical" href="https://www.dentplant.gr/implants.html">
   <script type="application/ld+json">
     {
@@ -18,8 +18,8 @@
                 {
           "@type": "Dentist",
           "@id": "https://www.dentplant.gr/#dentist",
-          "name": "Άγγελος Μοσχόπουλος | Dentplant Clinic",
-          "alternateName": "Άγγελος Μοσχόπουλος Dental Implant & Aesthetics Clinic",
+          "name": "Άγγελος Μοσχόπουλος | Dental Implants & Aesthetics Clinic",
+          "alternateName": "Άγγελος Μοσχόπουλος Dental Implants & Aesthetics Clinic",
           "url": "https://www.dentplant.gr",
           "telephone": "+302109312651",
           "priceRange": "$$",
@@ -129,33 +129,30 @@
           }
         },
         {
-          "@type": "ItemList",
-          "@id": "https://www.dentplant.gr/services.html#serviceslist",
-          "name": "Οδοντιατρικές Υπηρεσίες",
-          "itemListElement": [
+          "@type": "FAQPage",
+          "@id": "https://www.dentplant.gr/implants.html#faq",
+          "mainEntity": [
             {
-              "@type": "Service",
-              "name": "Οδοντικά Εμφυτεύματα",
-              "description": "Η πλέον σύγχρονη και μόνιμη λύση για την αναπλήρωση χαμένων δοντιών.",
-              "provider": { "@id": "https://www.dentplant.gr/#dentist" }
+              "@type": "Question",
+              "name": "Ποιο είναι το κόστος των οδοντικών εμφυτεύμάτων;",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Το κόστος των οδοντικών εμφυτευμάτων εξαρτάται από την πολυπλοκότητα της περίπτωσης, τον αριθμό των δοντιών και την επιλογή των υλικών."
+              }
             },
             {
-              "@type": "Service",
-              "name": "Οστικό Μόσχευμα & Ανάπλαση",
-              "description": "Ανάπλαση οστού για την υποστήριξη οδοντικών εμφυτευμάτων.",
-              "provider": { "@id": "https://www.dentplant.gr/#dentist" }
-            },
-            {
-              "@type": "Service",
-              "name": "Χειρουργικές Εξαγωγές",
-              "description": "Εξειδικευμένες χειρουργικές εξαγωγές εγκλείστων ή προβληματικών δοντιών.",
-              "provider": { "@id": "https://www.dentplant.gr/#dentist" }
+              "@type": "Question",
+              "name": "Πονάει η διαδικασία τοποθέτησης οδοντικών εμφυτευμάτων;",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Η επέμβαση πραγματοποιείται με τοπική αναισθησία ή μέθη, διασφαλίζοντας μια εντελώς ανώδυνη εμπειρία."
+              }
             }
           ]
         },
         {
           "@type": "BreadcrumbList",
-          "@id": "https://www.dentplant.gr/services.html#breadcrumb",
+          "@id": "https://www.dentplant.gr/implants.html#breadcrumb",
           "itemListElement": [
             {
               "@type": "ListItem",
@@ -166,8 +163,8 @@
             {
               "@type": "ListItem",
               "position": 2,
-              "name": "Υπηρεσίες",
-              "item": "https://www.dentplant.gr/services.html"
+              "name": "Εμφυτεύματα",
+              "item": "https://www.dentplant.gr/implants.html"
             }
           ]
         }
@@ -179,9 +176,7 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Julius+Sans+One%7CNoto+Sans:400,b%7COpen+Sans:400,600,600i,b,i%7CNunito:300,400,700">
   <style>
-    html {
-      overflow-y: scroll;
-    }
+    html { overflow-y: scroll; }
     @media (min-width: 768px) {
         .md\:flex { display: flex !important; }
         .md\:hidden { display: none !important; }
@@ -196,48 +191,38 @@
         z-index: 60 !important;
         transition: transform 0.3s ease-in-out !important;
     }
-    #mobile-sidebar.translate-x-full {
-        transform: translateX(100%) !important;
-    }
-    #mobile-sidebar:not(.translate-x-full) {
-        transform: translateX(0) !important;
-    }
+    #mobile-sidebar.translate-x-full { transform: translateX(100%) !important; }
+    #mobile-sidebar:not(.translate-x-full) { transform: translateX(0) !important; }
     .w-4\/5 { width: 80% !important; }
     .right-0 { right: 0 !important; left: auto !important; }
-  .text-white { color: #ffffff !important; }
-  .border-white\/50 { border-color: rgba(255, 255, 255, 0.5) !important; }
+    .text-white { color: #ffffff !important; }
+    .border-white\/50 { border-color: rgba(255, 255, 255, 0.5) !important; }
     .bg-white\/20 { background-color: rgba(255, 255, 255, 0.2) !important; }
     .text-\[10px\] { font-size: 10px !important; }
     .text-\[11px\] { font-size: 11px !important; }
-      html[lang="el"] h1:not(.keep-style), html[lang="el"] h2:not(.keep-style), html[lang="el"] h3:not(.keep-style), html[lang="el"] h4:not(.keep-style), html[lang="el"] h5:not(.keep-style), html[lang="el"] h6:not(.keep-style) {
+    html[lang="el"] h1:not(.keep-style), html[lang="el"] h2:not(.keep-style), html[lang="el"] h3:not(.keep-style), html[lang="el"] h4:not(.keep-style), html[lang="el"] h5:not(.keep-style), html[lang="el"] h6:not(.keep-style) {
         font-family: 'Nunito', sans-serif !important;
         font-weight: 300 !important;
     }
   </style>
 </head>
 <body class="bg-white overflow-x-hidden pt-20 min-h-screen flex flex-col">
-  <nav
-    class="fixed top-0 w-full bg-brand-blue shadow-md z-50 px-6 py-3 flex items-center justify-between transition-transform duration-300">
+  <nav class="fixed top-0 w-full bg-brand-blue shadow-md z-50 px-6 py-3 flex items-center justify-between transition-transform duration-300">
     <a href="index.html" class="w-12 h-12 rounded-full shadow-strong overflow-hidden flex-shrink-0 bg-white">
-      <img alt="Λογότυπο Dentplant Clinic - Άγγελος Μοσχόπουλος Εμφυτεύματα Παλαιό Φάληρο" data-i18n-alt="alt.logo" class="w-full h-full object-contain" src="images/dental-implant-circle-256-torqued.webp"
-        loading="lazy">
+      <img alt="Λογότυπο Dental Implants & Aesthetics Clinic - Άγγελος Μοσχόπουλος Εμφυτεύματα Παλαιό Φάληρο" data-i18n-alt="alt.logo" class="w-full h-full object-contain" src="images/dental-implant-circle-256-torqued.webp" loading="lazy">
     </a>
     <div class="flex items-center gap-4">
-      <div
-        class="hidden md:flex items-center space-x-4 md:space-x-8 text-white text-[11px] leading-tight md:text-xs md:leading-normal font-medium uppercase font-noto">
+      <div class="hidden md:flex items-center space-x-4 md:space-x-8 text-white text-[11px] leading-tight md:text-xs md:leading-normal font-medium uppercase font-noto">
         <a class="hover:text-gray-200 transition-colors" href="index.html" data-i18n="nav.home">Αρχικη</a>
         <a class="hover:text-gray-200 transition-colors" href="about.html" data-i18n="nav.doctor">Ο Ιατρος</a>
         <a class="text-yellow-300 transition-colors" href="implants.html" data-i18n="nav.implants">Εμφυτεύματα</a>
         <a class="hover:text-gray-200 transition-colors" href="oral-surgery.html" data-i18n="nav.surgery">Χειρουργική</a>
         <a class="hover:text-gray-200 transition-colors" href="aesthetics.html" data-i18n="nav.aesthetics">Αισθητική</a>
         <a class="hover:text-gray-200 transition-colors" href="clear-aligners.html" data-i18n="nav.aligners">Clear Aligners</a>
-        <a class="hover:text-gray-200 transition-colors" href="faq.html" data-i18n="nav.faq">ΣΥΧΝΕΣ ΕΡΩΤΗΣΕΙΣ</a>
+        <a class="hover:text-gray-200 transition-colors" href="implants.html" data-i18n="nav.faq">ΣΥΧΝΕΣ ΕΡΩΤΗΣΕΙΣ</a>
         <a class="hover:text-gray-200 transition-colors" href="contact.html" data-i18n="nav.contact">Επικοινωνια</a>
       </div>
-      <button onclick="i18n.toggleLanguage()"
-        class="lang-toggle text-white border border-white/50 rounded px-2 py-0.5 text-[10px] font-bold tracking-widest uppercase hover:bg-white/20 transition-all duration-300 flex-shrink-0">EN</button>
-      
-      <!-- Hamburger Button -->
+      <button onclick="i18n.toggleLanguage()" class="lang-toggle text-white border border-white/50 rounded px-2 py-0.5 text-[10px] font-bold tracking-widest uppercase hover:bg-white/20 transition-all duration-300 flex-shrink-0">EN</button>
       <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none p-1">
         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -262,105 +247,118 @@
         <a href="oral-surgery.html" data-i18n="nav.surgery" class="hover:text-yellow-300 transition-colors">Χειρουργική</a>
         <a href="aesthetics.html" data-i18n="nav.aesthetics" class="hover:text-yellow-300 transition-colors">Αισθητική</a>
         <a href="clear-aligners.html" data-i18n="nav.aligners" class="hover:text-yellow-300 transition-colors">Clear Aligners</a>
-        <a href="faq.html" data-i18n="nav.faq" class="hover:text-yellow-300 transition-colors">ΣΥΧΝΕΣ ΕΡΩΤΗΣΕΙΣ</a>
+        <a href="implants.html" data-i18n="nav.faq" class="hover:text-yellow-300 transition-colors">ΣΥΧΝΕΣ ΕΡΩΤΗΣΕΙΣ</a>
         <a href="contact.html" data-i18n="nav.contact" class="hover:text-yellow-300 transition-colors">Επικοινωνια</a>
       </div>
     </div>
   </div>
-  <main class="flex-grow container mx-auto px-6 py-12 max-w-6xl">
 
-    <div class="mt-8">
-      <div class="text-gray-700 font-open text-lg leading-relaxed max-w-3xl mx-auto text-center space-y-6">
-        <div data-i18n-html="services.p1">Η κλινική μας βασίζεται στις αρχές της κλινικής εμπιστοσύνης και του σχολαστικού διαγνωστικού σχεδιασμού. Θεωρούμε τη βιώσιμη στοματική υγεία ως τον απόλυτο δείκτη επιτυχίας, δίνοντας προτεραιότητα σε ολοκληρωμένες, τεκμηριωμένες θεραπείες. Με τη χρήση προηγμένης τρισδιάστατης απεικόνισης CBCT και τη συνεχή ενημέρωση των ασθενών μας, δεν αποκαθιστούμε απλώς τη λειτουργικότητα των δοντιών· θωρακίζουμε τη μελλοντική σας υγεία μέσω προληπτικών πρωτοκόλλων ακριβείας.</div>
-        <div data-i18n-html="services.p3">Σχεδιάσαμε την κλινική μας για να επαναπροσδιορίσουμε την οδοντιατρική εμπειρία, συνδυάζοντας την κλινική αρτιότητα με ένα περιβάλλον μειωμένου στρες. Κατανοώντας ότι το άγχος μπορεί να αποτελέσει εμπόδιο στη φροντίδα, η ομάδα μας προσφέρει μια αναβαθμισμένη εμπειρία που χαρακτηρίζεται από διαφάνεια και ενσυναίσθηση. Μέσω του σωστού προγραμματισμού και της έμφασης στην ανώδυνη θεραπεία, διασφαλίζουμε ότι κάθε επίσκεψη είναι ήρεμη και προσανατολισμένη στις υψηλότερες προδιαγραφές φροντίδας.</div>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
-        <!-- Service Card 1: Implants -->
-        <div class="bg-white p-8 rounded-2xl shadow-premium border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 flex flex-col items-center text-center">
-          <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-6 text-brand-blue">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.638.319a2 2 0 01-1.833.003l-.638-.319a6 6 0 00-3.86-.517l-2.387.477a2 2 0 00-1.022.547l-.331.331a2 2 0 000 2.828l1.414 1.414a2 2 0 002.828 0l.331-.331a2 2 0 00.547-1.022M12 2a10 10 0 100 20 10 10 0 000-20z" />
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-brand-blue mb-4 font-display" data-i18n="svc.implants.title">Οδοντικά Εμφυτεύματα Παλαιό Φάληρο</h3>
-          <p class="text-gray-600 leading-relaxed text-sm" data-i18n="svc.implants.desc">Η πλέον σύγχρονη και μόνιμη λύση για την αναπλήρωση χαμένων δοντιών. Τα οδοντικά εμφυτεύματα διατηρούν την υγεία της γνάθου και προσφέρουν την αίσθηση και τη λειτουργικότητα των φυσικών δοντιών, εξασφαλίζοντας ένα σταθερό χαμόγελο για μια ζωή.</p>
+  <!-- Header Section -->
+  <header class="bg-white py-12 text-center border-b border-gray-100">
+    <div class="container mx-auto px-6">
+        <h1 class="text-3xl md:text-4xl font-bold text-brand-blue text-center mt-8 mb-8 font-julius" data-i18n="faq.title">Συχνές Ερωτήσεις για Οδοντικά Εμφυτεύματα</h1>
+        <p class="text-gray-500 max-w-2xl mx-auto" data-i18n="faq.subtitle">Υπεύθυνες απαντήσεις στις πιο συχνές απορίες σας για τα οδοντικά εμφυτεύματα.</p>
+    </div>
+  </header>
+
+  <!-- FAQ Accordion -->
+  <main class="flex-grow container mx-auto px-6 py-20 max-w-4xl">
+    <div class="space-y-4">
+        <!-- Q1 -->
+        <div class="bg-white rounded-2xl shadow-premium overflow-hidden border border-gray-100 transition-all duration-300">
+            <button onclick="toggleAccordion(1)" class="w-full px-8 py-6 text-left flex items-center justify-between group">
+                <span class="text-brand-blue font-bold text-lg md:text-xl pr-4" data-i18n="faq.q1">Ποιο είναι το κόστος των οδοντικών εμφυτεύμάτων;</span>
+                <span id="icon-1" class="transform transition-transform duration-300 text-brand-blue text-2xl font-light">+</span>
+            </button>
+            <div id="content-1" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                <div class="px-8 pb-8 text-gray-600 leading-relaxed font-open" data-i18n="faq.a1">
+                    Το κόστος των οδοντικών εμφυτευμάτων εξαρτάται από την πολυπλοκότητα της περίπτωσης, τον αριθμό των δοντιών και την επιλογή των υλικών. Στην κλινική μας προσφέρουμε πλήρη διαφάνεια με αναλυτικά και εξατομικευμένα σχέδια θεραπείας.
+                </div>
+            </div>
         </div>
-        <!-- Service Card 2: Extractions -->
-        <div class="bg-white p-8 rounded-2xl shadow-premium border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 flex flex-col items-center text-center">
-          <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-6 text-brand-blue">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-brand-blue mb-4 font-display" data-i18n="svc.extractions.title">Χειρουργικές Εξαγωγές & Φρονιμίτες</h3>
-          <p class="text-gray-600 leading-relaxed text-sm" data-i18n="svc.extractions.desc">Εξειδικευμένες χειρουργικές εξαγωγές εγκλείστων ή προβληματικών δοντιών. Με τη χρήση προηγμένων τεχνικών και απόλυτο σεβασμό στον ασθενή, η διαδικασία πραγματοποιείται ανώδυνα, ελαχιστοποιώντας τον χρόνο αποκατάστασης.</p>
+        <!-- Q2 -->
+        <div class="bg-white rounded-2xl shadow-premium overflow-hidden border border-gray-100 transition-all duration-300">
+            <button onclick="toggleAccordion(2)" class="w-full px-8 py-6 text-left flex items-center justify-between group">
+                <span class="text-brand-blue font-bold text-lg md:text-xl pr-4" data-i18n="faq.q2">Πονάει η διαδικασία τοποθέτησης οδοντικών εμφυτευμάτων;</span>
+                <span id="icon-2" class="transform transition-transform duration-300 text-brand-blue text-2xl font-light">+</span>
+            </button>
+            <div id="content-2" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                <div class="px-8 pb-8 text-gray-600 leading-relaxed font-open" data-i18n="faq.a2">
+                    Η επέμβαση πραγματοποιείται με τοπική αναισθησία ή μέθη, διασφαλίζοντας μια εντελώς ανώδυνη εμπειρία. Η μετεγχειρητική ενόχληση είναι συνήθως ήπια και αντιμετωπίζεται εύκολα με κοινά παυσίπονα.
+                </div>
+            </div>
         </div>
-        <!-- Service Card 3: Bone Grafting -->
-        <div class="bg-white p-8 rounded-2xl shadow-premium border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 flex flex-col items-center text-center">
-          <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-6 text-brand-blue">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-brand-blue mb-4 font-display" data-i18n="svc.bonegraft.title">Οστικό Μόσχευμα & Ανάπλαση</h3>
-          <p class="text-gray-600 leading-relaxed text-sm" data-i18n="svc.bonegraft.desc">Η ανάπλαση οστού είναι απαραίτητη όταν η γνάθος δεν διαθέτει την απαιτούμενη μάζα για εμφυτεύματα. Χρησιμοποιούμε σύγχρονα μοσχεύματα για να δημιουργήσουμε ένα ισχυρό θεμέλιο, διασφαλίζοντας τη μακροχρόνια επιτυχία της θεραπείας σας.</p>
+        <!-- Q3 -->
+        <div class="bg-white rounded-2xl shadow-premium overflow-hidden border border-gray-100 transition-all duration-300">
+            <button onclick="toggleAccordion(3)" class="w-full px-8 py-6 text-left flex items-center justify-between group">
+                <span class="text-brand-blue font-bold text-lg md:text-xl pr-4" data-i18n="faq.q3">Πόσο καιρό διαρκεί η διαδικασία από την αρχή μέχρι το τέλος;</span>
+                <span id="icon-3" class="transform transition-transform duration-300 text-brand-blue text-2xl font-light">+</span>
+            </button>
+            <div id="content-3" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                <div class="px-8 pb-8 text-gray-600 leading-relaxed font-open" data-i18n="faq.a3">
+                    Η τυπική διαδικασία διαρκεί από 3 έως 6 μήνες, επιτρέποντας στο εμφύτευμα να ενσωματωθεί πλήρως στο οστό. Σε ορισμένες περιπτώσεις, είναι δυνατή η άμεση τοποθέτηση και φόρτωση του δοντιού την ίδια ημέρα.
+                </div>
+            </div>
         </div>
-        <!-- Service Card 4: Minor Surgery -->
-        <div class="bg-white p-8 rounded-2xl shadow-premium border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 flex flex-col items-center text-center">
-          <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-6 text-brand-blue">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4v16m8-8H4" />
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-brand-blue mb-4 font-display" data-i18n="svc.minorsurgery.title">Μικροχειρουργική Στόματος</h3>
-          <p class="text-gray-600 leading-relaxed text-sm" data-i18n="svc.minorsurgery.desc">Λεπτές χειρουργικές παρεμβάσεις για τη διόρθωση προβλημάτων στα μαλακά μόρια και τα οστά της στοματικής κοιλότητας. Κάθε επέμβαση σχεδιάζεται με ακρίβεια για τη βελτίωση της στοματικής υγείας και της λειτουργικότητας.</p>
+        <!-- Q4 -->
+        <div class="bg-white rounded-2xl shadow-premium overflow-hidden border border-gray-100 transition-all duration-300">
+            <button onclick="toggleAccordion(4)" class="w-full px-8 py-6 text-left flex items-center justify-between group">
+                <span class="text-brand-blue font-bold text-lg md:text-xl pr-4" data-i18n="faq.q4">Υπάρχει εγγύηση για τα οδοντικά εμφυτεύματα;</span>
+                <span id="icon-4" class="transform transition-transform duration-300 text-brand-blue text-2xl font-light">+</span>
+            </button>
+            <div id="content-4" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                <div class="px-8 pb-8 text-gray-600 leading-relaxed font-open" data-i18n="faq.a4">
+                    Χρησιμοποιούμε κορυφαία παγκοσμίως συστήματα εμφυτευμάτων που συνοδεύονται από εφ’ όρου ζωής εγγύηση για τα υλικά. Η μακροχρόνια επιτυχία διασφαλίζεται μέσω του τακτικού ελέγχου και της σωστής στοματικής υγιεινής.
+                </div>
+            </div>
         </div>
-        <!-- Service Card 5: Esthetic -->
-        <div class="bg-white p-8 rounded-2xl shadow-premium border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 flex flex-col items-center text-center">
-          <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-6 text-brand-blue">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-brand-blue mb-4 font-display" data-i18n="svc.esthetic.title">Αισθητικές Παρεμβάσεις</h3>
-          <p class="text-gray-600 leading-relaxed text-sm" data-i18n="svc.esthetic.desc">Αναβαθμίστε την αισθητική του χαμόγελού σας με εξατομικευμένες λύσεις. Από τη λεύκανση δοντιών έως τις όψεις και τις αισθητικές αποκαταστάσεις, συνδυάζουμε την επιστήμη με την τέχνη για ένα αποτέλεσμα που εκπέμπει αυτοπεποίθηση.</p>
+        <!-- Q5 -->
+        <div class="bg-white rounded-2xl shadow-premium overflow-hidden border border-gray-100 transition-all duration-300">
+            <button onclick="toggleAccordion(5)" class="w-full px-8 py-6 text-left flex items-center justify-between group">
+                <span class="text-brand-blue font-bold text-lg md:text-xl pr-4" data-i18n="faq.q5">Είμαι κατάλληλος υποψήφιος για εμφυτεύματα;</span>
+                <span id="icon-5" class="transform transition-transform duration-300 text-brand-blue text-2xl font-light">+</span>
+            </button>
+            <div id="content-5" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                <div class="px-8 pb-8 text-gray-600 leading-relaxed font-open" data-i18n="faq.a5">
+                    Οι περισσότεροι ενήλικες που έχουν χάσει ένα ή περισσότερα δόντια είναι κατάλληλοι υποψήφιοι. Κατά την πρώτη επίσκεψη, αξιολογούμε την υγεία των ούλων και την ποιότητα του οστού για να καθορίσουμε την καταλληλότερη λύση για εσάς.
+                </div>
+            </div>
         </div>
-        <!-- Service Card 6: Preventive -->
-        <div class="bg-white p-8 rounded-2xl shadow-premium border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 flex flex-col items-center text-center">
-          <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-6 text-brand-blue">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-brand-blue mb-4 font-display" data-i18n="svc.preventive.title">Προληπτική Φροντίδα & Καθαρισμός</h3>
-          <p class="text-gray-600 leading-relaxed text-sm" data-i18n="svc.preventive.desc">Η πρόληψη είναι η καλύτερη θεραπεία. Μέσα από τον επαγγελματικό καθαρισμό δοντιών και τον τακτικό έλεγχο, προστατεύουμε το χαμόγελό σας από την τερηδόνα και την περιοδοντική νόσο, διατηρώντας το υγιές και λαμπερό.</p>
+        <!-- Q6 -->
+        <div class="bg-white rounded-2xl shadow-premium overflow-hidden border border-gray-100 transition-all duration-300">
+            <button onclick="toggleAccordion(6)" class="w-full px-8 py-6 text-left flex items-center justify-between group">
+                <span class="text-brand-blue font-bold text-lg md:text-xl pr-4" data-i18n="faq.q6">Τι είναι η οστική ανάπλαση και πότε είναι απαραίτητη;</span>
+                <span id="icon-6" class="transform transition-transform duration-300 text-brand-blue text-2xl font-light">+</span>
+            </button>
+            <div id="content-6" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                <div class="px-8 pb-8 text-gray-600 leading-relaxed font-open" data-i18n="faq.a6">
+                    Η οστική ανάπλαση είναι μια σύγχρονη τεχνική που χρησιμοποιείται όταν το φυσικό οστό δεν είναι επαρκές για να στηρίξει το εμφύτευμα. Μέσω αυτής της διαδικασίας, αναδομούμε το θεμέλιο του χαμόγελού σας για απόλυτη σταθερότητα.
+                </div>
+            </div>
         </div>
-      </div>
     </div>
   </main>
+
   <section class="py-12 bg-white">
     <hr class="w-4/5 mx-auto border-gray-200">
-    <div
-      class="w-11/12 md:w-3/4 mx-auto bg-brand-light text-brand-blue text-center rounded-lg p-8 italic tracking-wide text-lg font-open my-12 fade-in shadow-inner"
-      data-i18n-html="quote.services">
-      &quot; Προσφέρουμε ένα ευρύ φάσμα σύγχρονων οδοντιατρικών θεραπειών, απόλυτα προσαρμοσμένων στις δικές σας
-      μοναδικές
-      απαιτήσεις. <br>Με την υποστήριξη τεχνολογίας αιχμής και εξειδικευμένης γνώσης, διασφαλίζουμε ανώδυνα και άριστα
-      αποτελέσματα. Κάθε θεραπεία σχεδιάζεται με γνώμονα τη βέλτιστη στοματική σας υγεία. &quot;
+    <div class="w-11/12 md:w-3/4 mx-auto bg-brand-light text-brand-blue text-center rounded-lg p-8 italic tracking-wide text-lg font-open my-12 fade-in shadow-inner" data-i18n-html="quote.faq">
+      &quot; Στόχος μας είναι η πλήρης ενημέρωση και η απόλυτη διαφάνειά σας σε κάθε βήμα. <br>Είμαστε εδώ για να απαντήσουμε σε κάθε σας απορία και να σας βοηθήσουμε να λάβετε την καλύτερη απόφαση για το χαμόγελό σας. Η εμπιστοσύνη σας είναι η μεγαλύτερη ανταμοιβή μας. &quot;
     </div>
     <hr class="w-4/5 mx-auto border-gray-200">
   </section>
+
   <div class="text-center mt-8 mb-12 fade-in flex justify-center space-x-6">
     <a href="https://www.facebook.com/dentplant/" target="_blank" class="bg-brand-blue rounded-full p-2 hover:opacity-75 transition-opacity">
-      <img class="w-10 h-10" src="socialicons/webicon-facebook.png" alt="Επισκεφθείτε την Dentplant Clinic στο Facebook" data-i18n-alt="alt.fb">
+      <img class="w-10 h-10" src="socialicons/webicon-facebook.webp" alt="Επισκεφθείτε την Dental Implants & Aesthetics Clinic στο Facebook" data-i18n-alt="alt.fb">
     </a>
     <a href="https://www.instagram.com/dentplant.gr/" target="_blank" class="bg-brand-blue rounded-full p-2 hover:opacity-75 transition-opacity">
-      <img class="w-10 h-10" src="socialicons/webicon-instagram.png" alt="Ακολουθήστε τον Άγγελο Μοσχόπουλο στο Instagram" data-i18n-alt="alt.ig">
+      <img class="w-10 h-10" src="socialicons/webicon-instagram.webp" alt="Ακολουθήστε τον Άγγελο Μοσχόπουλο στο Instagram" data-i18n-alt="alt.ig">
     </a>
     <a href="https://www.linkedin.com/in/angelo-moshopoulos-a93476403/" target="_blank" class="bg-brand-blue rounded-full p-2 hover:opacity-75 transition-opacity">
-      <img class="w-10 h-10" src="socialicons/webicon-linkedin.png" alt="Επαγγελματικό προφίλ του Άγγελου Μοσχόπουλου στο LinkedIn" data-i18n-alt="alt.li">
+      <img class="w-10 h-10" src="socialicons/webicon-linkedin.webp" alt="Επαγγελματικό προφίλ του Άγγελου Μοσχόπουλου στο LinkedIn" data-i18n-alt="alt.li">
     </a>
   </div>
+
   <footer class="py-12 bg-brand-blue border-t border-white/10 mt-auto">
     <div class="container mx-auto px-6">
       <div class="flex flex-col items-center text-center space-y-6">
@@ -381,17 +379,45 @@
           <p class="italic" data-i18n="footer.medical_review">Ελέγχθηκε ιατρικά από τον Άγγελο Μοσχόπουλο, DMD | Ενημέρωση: Απρίλιος 2026</p>
         </div>
         <div class="flex flex-wrap justify-center gap-6 text-white/70 text-sm font-medium uppercase tracking-widest">
-                    
-                    <a href="privacy.html" class="hover:text-white transition-colors" data-i18n="footer.privacy">Πολιτική Απορρήτου</a>
+            <a href="privacy.html" class="hover:text-white transition-colors" data-i18n="footer.privacy">Πολιτική Απορρήτου</a>
         </div>
         <p class="text-white/40 font-noto text-[10px] uppercase tracking-tighter" data-i18n-html="footer.copyright">
-          Copyright 2026. Dentplant Clinic. <br>All Rights Reserved.
+          Copyright 2026. Dental Implants & Aesthetics Clinic. <br>All Rights Reserved.
         </p>
       </div>
     </div>
   </footer>
+
   <script src="js/i18n.js"></script>
-  <script src="js/outofview.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    function toggleAccordion(id) {
+        const content = document.getElementById(`content-${id}`);
+        const icon = document.getElementById(`icon-${id}`);
+        const parent = content.parentElement;
+        if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+            content.style.maxHeight = '0px';
+            icon.style.transform = 'rotate(0deg)';
+            icon.textContent = '+';
+            parent.classList.remove('ring-2', 'ring-blue-100');
+        } else {
+            // Close others
+            for (let i = 1; i <= 6; i++) {
+                const c = document.getElementById(`content-${i}`);
+                const ic = document.getElementById(`icon-${i}`);
+                if (c && i !== id) {
+                    c.style.maxHeight = '0px';
+                    ic.style.transform = 'rotate(0deg)';
+                    ic.textContent = '+';
+                    ic.parentElement.parentElement.classList.remove('ring-2', 'ring-blue-100');
+                }
+            }
+            content.style.maxHeight = content.scrollHeight + 'px';
+            icon.style.transform = 'rotate(45deg)';
+            icon.textContent = '+';
+            parent.classList.add('ring-2', 'ring-blue-100');
+        }
+    }
+  </script>
 </body>
 </html>

@@ -22,13 +22,13 @@
       'desc.services': 'Ολοκληρωμένες οδοντιατρικές υπηρεσίες στο Παλαιό Φάληρο: Εμφυτεύματα, αισθητική οδοντιατρική & πρόληψη. Ενημερωθείτε για όλες τις λύσεις μας. Κλείστε ραντεβού!',
       'desc.contact': 'Επικοινωνήστε με την κλινική Dentplant στο Παλαιό Φάληρο. Βρείτε μας στην Πλατεία Ντάβαρη 2 ή καλέστε στο 210 9312651 για το ραντεβού σας. Σας περιμένουμε από κοντά!',
       'desc.booking': 'Κλείστε το οδοντιατρικό σας ραντεβού online εύκολα και γρήγορα. Επιλέξτε την ημέρα και την ώρα που σας εξυπηρετεί στην κλινική μας στο Παλαιό Φάληρο. Σας περιμένουμε!',
-      'desc.privacy': 'Πολιτική Απορρήτου της Dentplant Clinic στο Παλαιό Φάληρο. Μάθετε πώς προστατεύουμε τα προσωπικά σας δεδομένα σε συμμόρφωση με τον ΓΚΠΔ (GDPR) και την ελληνική νομοθεσία.',
+      'desc.privacy': 'Πολιτική Απορρήτου της Dental Implants & Aesthetics Clinic στο Παλαιό Φάληρο. Μάθετε πώς προστατεύουμε τα προσωπικά σας δεδομένα σε συμμόρφωση με τον ΓΚΠΔ (GDPR) και την ελληνική νομοθεσία.',
       'desc.manage': 'Διαχειριστείτε το οδοντιατρικό σας ραντεβού στην κλινική Dentplant. Δείτε τις λεπτομέρειες, αλλάξτε την ημερομηνία ή ακυρώστε το ραντεβού σας εύκολα και γρήγορα online.',
       'desc.faq': 'Συχνές ερωτήσεις για οδοντικά εμφυτεύματα: κόστος, πόνος, διάρκεια και εγγύηση. Ενημερωθείτε υπεύθυνα από την κλινική μας στο Παλαιό Φάληρο.',
       'desc.implants': 'Εξειδικευμένη κλινική για οδοντικά εμφυτεύματα τιτανίου στο Παλαιό Φάληρο. Μόνιμη και ασφαλής λύση για το χαμόγελό σας.',
       'desc.surgery': 'Ασφαλείς χειρουργικές εξαγωγές και μικροχειρουργική στόματος στο Παλαιό Φάληρο από τον χειρουργό οδοντίατρο Άγγελο Μοσχόπουλο.',
-      'desc.aesthetics': 'Αναβαθμίστε το χαμόγελό σας με υπηρεσίες αισθητικής οδοντιατρικής, ιατρικής λεύκανσης και όψεων στην Dentplant Clinic.',
-      'desc.aligners': 'Ψηφιακή ορθοδοντική με Clear Aligners. Ισιώστε τα δόντια σας αόρατα και με ακρίβεια στην Dentplant Clinic στο Παλαιό Φάληρο.',
+      'desc.aesthetics': 'Αναβαθμίστε το χαμόγελό σας με υπηρεσίες αισθητικής οδοντιατρικής, ιατρικής λεύκανσης και όψεων στην Dental Implants & Aesthetics Clinic.',
+      'desc.aligners': 'Ψηφιακή ορθοδοντική με Clear Aligners. Ισιώστε τα δόντια σας αόρατα και με ακρίβεια στην Dental Implants & Aesthetics Clinic στο Παλαιό Φάληρο.',
 
       /* ── Aesthetics / Whitening & Veneers ────── */
       'wh_hero_title': 'Επαγγελματική Λεύκανση Δοντιών',
@@ -68,14 +68,16 @@
       'vn_what_title': 'Τι είναι οι Όψεις;',
       'vn_what_desc': 'Οι αισθητικές όψεις είναι εξαιρετικά λεπτά κελύφη πορσελάνης, κατασκευασμένα στο χέρι από εξειδικευμένους κεραμιστές. Τοποθετούνται μόνιμα στην πρόσθια πλευρά των δοντιών και μπορούν να διορθώσουν δυσχρωμίες, ατέλειες στο σχήμα, κενά μεταξύ δοντιών, ή φθαρμένα δόντια — χαρίζοντας ένα εντυπωσιακό αποτέλεσμα.',
       'vn_procedure_title': 'Η Διαδικασία',
-      'vn_procedure_desc': 'Η τοποθέτηση όψεων ολοκληρώνεται σε δύο ραντεβού μέσα σε περίπου 10 ημέρες.',
+      'vn_procedure_desc': 'Η τοποθέτηση όψεων ολοκληρώνεται σε τρία ραντεβού.',
       'vn_appt1_title': '1ο Ραντεβού — Σχεδιασμός',
-      'vn_appt1_desc': 'Δημιουργούμε ένα διαγνωστικό μοντέλο (wax-up) για να καθορίσουμε τις ιδανικές διαστάσεις των όψεων σε αρμονία με τα χαρακτηριστικά του προσώπου σας. Σε πολλές περιπτώσεις, επιλέγουμε όψεις χωρίς τροχισμό (prepless veneers) για τη μέγιστη διατήρηση της φυσικής δομής του δοντιού. Λαμβάνουμε αποτυπώματα και ψηφιακές φωτογραφίες.',
-      'vn_appt2_title': '2ο Ραντεβού — Τοποθέτηση',
-      'vn_appt2_desc': 'Κατά τη διάρκεια της κατασκευής (περίπου 10 ημέρες), τοποθετούνται προσωρινές όψεις που σας δίνουν μια πρόγευση του τελικού αποτελέσματος. Στο δεύτερο ραντεβού, γίνεται η τελική τοποθέτηση των μόνιμων κεραμικών όψεων.',
+      'vn_appt1_desc': 'Δημιουργούμε ένα διαγνωστικό μοντέλο (wax-up) για να καθορίσουμε τις ιδανικές διαστάσεις των όψεων σε αρμονία με τα χαρακτηριστικά του προσώπου σας. Λαμβάνουμε αποτυπώματα και ψηφιακές φωτογραφίες.',
+      'vn_appt2_title': '2ο Ραντεβού — Δοκιμή (Trial Fit)',
+      'vn_appt2_desc': 'Έλεγχος χρώματος, σχήματος και σύγκλεισης (πώς κουμπώνουν τα δόντια) πριν τη μόνιμη συγκόλληση. Με αυτόν τον τρόπο διασφαλίζουμε το τέλειο αισθητικό και λειτουργικό αποτέλεσμα.',
+      'vn_appt3_title': '3ο Ραντεβού — Τοποθέτηση',
+      'vn_appt3_desc': 'Στο τρίτο ραντεβού, γίνεται η τελική τοποθέτηση των μόνιμων κεραμικών όψεων, αφού επιβεβαιώσουμε ότι όλα είναι τέλεια.',
       'vn_benefits_title': 'Πλεονεκτήματα',
       'vn_bene1': 'Φυσικό αποτέλεσμα που διαρκεί χρόνια',
-      'vn_bene2': 'Τοποθέτηση σε μόλις δύο ραντεβού',
+      'vn_bene2': 'Τοποθέτηση σε τρία ραντεβού',
       'vn_bene3': 'Ανθεκτικότητα στους λεκέδες',
       'vn_bene4': 'Ελάχιστη ή καθόλου παρέμβαση στο δόντι',
       'vn_bene5': 'Διόρθωση σχήματος, μεγέθους και χρώματος',
@@ -139,7 +141,7 @@
 
       /* ── Hero / Standalone Header ──────────────── */
       'hero.name': 'Dr. Angelo Moshopoulos',
-      'hero.title': 'Dental Implant & Aesthetics Clinic',
+      'hero.title': 'Dental Implants & Aesthetics Clinic',
 
       /* ── Shared booking button ────────────────── */
       'booking.btn': 'Ηλεκτρονικη Κρατηση',
@@ -207,6 +209,8 @@
       'quote.index': '&quot; Η υγεία και η λειτουργικότητα του χαμόγελού σας αποτελούν για εμάς κορυφαία προτεραιότητα.<br>Στο υπερσύγχρονο ιατρείο μας, συνδυάζουμε την επιστημονική αρτιότητα με την ανθρώπινη προσέγγιση. Σας καλωσορίζουμε σε ένα περιβάλλον όπου η προσωπική φροντίδα συναντά την καινοτομία. &quot;',
       'quote.about': '&quot; Η αφοσίωσή μας στην επιστήμη της οδοντιατρικής μεταφράζεται σε εξατομικευμένη και ουσιαστική φροντίδα για κάθε ασθενή. <br>Με οδηγό τη συνεχή εξέλιξη και το σεβασμό στις ανάγκες σας, χτίζουμε σχέσεις εμπιστοσύνης που διαρκούν. Αποτελεί τιμή μας να αναλαμβάνουμε τη φροντίδα του χαμόγελού σας. &quot;',
       'quote.services': '&quot; Προσφέρουμε ένα πλήρες φάσμα σύγχρονων οδοντιατρικών θεραπειών, καθεμία από τις οποίες είναι προσαρμοσμένη στις πραγματικές σας ανάγκες.<br>Με την υποστήριξη της τελευταίας λέξης της τεχνολογίας και πολυετή εμπειρία, στοχεύουμε σε αποτελέσματα που φαίνονται φυσικά και αντέχουν στον χρόνο. Κάθε μας απόφαση οδηγείται από τη δική σας στοματική υγεία. &quot;',
+      'quote.aesthetics': '&quot; Η αισθητική οδοντιατρική είναι ο τέλειος συνδυασμός επιστήμης και τέχνης. Στόχος μας δεν είναι απλώς ένα λευκό χαμόγελο, αλλά μια φυσική, αρμονική αλλαγή που αναδεικνύει την προσωπικότητά σας και ενισχύει την αυτοπεποίθησή σας. &quot;',
+      'quote.aligners': '&quot; Η σύγχρονη ορθοδοντική δεν αφορά μόνο την αισθητική, αλλά τη συνολική ισορροπία και υγεία του στόματος. Με τους διάφανους νάρθηκες, προσφέρουμε μια λύση που σέβεται την καθημερινότητά σας, εξασφαλίζοντας ένα αποτέλεσμα που ακτινοβολεί αυτοπεποίθηση. &quot;',
       'quote.faq': '&quot; Στόχος μας είναι η πλήρης ενημέρωση και η απόλυτη διαφάνειά σας σε κάθε βήμα. <br>Είμαστε εδώ για να απαντήσουμε σε κάθε σας απορία και να σας βοηθήσουμε να λάβετε την καλύτερη απόφαση για το χαμόγελό σας. Η εμπιστοσύνη σας είναι η μεγαλύτερη ανταμοιβή μας. &quot;',
       'quote.contact': '&quot; Είμαστε πάντα στη διάθεσή σας για να ακούσουμε τις ανάγκες σας και να επιλύσουμε όποιες απορίες έχετε. <br>Επικοινωνήστε μαζί μας σήμερα για να προγραμματίσουμε την επόμενη επίσκεψή σας στο ιατρείο. Με μεγάλη χαρά αναμένουμε να σας εξυπηρετήσουμε από κοντά. &quot;',
       /* ── about.html — biography sections ──────── */
@@ -244,7 +248,7 @@
 
       /* ── Footer ───────────────────────────────── */
       'footer.address': 'Πλατεία Ντάβαρη 2, Παλαιό Φάληρο<br>τηλ. 210 931 2651',
-      'footer.copyright': 'Copyright 2026. Dentplant Clinic. <br>Με την επιφύλαξη παντός δικαιώματος.',
+      'footer.copyright': 'Copyright 2026. Dental Implants & Aesthetics Clinic. <br>Με την επιφύλαξη παντός δικαιώματος.',
       'footer.disclaimer': 'Μια Σημείωση για την Υγεία σας: Μας αρέσει να μοιραζόμαστε την οδοντιατρική μας τεχνογνωσία, αλλά παρακαλούμε να θυμάστε ότι οι πληροφορίες σε αυτόν τον ιστότοπο προορίζονται για ενημέρωση και όχι για προσωπική διάγνωση. Ένας ιστότοπος δεν μπορεί να αντικαταστήσει τη δια ζώσης εξέταση. Εάν αντιμετωπίζετε ένα επείγον οδοντιατρικό περιστατικό, παρακαλούμε καλέστε εμάς ή τις τοπικές υπηρεσίες έκτακτης ανάγκης αμέσως. <a href="disclaimer.html" class="underline decoration-white/30 hover:text-white transition-colors">[Διαβάστε την Πλήρη Ιατρική Αποποίηση]</a>',
       'footer.metropolitan': '<a href="https://www.metropolitan-hospital.gr/el/" target="_blank" class="hover:text-white group transition-colors inline-flex items-center gap-1">Metropolitan Hospital <span class="group-hover:translate-x-0.5 transition-transform text-[10px] opacity-70">→</span></a>',
       'footer.membership': 'Μέλος του <a href="https://www.osp.gr/odontiatros/%ce%bc%ce%bf%cf%83%cf%87%ce%bf%cf%80%ce%bf%cf%85%ce%bb%ce%bf%cf%83-%ce%b1%ce%b3%ce%b3%ce%b5%ce%bb%ce%bf%cf%83-2/#" target="_blank" class="hover:text-white group transition-colors inline-flex items-center gap-1">Οδοντιατρικού Συλλόγου Πειραιώς <span class="group-hover:translate-x-0.5 transition-transform text-[10px] opacity-70">→</span></a>',
@@ -277,16 +281,16 @@
       /* ── privacy.html ─────────────────────────── */
       'privacy.title': 'Πολιτική Απορρήτου',
       'privacy.body': `<p><strong>Τελευταία ενημέρωση: 13 Απριλίου 2026</strong></p>
-      <p>Η παρούσα Πολιτική Απορρήτου περιγράφει τον τρόπο με τον οποίο η Dentplant Clinic συλλέγει, χρησιμοποιεί, αποθηκεύει και προστατεύει τα προσωπικά σας δεδομένα όταν επισκέπτεστε τους ιστότοπούς μας (dentplant.gr) ή κάνετε χρήση των οδοντιατρικών μας υπηρεσιών. Έχει συνταχθεί σε συμμόρφωση με τον Γενικό Κανονισμό Προστασίας Δεδομένων (ΕΕ) 2016/679 (ΓΚΠΔ/GDPR) και τον Ελληνικό Νόμο 4624/2019.</p>
-      <p>Παρακαλούμε να διαβάσετε προσεκτικά την παρούσα Πολιτική. Με τη χρήση των ιστοτόπων μας ή την πραγματοποίηση ραντεβού, αναγνωρίζετε ότι έχετε διαβάσει και κατανοήσει τον τρόπο με τον οποίο διαχειριζόμαστε τα προσωπικά σας δεδομένα.</p>
+      <p>Η παρούσα Πολιτική Απορρήτου περιγράφει τον τρόπο με τον οποίο η Dental Implants & Aesthetics Clinic συλλέγει, χρησιμοποιεί, αποθηκεύει και προστατεύει τα προσωπικά σας δεδομένα όταν επισκέπτεστε τον ιστότοπό μας (dentplant.gr) ή κάνετε χρήση των οδοντιατρικών μας υπηρεσιών. Έχει συνταχθεί σε συμμόρφωση με τον Γενικό Κανονισμό Προστασίας Δεδομένων (ΕΕ) 2016/679 (ΓΚΠΔ/GDPR) και τον Ελληνικό Νόμο 4624/2019.</p>
+      <p>Παρακαλούμε να διαβάσετε προσεκτικά την παρούσα Πολιτική. Με τη χρήση του ιστοτόπου μας ή την πραγματοποίηση ραντεβού, αναγνωρίζετε ότι έχετε διαβάσει και κατανοήσει τον τρόπο με τον οποίο διαχειριζόμαστε τα προσωπικά σας δεδομένα.</p>
 
       <h2>1. Υπεύθυνος Επεξεργασίας</h2>
       <p>Υπεύθυνος επεξεργασίας των προσωπικών σας δεδομένων είναι:</p>
       <table>
-        <tr><th>Επωνυμία</th><td>Dentplant Clinic</td></tr>
-        <tr><th>Ιστότοποι</th><td>dentplant.gr / i-smile.gr</td></tr>
+        <tr><th>Επωνυμία</th><td>Dental Implants & Aesthetics Clinic</td></tr>
+        <tr><th>Ιστότοποι</th><td>dentplant.gr</td></tr>
         <tr><th>Διεύθυνση</th><td>Πλατεία Νταβάρη 2, Παλαιό Φάληρο, 17564, Ελλάδα</td></tr>
-        <tr><th>Email</th><td>info@dentplant.gr / info@i-smile.gr</td></tr>
+        <tr><th>Email</th><td>info@dentplant.gr</td></tr>
         <tr><th>Τηλέφωνο</th><td>+30 210 9312651</td></tr>
         <tr><th>ΑΦΜ</th><td>077118016</td></tr>
       </table>
@@ -434,7 +438,7 @@
       'faq.a6': 'Η οστική ανάπλαση είναι μια σύγχρονη τεχνική που χρησιμοποιείται όταν το φυσικό οστό δεν είναι επαρκές για να στηρίξει το εμφύτευμα. Μέσω αυτής της διαδικασίας, αναδομούμε το θεμέλιο του χαμόγελού σας για απόλυτη σταθερότητα.',
 
       /* ── Image Alts ─────────────────────────── */
-      'alt.logo': 'Λογότυπο Dentplant Clinic - Άγγελος Μοσχόπουλος Εμφυτεύματα Παλαιό Φάληρο',
+      'alt.logo': 'Λογότυπο Dental Implants & Aesthetics Clinic - Άγγελος Μοσχόπουλος Εμφυτεύματα Παλαιό Φάληρο',
       'alt.hero_implants': 'Λεπτομέρεια διαδικασίας τοποθέτησης οδοντικών εμφυτευμάτων υψηλής ποιότητας',
       'alt.couple': 'Χαμογελαστό ζευγάρι ηλικιωμένων που απολαμβάνει τη ζωή με οδοντικά εμφυτεύματα',
       'alt.bone_graft': 'Οστικό μόσχευμα για επιτυχημένα οδοντικά εμφυτεύματα',
@@ -443,7 +447,7 @@
       'alt.cost': 'Διαφανής κοστολόγηση και τιμές οδοντικών εμφυτευμάτων',
       'alt.sedation': 'Ανώδυνη οδοντιατρική χειρουργική με μέθη (Sedation)',
       'alt.doctor_portrait': 'Οδοντίατρος Άγγελος Μοσχόπουλος στην κλινική του στο Παλαιό Φάληρο - Εξειδικευμένη Εμφυτευματολογία και Χειρουργική Στόματος',
-      'alt.fb': 'Επισκεφθείτε την Dentplant Clinic στο Facebook',
+      'alt.fb': 'Επισκεφθείτε την Dental Implants & Aesthetics Clinic στο Facebook',
       'alt.ig': 'Ακολουθήστε τον Άγγελο Μοσχόπουλο στο Instagram',
       'alt.li': 'Επαγγελματικό προφίλ του Άγγελου Μοσχόπουλου στο LinkedIn',
       'footer.review_btn': 'ΑΞΙΟΛΟΓΗΣΤΕ ΜΑΣ ΣΤΟ GOOGLE',
@@ -474,14 +478,14 @@
       'desc.about': 'Meet Dr. Angelo Moshopoulos, an experienced dental surgeon in Paleo Faliro specializing in titanium dental implants, periodontitis management, and cosmetic dentistry. Read his full biography.',
       'desc.services': 'Comprehensive dental services in Paleo Faliro: Implants, cosmetic dentistry, and prevention. Learn about our advanced dental solutions. Book online today!',
       'desc.faq': 'Frequently asked questions about dental implants: cost, pain, duration, and warranty. Get expert answers from our clinic in Paleo Faliro.',
-      'desc.contact': 'Contact Dentplant Clinic in Paleo Faliro. Visit us at Davari Square 2 or call 210 9312651 to schedule your dental appointment. We look forward to meeting you!',
+      'desc.contact': 'Contact Dental Implants & Aesthetics Clinic in Paleo Faliro. Visit us at Davari Square 2 or call 210 9312651 to schedule your dental appointment. We look forward to meeting you!',
       'desc.booking': 'Book your dental appointment online easily and quickly. Choose the day and time that fits your schedule at our clinic in Paleo Faliro. We look forward to seeing you!',
-      'desc.privacy': 'Privacy Policy of Dentplant Clinic in Paleo Faliro. Learn how we protect your personal data in compliance with GDPR and Greek data protection laws.',
-      'desc.manage': 'Manage your dental appointment at Dentplant Clinic. View details, reschedule, or cancel your appointment easily and quickly through our online portal.',
+      'desc.privacy': 'Privacy Policy of Dental Implants & Aesthetics Clinic in Paleo Faliro. Learn how we protect your personal data in compliance with GDPR and Greek data protection laws.',
+      'desc.manage': 'Manage your dental appointment at Dental Implants & Aesthetics Clinic. View details, reschedule, or cancel your appointment easily and quickly through our online portal.',
       'desc.implants': 'Specialized titanium dental implant clinic in Paleo Faliro. A permanent and safe solution for your smile.',
       'desc.surgery': 'Safe surgical extractions and minor oral surgery in Paleo Faliro by dental surgeon Dr. Angelo Moshopoulos.',
-      'desc.aesthetics': 'Enhance your smile with cosmetic dentistry, medical whitening, and veneers at Dentplant Clinic.',
-      'desc.aligners': 'Digital orthodontics with Clear Aligners. Straighten your teeth invisibly and precisely at Dentplant Clinic in Paleo Faliro.',
+      'desc.aesthetics': 'Enhance your smile with cosmetic dentistry, medical whitening, and veneers at Dental Implants & Aesthetics Clinic.',
+      'desc.aligners': 'Digital orthodontics with Clear Aligners. Straighten your teeth invisibly and precisely at Dental Implants & Aesthetics Clinic in Paleo Faliro.',
 
       /* ── Aesthetics / Whitening & Veneers ────── */
       'wh_hero_title': 'Professional Teeth Whitening',
@@ -521,14 +525,16 @@
       'vn_what_title': 'What are Veneers?',
       'vn_what_desc': 'Aesthetic veneers are extremely thin porcelain shells, handmade by specialized ceramists. They are permanently placed on the front side of the teeth and can correct discolorations, imperfections in shape, gaps between teeth, or worn teeth — giving an impressive result.',
       'vn_procedure_title': 'The Procedure',
-      'vn_procedure_desc': 'The placement of veneers is completed in two appointments within approximately 10 days.',
+      'vn_procedure_desc': 'The placement of veneers is completed in three appointments.',
       'vn_appt1_title': '1st Appointment — Design',
-      'vn_appt1_desc': 'We create a diagnostic model (wax-up) to determine the ideal dimensions of the veneers in harmony with your facial features. In many cases, we choose veneers without grinding (prepless veneers) for maximum preservation of the natural tooth structure. We take impressions and digital photographs.',
-      'vn_appt2_title': '2nd Appointment — Placement',
-      'vn_appt2_desc': 'During construction (about 10 days), temporary veneers are placed that give you a taste of the final result. In the second appointment, the final placement of the permanent ceramic veneers takes place.',
+      'vn_appt1_desc': 'We create a diagnostic model (wax-up) to determine the ideal dimensions of the veneers in harmony with your facial features. We take impressions and digital photographs.',
+      'vn_appt2_title': '2nd Appointment — Trial Fit',
+      'vn_appt2_desc': 'Color, shape, and occlusion check (how the teeth fit together) before permanent bonding. This ensures the perfect aesthetic and functional result.',
+      'vn_appt3_title': '3rd Appointment — Placement',
+      'vn_appt3_desc': 'In the third appointment, the final placement of the permanent ceramic veneers takes place after confirming that everything is perfect.',
       'vn_benefits_title': 'Advantages',
       'vn_bene1': 'Natural result that lasts for years',
-      'vn_bene2': 'Placement in just two appointments',
+      'vn_bene2': 'Placement in three appointments',
       'vn_bene3': 'Resistance to stains',
       'vn_bene4': 'Minimal or no intervention on the tooth',
       'vn_bene5': 'Correction of shape, size and color',
@@ -592,7 +598,7 @@
 
       /* ── Hero / Standalone Header ──────────────── */
       'hero.name': 'Dr. Angelo Moshopoulos',
-      'hero.title': 'Dental Implant & Aesthetics Clinic',
+      'hero.title': 'Dental Implants & Aesthetics Clinic',
 
       /* ── Shared booking button ────────────────── */
       'booking.btn': 'Online Appointment',
@@ -660,6 +666,8 @@
       'quote.index': '&quot; The health and functionality of your smile are our top priority.<br>In our state-of-the-art practice, we combine scientific excellence with a human touch. We welcome you to an environment where personalised care meets innovation. &quot;',
       'quote.about': '&quot; Our dedication to the science of dentistry is rooted in providing personalized, meaningful care for every individual. By embracing continuous innovation and maintaining a deep respect for our patients\' needs, we build relationships of trust that last a lifetime. It is a true honor to be entrusted with your smile. &quot;',
       'quote.services': '&quot; We provide a full range of modern dental treatments, each one tailored to what you actually need.<br>Backed by the latest technology and years of hands-on expertise, we aim for results that look natural and last. Your oral health drives every decision we make. &quot;',
+      'quote.aesthetics': '&quot; Cosmetic dentistry is the perfect blend of science and art. Our goal is not just a white smile, but a natural, harmonious change that highlights your personality and boosts your confidence. &quot;',
+      'quote.aligners': '&quot; Modern orthodontics is not just about aesthetics, but about the overall balance and health of the mouth. With clear aligners, we offer a solution that respects your daily life, ensuring a result that radiates confidence. &quot;',
       'quote.faq': '&quot; Our goal is to provide full information and absolute transparency at every step. <br>We are here to answer all your questions and help you make the best decision for your smile. Your trust is our greatest reward. &quot;',
       'quote.contact': '&quot; We are always at your disposal to listen to your needs and resolve any questions you may have. <br>Contact us today to schedule your next visit to the practice. It is our great pleasure to look forward to serving you in person. &quot;',
 
@@ -699,7 +707,7 @@
 
       /* ── Footer ───────────────────────────────── */
       'footer.address': 'Plateia Ntavari 2, Paleo Faliro<br>tel. 210 931 2651',
-      'footer.copyright': 'Copyright 2026. Dentplant Clinic. <br>All Rights Reserved.',
+      'footer.copyright': 'Copyright 2026. Dental Implants & Aesthetics Clinic. <br>All Rights Reserved.',
       'footer.disclaimer': 'A Note on Your Health: We love sharing our dental expertise, but please remember that the info on this site is for education, not a personal diagnosis. A website can’t replace an in-person exam. If you have a dental emergency, please call us or local emergency services immediately. <a href="disclaimer.html" class="underline decoration-white/30 hover:text-white transition-colors">[Read our Full Medical Disclaimer]</a>',
       'footer.metropolitan': '<a href="https://www.metropolitan-hospital.gr/el/" target="_blank" class="hover:text-white group transition-colors inline-flex items-center gap-1">Metropolitan Hospital <span class="group-hover:translate-x-0.5 transition-transform text-[10px] opacity-70">→</span></a>',
       'footer.membership': 'Member of the <a href="https://www.osp.gr/odontiatros/%ce%bc%ce%bf%cf%83%cf%87%ce%bf%cf%80%ce%bf%cf%85%ce%bb%ce%bf%cf%83-%ce%b1%ce%b3%ce%b3%ce%b5%ce%bb%ce%bf%cf%83-2/#" target="_blank" class="hover:text-white group transition-colors inline-flex items-center gap-1">Dental Association of Piraeus <span class="group-hover:translate-x-0.5 transition-transform text-[10px] opacity-70">→</span></a>',
@@ -732,16 +740,16 @@
       /* ── privacy.html ─────────────────────────── */
       'privacy.title': 'Privacy Policy',
       'privacy.body': `<p><strong>Last updated: 13 April 2026</strong></p>
-      <p>This Privacy Policy explains how Dentplant Clinic collects, uses, stores, and protects your personal data when you visit our website (dentplant.gr) or use our dental services. It has been prepared in accordance with the General Data Protection Regulation (EU) 2016/679 (GDPR) and Greek Law 4624/2019.</p>
-      <p>Please read this Policy carefully. By using our websites or booking an appointment, you acknowledge that you have read and understood how we handle your personal data.</p>
+      <p>This Privacy Policy explains how Dental Implants & Aesthetics Clinic collects, uses, stores, and protects your personal data when you visit our website (dentplant.gr) or use our dental services. It has been prepared in accordance with the General Data Protection Regulation (EU) 2016/679 (GDPR) and Greek Law 4624/2019.</p>
+      <p>Please read this Policy carefully. By using our website or booking an appointment, you acknowledge that you have read and understood how we handle your personal data.</p>
 
       <h2>1. Data Controller</h2>
       <p>The data controller responsible for your personal data is:</p>
       <table>
-        <tr><th>Business Name</th><td>Dentplant Clinic</td></tr>
-        <tr><th>Websites</th><td>dentplant.gr / i-smile.gr</td></tr>
+        <tr><th>Business Name</th><td>Dental Implants & Aesthetics Clinic</td></tr>
+        <tr><th>Websites</th><td>dentplant.gr</td></tr>
         <tr><th>Address</th><td>Plateia Ntavari 2, Paleo Faliro, 17564, Greece</td></tr>
-        <tr><th>Email</th><td>info@dentplant.gr / info@i-smile.gr</td></tr>
+        <tr><th>Email</th><td>info@dentplant.gr</td></tr>
         <tr><th>Phone</th><td>+30 210 9312651</td></tr>
         <tr><th>Tax number</th><td>077118016</td></tr>
       </table>
@@ -887,8 +895,8 @@
       'faq.a6': 'Bone grafting is a modern technique used when the natural bone is insufficient to support the implant. Through this process, we rebuild the foundation of your smile for absolute stability.',
 
       /* ── Image Alts ─────────────────────────── */
-      'alt.logo': 'Dentplant Clinic Logo - Dr. Angelo Moshopoulos Dental Implants Paleo Faliro',
-      'alt.hero_implants': 'Close-up of high-quality dental implant procedure at Dentplant Clinic',
+      'alt.logo': 'Dental Implants & Aesthetics Clinic Logo - Dr. Angelo Moshopoulos Dental Implants Paleo Faliro',
+      'alt.hero_implants': 'Close-up of high-quality dental implant procedure at Dental Implants & Aesthetics Clinic',
       'alt.couple': 'Smiling elderly couple enjoying life with dental implants',
       'alt.bone_graft': 'Bone grafting procedure for successful dental implants',
       'alt.timeline': 'Detailed dental implant treatment timeline from consultation to recovery',
@@ -896,7 +904,7 @@
       'alt.cost': 'Transparent dental implant cost and surgical pricing details',
       'alt.sedation': 'Conscious sedation for painless dental implant surgery in Paleo Faliro',
       'alt.doctor_portrait': 'Dr. Angelo Moshopoulos Dental Surgeon in his clinic in Paleo Faliro Athens - Specialist in Implantology and Oral Surgery',
-      'alt.fb': 'Visit Dentplant Clinic on Facebook',
+      'alt.fb': 'Visit Dental Implants & Aesthetics Clinic on Facebook',
       'alt.ig': 'Follow Dr. Angelo Moshopoulos on Instagram',
       'alt.li': 'Dr. Angelo Moshopoulos professional LinkedIn profile',
       'footer.review_btn': 'REVIEW US ON GOOGLE',
@@ -977,6 +985,7 @@
     currentLang = lang;
     localStorage.setItem('lang', lang);
     document.documentElement.lang = lang;
+    document.documentElement.classList.remove('i18n-loading');
 
     const t = translations[lang];
 
@@ -990,10 +999,30 @@
       if (t[key] !== undefined) el.setAttribute('alt', t[key]);
     });
 
+    const isSubdir = window.location.pathname.toLowerCase().includes('/article/') || window.location.pathname.toLowerCase().includes('\\article\\');
+    const rootPath = isSubdir ? '../' : './';
+
     document.querySelectorAll('[data-i18n-html]').forEach(el => {
       const key = el.getAttribute('data-i18n-html');
-      if (t[key] !== undefined) el.innerHTML = t[key];
+      if (t[key] !== undefined) {
+        let val = t[key];
+        // Ensure legal links work regardless of depth
+        if (isSubdir) {
+          val = val.replace(/href="disclaimer\.html"/g, 'href="../disclaimer.html"');
+          val = val.replace(/href="privacy\.html"/g, 'href="../privacy.html"');
+        }
+        el.innerHTML = val;
+      }
     });
+
+    document.querySelectorAll('a[data-i18n="footer.privacy"]').forEach(a => {
+      if (isSubdir) a.setAttribute('href', '../privacy.html');
+      else a.setAttribute('href', 'privacy.html');
+    });
+
+    if (isSubdir) {
+      document.querySelectorAll('a[href="disclaimer.html"]').forEach(a => a.setAttribute('href', '../disclaimer.html'));
+    }
 
     document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
       const key = el.getAttribute('data-i18n-placeholder');

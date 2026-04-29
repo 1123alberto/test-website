@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /manage.html
+Disallow: /faq.html
+Disallow: /services.html
+
+Sitemap: https://www.dentplant.gr/sitemap.xml
