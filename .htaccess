@@ -8,6 +8,16 @@ RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://www.dentplant.gr/$1 [L,R=301]
 
 # ------------------------------------------------------------------------------
+# | Legacy Article Redirects (moved to /article/ subfolder)
+# ------------------------------------------------------------------------------
+Redirect 301 /article-candidate.html https://www.dentplant.gr/article/article-candidate.html
+Redirect 301 /article-bone-graft.html https://www.dentplant.gr/article/article-bone-graft.html
+Redirect 301 /article-timeline.html https://www.dentplant.gr/article/article-timeline.html
+Redirect 301 /article-cost.html https://www.dentplant.gr/article/article-cost.html
+Redirect 301 /article-comparison.html https://www.dentplant.gr/article/article-comparison.html
+Redirect 301 /article-sedation.html https://www.dentplant.gr/article/article-sedation.html
+
+# ------------------------------------------------------------------------------
 # | URL Cleanup (Remove .html extension)
 # ------------------------------------------------------------------------------
 RewriteCond %{REQUEST_FILENAME} !-d
