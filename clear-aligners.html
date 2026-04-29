@@ -19,7 +19,7 @@
           "@type": "Dentist",
           "@id": "https://www.dentplant.gr/#dentist",
           "name": "Άγγελος Μοσχόπουλος | Dentplant Clinic",
-          "alternateName": "Άγγελος Μοσχόπουλος Dental Implant Clinic",
+          "alternateName": "Άγγελος Μοσχόπουλος Dental Implant & Aesthetics Clinic",
           "url": "https://www.dentplant.gr",
           "telephone": "+302109312651",
           "priceRange": "$$",
@@ -100,38 +100,50 @@
                   "name": "Sedation Dentistry",
                   "description": "Stress-free dental procedures with IV and conscious sedation options."
                 }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Professional Teeth Whitening",
+                  "description": "In-office LED teeth whitening for instant, dramatic results in a single 90-minute session."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Porcelain Veneers",
+                  "description": "Custom-crafted porcelain shells for a symmetrical, natural-looking smile transformation."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Clear Aligners",
+                  "description": "Invisible orthodontic aligners for discreet, comfortable teeth straightening without metal braces."
+                }
               }
             ]
           }
         },
         {
           "@type": "ItemList",
-          "@id": "https://www.dentplant.gr/services.html#serviceslist",
-          "name": "Οδοντιατρικές Υπηρεσίες",
+          "@id": "https://www.dentplant.gr/clear-aligners.html#serviceslist",
+          "name": "Clear Aligners - Διάφανοι Νάρθηκες",
           "itemListElement": [
             {
               "@type": "Service",
-              "name": "Οδοντικά Εμφυτεύματα",
-              "description": "Η πλέον σύγχρονη και μόνιμη λύση για την αναπλήρωση χαμένων δοντιών.",
-              "provider": { "@id": "https://www.dentplant.gr/#dentist" }
-            },
-            {
-              "@type": "Service",
-              "name": "Οστικό Μόσχευμα & Ανάπλαση",
-              "description": "Ανάπλαση οστού για την υποστήριξη οδοντικών εμφυτευμάτων.",
-              "provider": { "@id": "https://www.dentplant.gr/#dentist" }
-            },
-            {
-              "@type": "Service",
-              "name": "Χειρουργικές Εξαγωγές",
-              "description": "Εξειδικευμένες χειρουργικές εξαγωγές εγκλείστων ή προβληματικών δοντιών.",
+              "name": "Διάφανοι Νάρθηκες (Clear Aligners)",
+              "description": "Ψηφιακή ορθοδοντική με εξατομικευμένους, αόρατους νάρθηκες για σταδιακή ευθυγράμμιση των δοντιών.",
               "provider": { "@id": "https://www.dentplant.gr/#dentist" }
             }
           ]
         },
         {
           "@type": "BreadcrumbList",
-          "@id": "https://www.dentplant.gr/services.html#breadcrumb",
+          "@id": "https://www.dentplant.gr/clear-aligners.html#breadcrumb",
           "itemListElement": [
             {
               "@type": "ListItem",
@@ -142,8 +154,8 @@
             {
               "@type": "ListItem",
               "position": 2,
-              "name": "Υπηρεσίες",
-              "item": "https://www.dentplant.gr/services.html"
+              "name": "Clear Aligners",
+              "item": "https://www.dentplant.gr/clear-aligners.html"
             }
           ]
         }
@@ -192,11 +204,7 @@
     }
   </style>
 
-  <!-- i-smile Typography -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Passions+Conflict&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cal-sans@1.0.1/dist/index.min.css">
+
 
 </head>
 <body class="bg-white overflow-x-hidden pt-20 min-h-screen flex flex-col">
@@ -261,8 +269,9 @@
                         σιδεράκια. Οι διάφανοι νάρθηκες είναι η σύγχρονη, διακριτική λύση ορθοδοντικής που προσαρμόζεται
                         στον τρόπο ζωής σας.</p>
                     <div class="hero-actions">
-                        <a href="book.html?service=aligners" class="btn btn-primary btn-large"
-                            data-i18n="book_now">Κλείστε Ραντεβού</a>
+                        <a href="booking.html"
+                            class="btn-booking"
+                            data-i18n="booking.btn">Ηλεκτρονικη Κρατηση</a>
                     </div>
                 </div>
                 <div class="treatment-hero-image">
@@ -473,16 +482,7 @@
             </div>
         </section>
 
-        <!-- CTA Banner -->
-        <section class="cta-banner section-padding bg-accent reveal">
-            <div class="container text-center">
-                <h2 class="cta-title text-white" data-i18n="al_cta_title">Ξεκινήστε τη θεραπεία σας σήμερα</h2>
-                <p class="cta-desc text-white mb-4" data-i18n="al_cta_desc">Κλείστε μια δωρεάν αξιολόγηση και μάθετε αν
-                    οι διάφανοι νάρθηκες είναι η σωστή λύση για εσάς.</p>
-                <a href="book.html?service=aligners" class="btn btn-primary btn-large btn-white"
-                    data-i18n="book_now">Κλείστε Ραντεβού</a>
-            </div>
-        </section>
+
     </main>
   <section class="py-12 bg-white">
     <hr class="w-4/5 mx-auto border-gray-200">
