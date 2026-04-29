@@ -1,6 +1,6 @@
-# Master Calendar Upgrade Guide
+# Master Calendar Upgrade Guide (v2.1)
 
-Use this document to carry over the optimized "Smart Calendar" from Dentplant to your whitening site or other projects.
+Use this document to carry over the optimized "Smart Calendar" from Dentplant to your other projects. This version is optimized for **zero-latency rendering** and eliminates the 1-3 second Google Apps Script "cold-start" delay.
 
 ---
 
@@ -10,11 +10,12 @@ Use this document to carry over the optimized "Smart Calendar" from Dentplant to
 
 ```javascript
 /* 
-  MASTER CALENDAR BACKEND (v2.0)
+  MASTER CALENDAR BACKEND (v2.1)
+  Source: Dentplant Production
   Features:
-  - Monthly Busy-Day Scanning
+  - Monthly Busy-Day Scanning (Optimized for prefetching)
   - [BLOCK] keyword detection
-  - Patient Appointment Booking & Email Reminders
+  - Patient Appointment Booking & Rescheduling Support
 */
 
 // --- CONFIGURATION ---
@@ -26,12 +27,11 @@ const CLINIC_HOURS = {
   3: { start: 10, end: 20 }, // Wed
   4: { start: 10, end: 20 }, // Thu
   5: { start: 10, end: 20 }, // Fri
-  6: null, // Sat
+  6: null, // Sat (Handled as "Call for appointment" on frontend)
   0: null  // Sun
 };
-const BLOCKED_DATES = [];
-const SENDER_ALIAS = '1123alberto@gmail.com'; 
-const SENDER_NAME = "Οδοντιατρείο - A. Moshopoulos - Dental Clinic"; 
+const SENDER_ALIAS = 'your-email@gmail.com'; 
+const SENDER_NAME = "Your Clinic Name"; 
 // ----------------------
 
 function getCalendars() {
@@ -51,16 +51,20 @@ function getPrimaryCalendar() {
 
 function doGet(e) {
   const action = e.parameter.action;
-  if (action === 'getAppointment') return handleGetAppointment(e.parameter.uid);
   if (action === 'getBusyDays') return handleGetBusyDays(e);
+  if (action === 'getSlots') return handleGetSlots(e);
+  
+  return respondJSON({ error: "Invalid action." });
+}
 
-  const dateStr = e.parameter.date; 
+function handleGetSlots(e) {
+  const dateStr = e.parameter.date;
   if (!dateStr) return respondJSON({ error: "No date provided." });
 
   const [year, month, day] = dateStr.split('-').map(Number);
   const targetDate = new Date(year, month - 1, day);
   const hours = CLINIC_HOURS[targetDate.getDay()];
-  if (!hours || BLOCKED_DATES.includes(dateStr)) return respondJSON({ date: dateStr, slots: [] }); 
+  if (!hours) return respondJSON({ date: dateStr, slots: [] });
 
   const allCals = getCalendars();
   const startOfDay = new Date(year, month - 1, day, 0, 0, 0);
@@ -77,11 +81,10 @@ function doGet(e) {
       busyPeriods.push({ start: ev.getStartTime(), end: ev.getEndTime() });
     });
   });
-  busyPeriods.sort((a, b) => a.start - b.start);
-  
+
   let availableSlots = [];
   const now = new Date(); 
-  const minTime = new Date(now.getTime() + 6 * 60 * 60 * 1000); 
+  const minTime = new Date(now.getTime() + 6 * 60 * 60 * 1000); // 6-hour buffer
 
   const allowedHours = [10, 11, 12, 13, 17, 18, 19];
   for (let h of allowedHours) {
@@ -92,7 +95,7 @@ function doGet(e) {
       for (const busy of busyPeriods) {
         if (slotS < busy.end && slotE > busy.start) { isOverlapping = true; break; }
       }
-      if (!isOverlapping) availableSlots.push(`${h.toString().padStart(2, '0')}:00`);
+      if (!isOverlapping) availableSlots.push(`${h}:00`);
     }
   }
   return respondJSON({ date: dateStr, slots: availableSlots });
@@ -105,16 +108,17 @@ function handleGetBusyDays(e) {
 
   const startOfMonth = new Date(year, month - 1, 1, 0, 0, 0);
   const endOfMonth = new Date(year, month, 0, 23, 59, 59);
+  const allCals = getCalendars();
   const allEvents = [];
-  getCalendars().forEach(cal => { allEvents.push(...cal.getEvents(startOfMonth, endOfMonth)); });
+  allCals.forEach(cal => { allEvents.push(...cal.getEvents(startOfMonth, endOfMonth)); });
 
   let busyDays = [];
   for (let d = 1; d <= endOfMonth.getDate(); d++) {
     const dS = new Date(year, month - 1, d, 0, 0, 0);
     const dE = new Date(year, month - 1, d, 23, 59, 59);
     const dateStr = Utilities.formatDate(dS, Session.getScriptTimeZone(), "yyyy-MM-dd");
+    
     const dayEv = allEvents.filter(ev => ev.getStartTime() < dE && ev.getEndTime() > dS);
-
     if (dayEv.some(ev => ev.isAllDayEvent() && ev.getTitle().toUpperCase().includes("[BLOCK]"))) {
       busyDays.push(dateStr); continue;
     }
@@ -139,49 +143,53 @@ function doPost(e) {
 }
 
 function handleBook(data) {
-  const { date, time, name, email, phone } = data;
+  const { date, time, name, email, phone, services } = data;
   const uid = Math.random().toString(36).substring(2, 10).toUpperCase();
   const [y, m, d] = date.split('-').map(Number);
   const [hr, min] = time.split(':').map(Number);
   const start = new Date(y, m - 1, d, hr, min);
   const end = new Date(start.getTime() + SERVICE_DURATION * 60000);
-  getPrimaryCalendar().createEvent(name, start, end, { description: `UID: ${uid}\nPhone: ${phone}` });
+  
+  getPrimaryCalendar().createEvent(name, start, end, { 
+    description: `UID: ${uid}\nPhone: ${phone}\nServices: ${services}` 
+  });
+  
   return respondJSON({ success: true, uid: uid });
 }
 
-function respondJSON(data) { return ContentService.createTextOutput(JSON.stringify(data)).setMimeType(ContentService.MimeType.JSON); }
+function respondJSON(data) { 
+  return ContentService.createTextOutput(JSON.stringify(data)).setMimeType(ContentService.MimeType.JSON); 
+}
 ```
 
 ---
 
 ## 2. HTML Structure
-**Action**: Use this grid container in your booking form.
+**Action**: Use this structure in your booking form. Note the inclusion of a hidden `calendar-loader`.
 
 ```html
 <div class="calendar-header flex justify-between items-center mb-5 px-4">
-    <button id="prev-week" class="calendar-nav-btn w-8 h-8 rounded-full border border-gray-200">&larr;</button>
-    <h3 id="calendar-month" class="font-bold text-lg">Απρίλιος 2026</h3>
-    <button id="next-week" class="calendar-nav-btn w-8 h-8 rounded-full border border-gray-200">&rarr;</button>
+    <button id="prev-week" class="calendar-nav-btn w-8 h-8 rounded-full border border-gray-200 transition-all">&larr;</button>
+    <h3 id="calendar-month" class="font-bold text-lg text-[#1a365d]">Month Year</h3>
+    <button id="next-week" class="calendar-nav-btn w-8 h-8 rounded-full border border-gray-200 transition-all">&rarr;</button>
 </div>
-<div class="calendar-grid grid grid-cols-7 gap-y-2 gap-x-1 text-center" id="calendar-grid">
-    <!-- JS Populates -->
+
+<div class="calendar-grid grid grid-cols-7 gap-y-2 gap-x-1 text-center relative" id="calendar-grid">
+    <!-- JS Populates day headers and dates -->
 </div>
-<div id="calendar-loader" style="display: none;" class="absolute inset-0 bg-white/60 flex items-center justify-center z-50">
-    <!-- Spinner -->
+
+<!-- Cold-start & Fetching Loader -->
+<div id="calendar-loader" style="display: none;" class="absolute inset-x-0 top-0 bottom-0 bg-white/60 flex items-center justify-center z-50">
     <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
 </div>
 ```
 
 ---
 
-## 3. CSS Styling
-**Action**: Add these styles to your main CSS file.
+## 3. CSS Styling (Tailwind/Modern CSS)
+**Action**: Add these styles to your main CSS file for the high-contrast premium look.
 
 ```css
-.calendar-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-}
 .date-btn {
     width: 36px;
     height: 36px;
@@ -191,45 +199,85 @@ function respondJSON(data) { return ContentService.createTextOutput(JSON.stringi
     justify-content: center;
     font-size: 0.875rem;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .date-btn.disabled {
     color: #cbd5e1;
     cursor: not-allowed;
-    opacity: 0.4;
+    opacity: 0.3;
 }
+
 .today-date {
     border: 2px solid #0284c7 !important;
     color: #0284c7 !important;
     font-weight: 700;
 }
+
+.time-slot-btn {
+    transition: all 0.3s ease;
+}
+.time-slot-btn:hover {
+    transform: scale(1.05);
+    border-color: #0284c7;
+}
 ```
 
 ---
 
-## 4. JavaScript Logic
-**Action**: This logic handles navigation, caching, and dynamic blocking.
+## 4. JavaScript Logic (The "Smart" Engine)
+**Action**: This logic includes the **Eager Prefetch** trick. Place this in your `booking.js`.
 
 ```javascript
-let currentViewDate = new Date();
-currentViewDate.setDate(1); 
-let monthlyBusyData = {}; 
+const GOOGLE_SCRIPT_URL = 'YOUR_DEPLOY_URL';
 
+let currentViewDate = new Date();
+currentViewDate.setDate(1); // Force to 1st of month
+let monthlyBusyData = {}; 
+let prefetchPromise = null;
+
+// ── Step 1: Eager Prefetch ──
+// Fires immediately on script load, winking the GAS instance and 
+// fetching data before the user even clicks "Book".
+(function prefetchCurrentMonth() {
+    if (GOOGLE_SCRIPT_URL.includes('YOUR_DEPLOY_URL')) return;
+    const year = currentViewDate.getFullYear();
+    const month = currentViewDate.getMonth() + 1;
+    const key = `${year}-${month}`;
+    
+    prefetchPromise = fetch(`${GOOGLE_SCRIPT_URL}?action=getBusyDays&year=${year}&month=${month}`)
+        .then(r => r.json())
+        .then(data => {
+            monthlyBusyData[key] = data.busyDays || [];
+            // Silently update if calendar is already visible
+            if (document.getElementById('calendar-grid')) renderCalendar();
+        })
+        .catch(() => { monthlyBusyData[key] = []; })
+        .finally(() => { prefetchPromise = null; });
+})();
+
+// ── Step 2: Adaptive Month Loading ──
 async function fetchMonthlyBusyDays(year, month) {
     const key = `${year}-${month}`;
-    const loader = document.getElementById('calendar-loader');
-    if (loader) loader.style.display = 'flex';
+    
+    // If a prefetch for this specific month is already running, wait for it
+    if (prefetchPromise && !monthlyBusyData.hasOwnProperty(key)) {
+        await prefetchPromise;
+        return;
+    }
 
+    // Otherwise, fetch in background without blocking the UI
     try {
         const response = await fetch(`${GOOGLE_SCRIPT_URL}?action=getBusyDays&year=${year}&month=${month}`);
         const data = await response.json();
         monthlyBusyData[key] = data.busyDays || [];
         renderCalendar();
-    } finally {
-        if (loader) loader.style.display = 'none';
+    } catch (e) {
+        monthlyBusyData[key] = [];
     }
 }
 
+// ── Step 3: Calendar Rendering ──
 function renderCalendar() {
     const grid = document.getElementById('calendar-grid');
     const monthLabel = document.getElementById('calendar-month');
@@ -242,20 +290,30 @@ function renderCalendar() {
     if (!monthlyBusyData.hasOwnProperty(key)) fetchMonthlyBusyDays(year, month);
     const busyDays = monthlyBusyData[key] || [];
 
+    // Weekday headers
+    ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].forEach(d => {
+        const h = document.createElement('div');
+        h.className = 'text-xs font-bold text-gray-400 mb-2';
+        h.textContent = d;
+        grid.appendChild(h);
+    });
+
     const gridStart = new Date(currentViewDate);
-    const dow = gridStart.getDay();
-    const padding = dow === 0 ? 6 : dow - 1;
+    const dayOfWeek = gridStart.getDay();
+    const padding = dayOfWeek === 0 ? 6 : dayOfWeek - 1;
     gridStart.setDate(gridStart.getDate() - padding);
 
-    monthLabel.textContent = currentViewDate.toLocaleString('el-GR', { month: 'long', year: 'numeric' });
+    monthLabel.textContent = currentViewDate.toLocaleString('default', { month: 'long', year: 'numeric' });
 
     for (let i = 0; i < 35; i++) { 
         const date = new Date(gridStart);
         date.setDate(date.getDate() + i);
+        const dateStr = date.toISOString().split('T')[0];
+        
         const btn = document.createElement('button');
         btn.textContent = date.getDate();
-        
-        const dateStr = date.toISOString().split('T')[0];
+        btn.className = 'date-btn hover:bg-gray-50';
+
         const isPast = date < new Date().setHours(0,0,0,0);
         const isCurrentM = date.getMonth() === currentViewDate.getMonth();
         const isBusy = busyDays.includes(dateStr);
@@ -270,3 +328,18 @@ function renderCalendar() {
     }
 }
 ```
+
+---
+
+## 5. Emergency Contact Logic
+**Best Practice**: Never just say "No slots". Always provide a path to a phone call for emergencies.
+
+**Action**: In your "No Slots" handling logic, include a link:
+```html
+<p>No slots available? For emergencies please call 
+   <a href="tel:2109312651" class="font-bold underline">210 9312651</a>
+</p>
+```
+
+> [!IMPORTANT]
+> The phone link is critical for conversion. Patients in pain will rarely wait for a technical fix if they can just call a competitor. Always keep the number prominent in the "No Slots" and "Saturday" messages.
