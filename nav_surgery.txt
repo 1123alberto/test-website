@@ -1,0 +1,29 @@
+  <nav
+    class="fixed top-0 w-full bg-brand-blue shadow-md z-50 px-6 py-3 flex items-center justify-between transition-transform duration-300">
+    <a href="index.html" class="w-12 h-12 rounded-full shadow-strong overflow-hidden flex-shrink-0 bg-white">
+      <img alt="Λογότυπο Dental Implants & Aesthetics Clinic - Άγγελος Μοσχόπουλος Εμφυτεύματα Παλαιό Φάληρο" data-i18n-alt="alt.logo" class="w-full h-full object-contain" src="images/dental-implant-circle-256-torqued.webp"
+        loading="lazy">
+    </a>
+    <div class="flex items-center gap-4">
+      <div
+        class="hidden md:flex items-center space-x-4 md:space-x-8 text-white text-[11px] leading-tight md:text-xs md:leading-normal font-medium uppercase font-noto">
+        <a class="hover:text-gray-200 transition-colors" href="index.html" data-i18n="nav.home">Αρχικη</a>
+        <a class="hover:text-gray-200 transition-colors" href="about.html" data-i18n="nav.doctor">Ο Ιατρος</a>
+        <a class="hover:text-gray-200 transition-colors" href="implants.html" data-i18n="nav.implants">Εμφυτεύματα</a>
+        <a class="text-yellow-300 transition-colors" href="oral-surgery.html" data-i18n="nav.surgery">Χειρουργική</a>
+        <a class="hover:text-gray-200 transition-colors" href="aesthetics.html" data-i18n="nav.aesthetics">Αισθητική</a>
+        <a class="hover:text-gray-200 transition-colors" href="clear-aligners.html" data-i18n="nav.aligners">Clear Aligners</a>
+        <a class="hover:text-gray-200 transition-colors" href="implants.html" data-i18n="nav.faq">ΣΥΧΝΕΣ ΕΡΩΤΗΣΕΙΣ</a>
+        <a class="hover:text-gray-200 transition-colors" href="contact.html" data-i18n="nav.contact">Επικοινωνια</a>
+      </div>
+      <button onclick="i18n.toggleLanguage()"
+        class="lang-toggle text-white border border-white/50 rounded px-2 py-0.5 text-[10px] font-bold tracking-widest uppercase hover:bg-white/20 transition-all duration-300 flex-shrink-0">EN</button>
+      
+      <!-- Hamburger Button -->
+      <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none p-1">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </nav>

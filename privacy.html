@@ -238,84 +238,91 @@
         .privacy-content th {
             background-color: #f8fafc;
         }
-        @media (min-width: 768px) {
-            .md\:flex { display: flex !important; }
-            .md\:hidden { display: none !important; }
-            #mobile-sidebar { display: none !important; }
-        }
-        #mobile-sidebar {
-            position: fixed !important;
-            top: 0 !important;
-            right: 0 !important;
-            bottom: 0 !important;
-            left: 0 !important;
-            z-index: 60 !important;
-            transition: transform 0.3s ease-in-out !important;
-        }
-        #mobile-sidebar.translate-x-full {
-            transform: translateX(100%) !important;
-        }
-        #mobile-sidebar:not(.translate-x-full) {
-            transform: translateX(0) !important;
-        }
-        .w-4\/5 { width: 80% !important; }
-        .right-0 { right: 0 !important; left: auto !important; }
-    .text-white { color: #ffffff !important; }
+    @media (min-width: 1024px) {
+        .lg\:flex { display: flex !important; }
+        .lg\:hidden { display: none !important; }
+        #mobile-sidebar { display: none !important; }
+    }
+    #mobile-sidebar {
+        position: fixed !important;
+        top: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        z-index: 60 !important;
+        transition: transform 0.3s ease-in-out !important;
+    }
+    #mobile-sidebar.translate-x-full {
+        transform: translateX(100%) !important;
+    }
+    #mobile-sidebar:not(.translate-x-full) {
+        transform: translateX(0) !important;
+    }
+    .w-4\/5 { width: 80% !important; }
+    .right-0 { right: 0 !important; left: auto !important; }
+  .text-white { color: #ffffff !important; }
   .border-white\/50 { border-color: rgba(255, 255, 255, 0.5) !important; }
     .bg-white\/20 { background-color: rgba(255, 255, 255, 0.2) !important; }
     .text-\[10px\] { font-size: 10px !important; }
     .text-\[11px\] { font-size: 11px !important; }
+      html[lang="el"] h1:not(.keep-style), html[lang="el"] h2:not(.keep-style), html[lang="el"] h3:not(.keep-style), html[lang="el"] h4:not(.keep-style), html[lang="el"] h5:not(.keep-style), html[lang="el"] h6:not(.keep-style) {
+        font-family: 'Nunito', sans-serif !important;
+        font-weight: 300 !important;
+    }
   </style>
 </head>
 <body class="bg-white overflow-x-hidden pt-20 min-h-screen flex flex-col">
-    <nav class="fixed top-0 w-full bg-brand-blue shadow-md z-50 px-6 py-3 flex items-center justify-between transition-transform duration-300">
-        <a href="index.html" class="w-12 h-12 rounded-full shadow-strong overflow-hidden flex-shrink-0 bg-white">
-            <img alt="Λογότυπο Dental Implants & Aesthetics Clinic - Άγγελος Μοσχόπουλος Εμφυτεύματα Παλαιό Φάληρο" data-i18n-alt="alt.logo" class="w-full h-full object-contain" src="images/dental-implant-circle-256-torqued.webp" loading="lazy">
-        </a>
-        <div class="flex items-center gap-4">
-            <div class="hidden md:flex items-center space-x-4 md:space-x-8 text-white text-[11px] leading-tight md:text-xs md:leading-normal font-medium uppercase font-noto">
-                <a class="hover:text-gray-200 transition-colors" href="index.html" data-i18n="nav.home">Αρχικη</a>
-                <a class="hover:text-gray-200 transition-colors" href="about.html" data-i18n="nav.doctor">Ο Ιατρος</a>
-                <a class="hover:text-gray-200 transition-colors" href="implants.html" data-i18n="nav.implants">Εμφυτεύματα</a>
+  <nav
+    class="fixed top-0 w-full bg-brand-blue shadow-md z-50 px-6 py-3 flex items-center justify-between transition-transform duration-300 min-h-[72px]">
+    <a href="index.html" class="w-12 h-12 rounded-full shadow-strong overflow-hidden flex-shrink-0 bg-white">
+      <img alt="Λογότυπο Dental Implants & Aesthetics Clinic - Άγγελος Μοσχόπουλος Εμφυτεύματα Παλαιό Φάληρο" data-i18n-alt="alt.logo" class="w-full h-full object-contain" src="images/dental-implant-circle-256-torqued.webp"
+        loading="lazy">
+    </a>
+    <div class="flex items-center gap-4">
+      <div
+        class="hidden lg:flex items-center space-x-4 lg:space-x-8 text-white text-[11px] leading-tight lg:text-xs lg:leading-normal font-medium uppercase font-noto">
+        <a class="hover:text-gray-200 transition-colors" href="index.html" data-i18n="nav.home">Αρχικη</a>
+        <a class="hover:text-gray-200 transition-colors" href="about.html" data-i18n="nav.doctor">Ο Ιατρος</a>
+        <a class="hover:text-gray-200 transition-colors" href="implants.html" data-i18n="nav.implants">Εμφυτεύματα</a>
         <a class="hover:text-gray-200 transition-colors" href="oral-surgery.html" data-i18n="nav.surgery">Χειρουργική</a>
         <a class="hover:text-gray-200 transition-colors" href="aesthetics.html" data-i18n="nav.aesthetics">Αισθητική</a>
         <a class="hover:text-gray-200 transition-colors" href="clear-aligners.html" data-i18n="nav.aligners">Clear Aligners</a>
-                <a class="hover:text-gray-200 transition-colors" href="implants.html" data-i18n="nav.faq">ΣΥΧΝΕΣ ΕΡΩΤΗΣΕΙΣ</a>
-                <a class="hover:text-gray-200 transition-colors" href="contact.html" data-i18n="nav.contact">Επικοινωνια</a>
-            </div>
-            <button onclick="i18n.toggleLanguage()"
-                class="lang-toggle text-white border border-white/50 rounded px-2 py-0.5 text-[10px] font-bold tracking-widest uppercase hover:bg-white/20 transition-all duration-300">EN</button>
-            
-            <!-- Hamburger Button -->
-            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none p-1">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
-        </div>
-    </nav>
+        <a class="hover:text-gray-200 transition-colors" href="implants.html" data-i18n="nav.faq">ΣΥΧΝΕΣ ΕΡΩΤΗΣΕΙΣ</a>
+        <a class="hover:text-gray-200 transition-colors" href="contact.html" data-i18n="nav.contact">Επικοινωνια</a>
+      </div>
+      <button onclick="i18n.toggleLanguage()"
+        class="lang-toggle text-white border border-white/50 rounded px-2 py-0.5 text-[10px] font-bold tracking-widest uppercase hover:bg-white/20 transition-all duration-300 flex-shrink-0">EN</button>
+      
+      <!-- Hamburger Button -->
+      <button id="mobile-menu-btn" class="lg:hidden text-white focus:outline-none p-1">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </nav>
 
-    <!-- Mobile Sidebar -->
-    <div id="mobile-sidebar" class="fixed inset-0 z-[60] transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
-        <div id="mobile-menu-backdrop" class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
-        <div class="absolute right-0 top-0 h-full w-4/5 bg-brand-blue shadow-2xl flex flex-col p-8">
-            <button id="mobile-menu-close" class="self-end text-white mb-12">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
-            </button>
-            <div class="flex flex-col gap-6 text-white text-lg font-noto uppercase tracking-wider">
-                <a href="index.html" data-i18n="nav.home" class="hover:text-yellow-300 transition-colors">Αρχικη</a>
-                <a href="about.html" data-i18n="nav.doctor" class="hover:text-yellow-300 transition-colors">Ο Ιατρος</a>
-                <a href="implants.html" data-i18n="nav.implants" class="hover:text-yellow-300 transition-colors">Εμφυτεύματα</a>
+  <!-- Mobile Sidebar -->
+  <div id="mobile-sidebar" class="fixed inset-0 z-[60] transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden">
+    <div id="mobile-menu-backdrop" class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+    <div class="absolute right-0 top-0 h-full w-4/5 bg-brand-blue shadow-2xl flex flex-col p-8">
+      <button id="mobile-menu-close" class="self-end text-white mb-12">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+      <div class="flex flex-col gap-6 text-white text-lg font-noto uppercase tracking-wider">
+        <a href="index.html" data-i18n="nav.home" class="hover:text-yellow-300 transition-colors">Αρχικη</a>
+        <a href="about.html" data-i18n="nav.doctor" class="hover:text-yellow-300 transition-colors">Ο Ιατρος</a>
+        <a href="implants.html" data-i18n="nav.implants" class="hover:text-yellow-300 transition-colors">Εμφυτεύματα</a>
         <a href="oral-surgery.html" data-i18n="nav.surgery" class="hover:text-yellow-300 transition-colors">Χειρουργική</a>
         <a href="aesthetics.html" data-i18n="nav.aesthetics" class="hover:text-yellow-300 transition-colors">Αισθητική</a>
         <a href="clear-aligners.html" data-i18n="nav.aligners" class="hover:text-yellow-300 transition-colors">Clear Aligners</a>
-                <a href="implants.html" data-i18n="nav.faq" class="hover:text-yellow-300 transition-colors">ΣΥΧΝΕΣ ΕΡΩΤΗΣΕΙΣ</a>
-                <a href="contact.html" data-i18n="nav.contact" class="hover:text-yellow-300 transition-colors">Επικοινωνια</a>
-            </div>
-        </div>
+        <a href="implants.html" data-i18n="nav.faq" class="hover:text-yellow-300 transition-colors">ΣΥΧΝΕΣ ΕΡΩΤΗΣΕΙΣ</a>
+        <a href="contact.html" data-i18n="nav.contact" class="hover:text-yellow-300 transition-colors">Επικοινωνια</a>
+      </div>
     </div>
+  </div>
     <main class="flex-grow container mx-auto px-6 py-16 max-w-4xl">
         <h1 class="text-4xl font-display text-brand-blue mb-8 border-b pb-4" data-i18n="privacy.title">Πολιτική Απορρήτου</h1>
         <div class="privacy-content" data-i18n-html="privacy.body">
