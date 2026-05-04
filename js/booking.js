@@ -339,6 +339,16 @@ document.addEventListener("DOMContentLoaded", () => {
             } else {
                 await new Promise(r => setTimeout(r, 1500)); // Test mode
             }
+
+            // Meta Pixel Tracking: Record a successful booking
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Schedule', {
+                    content_name: payload.services,
+                    currency: 'EUR',
+                    value: 0.00
+                });
+            }
+
             goToStep(4);
         } catch (error) {
             alert(window.i18n ? window.i18n.t('js.error') : 'Σφάλμα συστήματος. Παρακαλώ δοκιμάστε ξανά.');
