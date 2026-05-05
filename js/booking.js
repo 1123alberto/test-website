@@ -350,6 +350,9 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             goToStep(4);
+            if (typeof fbq === 'function') {
+                fbq('track', 'Lead');
+            }
         } catch (error) {
             alert(window.i18n ? window.i18n.t('js.error') : 'Σφάλμα συστήματος. Παρακαλώ δοκιμάστε ξανά.');
         } finally {
