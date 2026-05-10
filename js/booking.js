@@ -353,6 +353,13 @@ document.addEventListener("DOMContentLoaded", () => {
             if (typeof fbq === 'function') {
                 fbq('track', 'Lead');
             }
+            if (typeof window.gtag === 'function') {
+                window.gtag('event', 'conversion', {
+                    'send_to': 'AW-1015956698/1TAmCJe1paocENqJueQD',
+                    'value': 1.0,
+                    'currency': 'EUR'
+                });
+            }
         } catch (error) {
             alert(window.i18n ? window.i18n.t('js.error') : 'Σφάλμα συστήματος. Παρακαλώ δοκιμάστε ξανά.');
         } finally {
