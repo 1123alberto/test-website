@@ -1,5 +1,22 @@
 [
   {
+    "id": 1778887413,
+    "date": "May 16, 2026",
+    "source": "Dentistry Today",
+    "image": "images/blog/3d_dental_printing.png",
+    "url": "article/news-2026-05-16-1.html",
+    "en": {
+      "title": "The 3D Printing Revolution in Dentistry: Precision Meets Speed",
+      "teaser": "Digital transformation is here! Discover how the latest 3D printing technology is allowing for more consistent, accurate, and faster dental restorations for patients.",
+      "content": "..."
+    },
+    "el": {
+      "title": "Η Επανάσταση της 3D Εκτύπωσης στην Οδοντιατρική: Ακρίβεια και Ταχύτητα",
+      "teaser": "Η ψηφιακή μεταμόρφωση είναι εδώ! Μάθετε πώς η τελευταία τεχνολογία 3D εκτύπωσης επιτρέπει πιο ακριβείς και γρήγορες οδοντιατρικές αποκαταστάσεις.",
+      "content": "..."
+    }
+  },
+  {
     "id": 1778882715.044957,
     "date": "May 15, 2026",
     "source": "Dentistry News -- ScienceDaily",
