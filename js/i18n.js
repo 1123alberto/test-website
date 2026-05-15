@@ -62,7 +62,7 @@
       'wh_faq3_a': 'Η λεύκανση ενδείκνυται για ενήλικες με υγιή δόντια και ούλα. Στη δωρεάν αρχική αξιολόγηση, ο οδοντίατρος θα εκτιμήσει αν η θεραπεία είναι κατάλληλη για εσάς.',
       'wh_faq4_q': 'Είναι ασφαλής η λεύκανση LED;',
       'wh_faq4_a': 'Απολύτως. Η τεχνολογία Blue Spectrum LED ενεργοποιεί το gel λεύκανσης χωρίς υπερθέρμανση ή βλάβη στα δόντια. Είναι η πιο ασφαλής μέθοδος λεύκανσης που διατίθεται σήμερα.',
-      
+
       'vn_hero_title': 'Όψεις Πορσελάνης',
       'vn_hero_subtitle': 'Λεπτά, χειροποίητα κελύφη πορσελάνης που τοποθετούνται μόνιμα στην πρόσθια επιφάνεια των δοντιών — η απόλυτη λύση για ένα συμμετρικό, φυσικό και εντυπωσιακό χαμόγελο.',
       'vn_what_title': 'Τι είναι οι Όψεις;',
@@ -136,8 +136,13 @@
       'nav.surgery': 'Χειρουργικη',
       'nav.aesthetics': 'Αισθητικη',
       'nav.aligners': 'Clear Aligners',
+      'nav.blog': 'BLOG',
       'nav.faq': 'ΣΥΧΝΕΣ ΕΡΩΤΗΣΕΙΣ',
       'nav.contact': 'Επικοινωνια',
+
+      'blog.hero_title': 'Dental Breakthroughs',
+      'blog.hero_subtitle': 'Ενημερωθείτε για τις τελευταίες εξελίξεις στην παγκόσμια οδοντιατρική έρευνα.',
+      'blog.read_more': 'ΔΙΑΒΑΣΤΕ ΠΕΡΙΣΣΟΤΕΡΑ',
 
       /* ── Hero / Standalone Header ──────────────── */
       'hero.name': 'Dr. Angelo Moshopoulos',
@@ -519,7 +524,7 @@
       'wh_faq3_a': 'Whitening is indicated for adults with healthy teeth and gums. In the free initial evaluation, the dentist will assess if the treatment is suitable for you.',
       'wh_faq4_q': 'Is LED whitening safe?',
       'wh_faq4_a': 'Absolutely. Blue Spectrum LED technology activates the whitening gel without overheating or damaging the teeth. It is the safest whitening method available today.',
-      
+
       'vn_hero_title': 'Porcelain Veneers',
       'vn_hero_subtitle': 'Thin, handmade porcelain shells permanently placed on the front surface of the teeth — the ultimate solution for a symmetrical, natural, and impressive smile.',
       'vn_what_title': 'What are Veneers?',
@@ -593,8 +598,13 @@
       'nav.surgery': 'Oral Surgery',
       'nav.aesthetics': 'Aesthetics',
       'nav.aligners': 'Clear Aligners',
+      'nav.blog': 'BLOG',
       'nav.faq': 'FAQ',
       'nav.contact': 'Contact',
+
+      'blog.hero_title': 'Dental Breakthroughs',
+      'blog.hero_subtitle': 'Stay informed about the latest advancements in global dental research.',
+      'blog.read_more': 'READ MORE',
 
       /* ── Hero / Standalone Header ──────────────── */
       'hero.name': 'Dr. Angelo Moshopoulos',
