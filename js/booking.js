@@ -6,7 +6,7 @@ const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyMjJ9NRRr1Cv
  * slots: Object with YYYY-MM-DD keys and arrays of HH:MM strings to block specific slots.
  */
 const BLOCKED_CONFIG = {
-    dates: ['2026-04-10', '2026-04-11', '2026-04-13', '2026-04-14', '2026-05-01'], // e.g. ['2026-04-10', '2026-04-11', '2026-04-13', '2026-04-14', '2026-05-01']
+    dates: [], // Add 'YYYY-MM-DD' strings here to block entire days
     slots: {}  // e.g. { '2026-04-10': ['10:00', '13:00'] }
 };
 
@@ -284,6 +284,15 @@ async function fetchAndShowSlots(date) {
 function selectTime(time) {
     selectedTime = time;
     document.getElementById('final-date-time').textContent = `${formatDateDisplay(selectedDate)} | ${time}`;
+    
+    // Meta Pixel: Track intent to book when they reach the details form
+    if (typeof fbq === 'function') {
+        fbq('track', 'InitiateCheckout', {
+            content_name: 'Dental Appointment',
+            content_category: 'Booking'
+        });
+    }
+
     goToStep(3);
 }
 
@@ -310,13 +319,9 @@ document.addEventListener("DOMContentLoaded", () => {
         loader.style.display = 'flex';
 
         // Collect checked services
-        const selectedServices = Array.from(document.querySelectorAll('input[name="services"]:checked')).map(cb => {
-            if (cb.value === "other") {
-                return document.getElementById('other-service-input').value || (window.i18n ? window.i18n.t('js.other') : 'Άλλο');
-            }
-            return cb.value;
-        }).join(', ') || (window.i18n ? window.i18n.t('js.noservice') : 'Καμία υπηρεσία επιλεγμένη');
+        const selectedServices = Array.from(document.querySelectorAll('input[name="services"]:checked')).map(cb => cb.value).join(', ') || (window.i18n ? window.i18n.t('js.noservice') : 'No service selected');
 
+        const urlParams = new URLSearchParams(window.location.search);
         const payload = {
             action: 'book',
             date: formatDateAPI(selectedDate),
@@ -325,7 +330,13 @@ document.addEventListener("DOMContentLoaded", () => {
             email: document.getElementById('b-email').value,
             phone: document.getElementById('b-phone').value,
             services: selectedServices,
-            rescheduleUid: window.rescheduleUid || null
+            rescheduleUid: window.rescheduleUid || null,
+            // Agency/Marketing tracking
+            utm_source: urlParams.get('utm_source') || '',
+            utm_medium: urlParams.get('utm_medium') || '',
+            utm_campaign: urlParams.get('utm_campaign') || '',
+            utm_content: urlParams.get('utm_content') || '',
+            utm_term: urlParams.get('utm_term') || ''
         };
 
         try {
@@ -345,13 +356,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 fbq('track', 'Schedule', {
                     content_name: payload.services,
                     currency: 'EUR',
-                    value: 0.00
+                    value: 1.00
                 });
             }
 
             goToStep(4);
             if (typeof fbq === 'function') {
-                fbq('track', 'Lead');
+                fbq('track', 'Lead', {
+                    content_name: payload.services,
+                    content_category: 'Dental Booking',
+                    currency: 'EUR',
+                    value: 1.00,
+                    source: payload.utm_source || 'direct'
+                });
             }
             if (typeof window.gtag === 'function') {
                 window.gtag('event', 'conversion', {
@@ -409,16 +426,6 @@ function prefillBookingForm() {
                 cb.checked = true;
             }
         });
-
-        // Handle "Other"
-        const standardValues = Array.from(checkboxes).map(cb => cb.value);
-        const otherServices = services.filter(s => s && !standardValues.includes(s) && s !== 'other' && s !== 'Άλλο');
-        if (otherServices.length > 0) {
-            const otherCb = document.getElementById('other-service-checkbox');
-            const otherInput = document.getElementById('other-service-input');
-            if (otherCb) otherCb.checked = true;
-            if (otherInput) otherInput.value = otherServices.join(', ');
-        }
     }
 
     // Open Modal and scroll to booking

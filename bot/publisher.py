@@ -71,7 +71,10 @@ def publish_blog_post(markdown_content):
         file_name = f"{base_name}-{counter}.html"
         file_path = os.path.join(OUTPUT_DIR, file_name)
 
-    # Use selected image or fallback
+    # Use selected image or fallback for OG/Twitter
+    seo_image = data["image_url"] if data["image_url"] else "https://www.dentplant.gr/images/dental-implant-circle-256-torqued.webp"
+    
+    # On-page display fallback (gradient div as per original bot logic)
     image_html = f'<img src="{data["image_url"]}" alt="Dental News" class="w-full h-full object-cover">' if data["image_url"] else \
                  '<div class="h-full w-full bg-gradient-to-r from-cyan-500 to-blue-600"></div>'
 
@@ -82,6 +85,22 @@ def publish_blog_post(markdown_content):
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{data['el']['title']} | {data['en']['title']}</title>
+    <meta name="description" content="{data['el']['teaser']} | {data['en']['teaser']}">
+    <link rel="canonical" href="https://www.dentplant.gr/article/{{file_name}}">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.dentplant.gr/article/{{file_name}}">
+    <meta property="og:title" content="{data['el']['title']} | {data['en']['title']}">
+    <meta property="og:description" content="{data['el']['teaser']} | {data['en']['teaser']}">
+    <meta property="og:image" content="{seo_image}">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{data['el']['title']} | {data['en']['title']}">
+    <meta name="twitter:description" content="{data['el']['teaser']} | {data['en']['teaser']}">
+    <meta name="twitter:image" content="{seo_image}">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>

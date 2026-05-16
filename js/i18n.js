@@ -13,6 +13,7 @@
       'title.privacy': 'Πολιτική Απορρήτου | Παλαιό Φάληρο | Άγγελος Μοσχόπουλος',
       'title.manage': 'Διαχείριση Ραντεβού | Παλαιό Φάληρο | Άγγελος Μοσχόπουλος',
       'title.faq': 'Συχνές Ερωτήσεις',
+      'title.blog': 'Οδοντιατρικό Blog & Νέα | Παλαιό Φάληρο | Άγγελος Μοσχόπουλος',
       'title.implants': 'Οδοντικά Εμφυτεύματα | Παλαιό Φάληρο | Άγγελος Μοσχόπουλος',
       'title.surgery': 'Χειρουργική Στόματος | Παλαιό Φάληρο | Άγγελος Μοσχόπουλος',
       'title.aesthetics': 'Αισθητική Οδοντιατρική | Λεύκανση & Όψεις | Παλαιό Φάληρο',
@@ -25,6 +26,7 @@
       'desc.privacy': 'Πολιτική Απορρήτου της Dental Implants & Aesthetics Clinic στο Παλαιό Φάληρο. Μάθετε πώς προστατεύουμε τα προσωπικά σας δεδομένα σε συμμόρφωση με τον ΓΚΠΔ (GDPR) και την ελληνική νομοθεσία.',
       'desc.manage': 'Διαχειριστείτε το οδοντιατρικό σας ραντεβού στην κλινική Dentplant. Δείτε τις λεπτομέρειες, αλλάξτε την ημερομηνία ή ακυρώστε το ραντεβού σας εύκολα και γρήγορα online.',
       'desc.faq': 'Συχνές ερωτήσεις για οδοντικά εμφυτεύματα: κόστος, πόνος, διάρκεια και εγγύηση. Ενημερωθείτε υπεύθυνα από την κλινική μας στο Παλαιό Φάληρο.',
+      'desc.blog': 'Ενημερωθείτε για τις τελευταίες εξελίξεις στην οδοντιατρική έρευνα και τεχνολογία. Δίγλωσσο blog από τον Άγγελο Μοσχόπουλο.',
       'desc.implants': 'Εξειδικευμένη κλινική για οδοντικά εμφυτεύματα τιτανίου στο Παλαιό Φάληρο. Μόνιμη και ασφαλής λύση για το χαμόγελό σας.',
       'desc.surgery': 'Ασφαλείς χειρουργικές εξαγωγές και μικροχειρουργική στόματος στο Παλαιό Φάληρο από τον χειρουργό οδοντίατρο Άγγελο Μοσχόπουλο.',
       'desc.aesthetics': 'Αναβαθμίστε το χαμόγελό σας με υπηρεσίες αισθητικής οδοντιατρικής, ιατρικής λεύκανσης και όψεων στην Dental Implants & Aesthetics Clinic.',
@@ -141,7 +143,7 @@
       'nav.contact': 'Επικοινωνια',
 
       'blog.hero_title': 'Dental Breakthroughs',
-      'blog.hero_subtitle': 'Ενημερωθείτε για τις τελευταίες εξελίξεις στην παγκόσμια οδοντιατρική έρευνα.',
+      'blog.hero_subtitle': 'Ενημερωθείτε για τις τελευταίες εξελίξεις <br class="hidden md:block"> στην παγκόσμια οδοντιατρική έρευνα.',
       'blog.read_more': 'ΔΙΑΒΑΣΤΕ ΠΕΡΙΣΣΟΤΕΡΑ',
 
       /* ── Hero / Standalone Header ──────────────── */
@@ -240,7 +242,7 @@
       'svc.minorsurgery.title': 'Μικροχειρουργική Στόματος',
       'svc.minorsurgery.desc': 'Λεπτές χειρουργικές παρεμβάσεις για τη διόρθωση προβλημάτων στα μαλακά μόρια και τα οστά της στοματικής κοιλότητας. Κάθε επέμβαση σχεδιάζεται με ακρίβεια για τη βελτίωση της στοματικής υγείας και της λειτουργικότητας.',
       'svc.esthetic.title': 'Αισθητικές Παρεμβάσεις',
-      'svc.esthetic.desc': 'Αναβαθμίστε την αισθητική του χαμόγελού σας με εξατομικευμένες λύσεις. Από τη λεύκανση δοντιών έως τις όψεις και τις αισθητικές αποκαταστάσεις, συνδυάζουμε την επιστήμη με την τέχνη για ένα αποτέλεσμα που εκπέμπει αυτοπεποίθηση.',
+      'svc.esthetic.desc': 'Αναβαθμίστε την αισθητική του χαμόγελου σας με εξατομικευμένες λύσεις. Από τη λεύκανση δοντιών έως τις όψεις και τις αισθητικές αποκαταστάσεις, συνδυάζουμε την επιστήμη με την τέχνη για ένα αποτέλεσμα που εκπέμπει αυτοπεποίθηση.',
       'svc.preventive.title': 'Προληπτική Φροντίδα & Καθαρισμός',
       'svc.preventive.desc': 'Η πρόληψη είναι η καλύτερη θεραπεία. Μέσα από τον επαγγελματικό καθαρισμό δοντιών και τον τακτικό έλεγχο, προστατεύουμε το χαμόγελό σας από την τερηδόνα και την περιοδοντική νόσο, διατηρώντας το υγιές και λαμπερό.',
 
@@ -395,7 +397,6 @@
       'js.noslots': 'Δεν υπάρχουν διαθέσιμες ώρες για αυτή την ημερομηνία. Για επείγοντα περιστατικά παρακαλούμε καλέστε στο <a href="tel:2109312651" class="font-bold text-[#0284c7] hover:underline whitespace-nowrap">210 931 2651</a>.',
       'js.error': 'Σφάλμα συστήματος. Παρακαλώ δοκιμάστε ξανά.',
       'js.noservice': 'Καμία υπηρεσία επιλεγμένη',
-      'js.other': 'Άλλο',
 
       /* ── Social Proof / Reviews ──────────────── */
       'reviews.title': 'Εμπειρίες Ασθενών',
@@ -420,7 +421,7 @@
       'mg.cancel_btn': 'Ακύρωση Ραντεβού',
       'mg.reschedule_btn': 'Αλλαγή Ραντεβού',
       'mg.confirm_title': 'Επιβεβαίωση Ακύρωσης',
-      'mg.confirm_text': 'Είστε σίγουροι ότι θέλετε να ακυρώσετε το ραντεβού σας; Αυτή η ενέργεια δεν μπορεί να αναιρεθεί.',
+      'mg.confirm_text': 'Είστε σίγουροι ότι θέλετε να ακυρώσετε το ραντεβού σας? Αυτή η ενέργεια δεν μπορεί να αναιρεθεί.',
       'mg.confirm_yes': 'Ναι, Ακύρωση',
       'mg.confirm_no': 'Όχι, Επιστροφή',
       'mg.cancel_success': 'Το ραντεβού σας ακυρώθηκε με επιτυχία.',
@@ -429,7 +430,7 @@
       /* ── faq.html ─────────────────────────────── */
       'faq.title': 'Συχνές Ερωτήσεις',
       'faq.subtitle': 'Υπεύθυνες απαντήσεις στις πιο συχνές απορίες σας για τα οδοντικά εμφυτεύματα.',
-      'faq.q1': 'Ποιο είναι το κόστος των οδοντικών εμφυτεύμάτων;',
+      'faq.q1': 'Ποιο είναι το κόστος των οδοντικών εμφυτευμάτων;',
       'faq.a1': 'Το κόστος των οδοντικών εμφυτευμάτων εξαρτάται από την πολυπλοκότητα της περίπτωσης, τον αριθμό των δοντιών και την επιλογή των υλικών. Στην κλινική μας προσφέρουμε πλήρη διαφάνεια με αναλυτικά και εξατομικευμένα σχέδια θεραπείας.',
       'faq.q2': 'Πονάει η διαδικασία τοποθέτησης οδοντικών εμφυτευμάτων;',
       'faq.a2': 'Η επέμβαση πραγματοποιείται με τοπική αναισθησία ή μέθη, διασφαλίζοντας μια εντελώς ανώδυνη εμπειρία. Η μετεγχειρητική ενόχληση είναι συνήθως ήπια και αντιμετωπίζεται εύκολα με κοινά παυσίπονα.',
@@ -440,7 +441,7 @@
       'faq.q5': 'Είμαι κατάλληλος υποψήφιος για εμφυτεύματα;',
       'faq.a5': 'Οι περισσότεροι ενήλικες που έχουν χάσει ένα ή περισσότερα δόντια είναι κατάλληλοι υποψήφιοι. Κατά την πρώτη επίσκεψη, αξιολογούμε την υγεία των ούλων και την ποιότητα του οστού για να καθορίσουμε την καταλληλότερη λύση για εσάς.',
       'faq.q6': 'Τι είναι η οστική ανάπλαση και πότε είναι απαραίτητη για Οδοντικά Εμφυτεύματα;',
-      'faq.a6': 'Η οστική ανάπλαση είναι μια σύγχρονη τεχνική που χρησιμοποιείται όταν το φυσικό οστό δεν είναι επαρκές για να στηρίξει το εμφύτευμα. Μέσω αυτής της διαδικασίας, αναδομούμε το θεμέλιο του χαμόγελού σας για απόλυτη σταθερότητα.',
+      'faq.a6': 'Η οστική ανάπλαση είναι μια σύγχρονη τεχνική που χρησιμοποιείται όταν το φυσικό οστό δεν είναι επαρκές για να στηρίξει το εμφύτευμα. Μέσω αυτής της διαδικασίας, αναδομούμε το θεμέλιο του χαμόγελου σας για απόλυτη σταθερότητα.',
 
       /* ── Image Alts ─────────────────────────── */
       'alt.logo': 'Λογότυπο Dental Implants & Aesthetics Clinic - Άγγελος Μοσχόπουλος Εμφυτεύματα Παλαιό Φάληρο',
@@ -475,6 +476,7 @@
       'title.privacy': 'Privacy Policy | Paleo Faliro | Dr. Angelo Moshopoulos',
       'title.manage': 'Manage Appointment | Paleo Faliro | Dr. Angelo Moshopoulos',
       'title.faq': 'Dental Implant FAQ',
+      'title.blog': 'Dental Blog & News | Paleo Faliro | Dr. Angelo Moshopoulos',
       'title.implants': 'Dental Implants | Paleo Faliro | Dr. Angelo Moshopoulos',
       'title.surgery': 'Oral Surgery | Paleo Faliro | Dr. Angelo Moshopoulos',
       'title.aesthetics': 'Cosmetic Dentistry | Whitening & Veneers | Paleo Faliro',
@@ -487,6 +489,7 @@
       'desc.booking': 'Book your dental appointment online easily and quickly. Choose the day and time that fits your schedule at our clinic in Paleo Faliro. We look forward to seeing you!',
       'desc.privacy': 'Privacy Policy of Dental Implants & Aesthetics Clinic in Paleo Faliro. Learn how we protect your personal data in compliance with GDPR and Greek data protection laws.',
       'desc.manage': 'Manage your dental appointment at Dental Implants & Aesthetics Clinic. View details, reschedule, or cancel your appointment easily and quickly through our online portal.',
+      'desc.blog': 'Stay informed about the latest breakthroughs in dental research and technology. Bilingual blog by Dr. Angelo Moshopoulos.',
       'desc.implants': 'Specialized titanium dental implant clinic in Paleo Faliro. A permanent and safe solution for your smile.',
       'desc.surgery': 'Safe surgical extractions and minor oral surgery in Paleo Faliro by dental surgeon Dr. Angelo Moshopoulos.',
       'desc.aesthetics': 'Enhance your smile with cosmetic dentistry, medical whitening, and veneers at Dental Implants & Aesthetics Clinic.',
@@ -603,7 +606,7 @@
       'nav.contact': 'Contact',
 
       'blog.hero_title': 'Dental Breakthroughs',
-      'blog.hero_subtitle': 'Stay informed about the latest advancements in global dental research.',
+      'blog.hero_subtitle': 'Stay informed about the latest advancements <br class="hidden md:block"> in global dental research.',
       'blog.read_more': 'READ MORE',
 
       /* ── Hero / Standalone Header ──────────────── */
@@ -857,7 +860,6 @@
       'js.noslots': 'No available time slots for this date. For emergencies please call <a href="tel:2109312651" class="font-bold text-[#0284c7] hover:underline whitespace-nowrap">210 931 2651</a>.',
       'js.error': 'System error. Please try again.',
       'js.noservice': 'No service selected',
-      'js.other': 'Other',
 
       /* ── Social Proof / Reviews ──────────────── */
       'reviews.title': 'Patient Experiences',
@@ -1039,7 +1041,7 @@
       if (t[key] !== undefined) el.placeholder = t[key];
     });
 
-    document.querySelectorAll('meta[name="description"][data-i18n-content]').forEach(el => {
+    document.querySelectorAll('meta[data-i18n-content]').forEach(el => {
       const key = el.getAttribute('data-i18n-content');
       if (t[key] !== undefined) el.setAttribute('content', t[key]);
     });
