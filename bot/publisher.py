@@ -91,11 +91,11 @@ def publish_blog_post(markdown_content):
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{data['el']['title']} | {data['en']['title']}</title>
     <meta name="description" content="{data['el']['teaser']} | {data['en']['teaser']}">
-    <link rel="canonical" href="https://www.dentplant.gr/article/{{file_name}}">
+    <link rel="canonical" href="https://www.dentplant.gr/article/{file_name}">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://www.dentplant.gr/article/{{file_name}}">
+    <meta property="og:url" content="https://www.dentplant.gr/article/{file_name}">
     <meta property="og:title" content="{data['el']['title']} | {data['en']['title']}">
     <meta property="og:description" content="{data['el']['teaser']} | {data['en']['teaser']}">
     <meta property="og:image" content="{seo_image}">
