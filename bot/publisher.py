@@ -24,40 +24,45 @@ def parse_bilingual_content(markdown_content):
         "el": {"title": "", "teaser": "", "content": ""}
     }
 
+    def get_field(marker, text):
+        # Flexible regex: handles [MARKER], **[MARKER]**, [MARKER]: with or without spaces
+        pattern = rf"(?:\*\*|__)?\[{marker}\](?:\*\*|__)?\s*:\s*(.*?)(?=\n\s*(?:---|\*\*|__|\[)|$)"
+        match = re.search(pattern, text, re.IGNORECASE | re.DOTALL)
+        return clean_field(match.group(1)) if match else ""
+
     # Extract Common Fields
-    source_match = re.search(r"\[SOURCE\]:\s*(.*)", markdown_content, re.IGNORECASE)
-    if source_match: data["source"] = clean_field(source_match.group(1))
-
-    date_match = re.search(r"\[DATE\]:\s*(.*)", markdown_content, re.IGNORECASE)
-    if date_match: data["date"] = clean_field(date_match.group(1))
-
-    image_match = re.search(r"\[IMAGE_URL\]:\s*(https?://\S+)", markdown_content, re.IGNORECASE)
-    if image_match: data["image_url"] = image_match.group(1).strip()
+    data["source"] = get_field("SOURCE", markdown_content) or "Dental News"
+    data["date"] = get_field("DATE", markdown_content) or datetime.now().strftime("%B %d, %Y")
+    data["image_url"] = get_field("IMAGE_URL", markdown_content)
 
     # Extract English Fields
-    en_title = re.search(r"\[EN_TITLE\]:\s*(.*?)(?=\n\[|$)", markdown_content, re.DOTALL | re.IGNORECASE)
-    if en_title: data["en"]["title"] = clean_field(en_title.group(1))
-
-    en_teaser = re.search(r"\[EN_TEASER\]:\s*(.*?)(?=\n\[|$)", markdown_content, re.DOTALL | re.IGNORECASE)
-    if en_teaser: data["en"]["teaser"] = clean_field(en_teaser.group(1))
-
-    en_content = re.search(r"\[EN_CONTENT\]:\s*(.*?)(?=\n\[|---|$)", markdown_content, re.DOTALL | re.IGNORECASE)
-    if en_content: data["en"]["content"] = markdown.markdown(en_content.group(1).strip())
+    data["en"]["title"] = get_field("EN_TITLE", markdown_content)
+    data["en"]["teaser"] = get_field("EN_TEASER", markdown_content)
+    data["en"]["content"] = markdown.markdown(get_field("EN_CONTENT", markdown_content))
 
     # Extract Greek Fields
-    el_title = re.search(r"\[EL_TITLE\]:\s*(.*?)(?=\n\[|$)", markdown_content, re.DOTALL | re.IGNORECASE)
-    if el_title: data["el"]["title"] = clean_field(el_title.group(1))
-
-    el_teaser = re.search(r"\[EL_TEASER\]:\s*(.*?)(?=\n\[|$)", markdown_content, re.DOTALL | re.IGNORECASE)
-    if el_teaser: data["el"]["teaser"] = clean_field(el_teaser.group(1))
-
-    el_content = re.search(r"\[EL_CONTENT\]:\s*(.*?)(?=\n\[|---|$)", markdown_content, re.DOTALL | re.IGNORECASE)
-    if el_content: data["el"]["content"] = markdown.markdown(el_content.group(1).strip())
+    data["el"]["title"] = get_field("EL_TITLE", markdown_content)
+    data["el"]["teaser"] = get_field("EL_TEASER", markdown_content)
+    data["el"]["content"] = markdown.markdown(get_field("EL_CONTENT", markdown_content))
 
     return data
 
 def publish_blog_post(markdown_content):
     data = parse_bilingual_content(markdown_content)
+    
+    # CRITICAL: Prevent publishing empty files if parsing failed
+    if not data["en"]["title"] and not data["el"]["title"]:
+        print("❌ ERROR: No content could be parsed from AI output.")
+        print("--- START OF AI OUTPUT ---")
+        print(markdown_content)
+        print("--- END OF AI OUTPUT ---")
+        
+        # Save a debug file of the failed output
+        debug_path = os.path.join(OUTPUT_DIR, f"debug-failed-{datetime.now().strftime('%Y%m%d-%H%M%S')}.md")
+        with open(debug_path, "w") as f:
+            f.write(markdown_content)
+        print(f"Failed output saved to {debug_path} for debugging.")
+        return None
     
     # Generate Standalone Filename
     date_str = datetime.now().strftime("%Y-%m-%d")
