@@ -4,8 +4,10 @@ import json
 from datetime import datetime
 import markdown
 
-OUTPUT_DIR = "/home/angelo/Gemini/dentplant/article"
-WEBSITE_DATA_PATH = "/home/angelo/Gemini/dentplant/data/posts.json"
+# Use environment variable for website root or fallback to relative path from bot/ directory
+WEBSITE_ROOT = os.getenv("WEBSITE_PATH", os.path.join(os.path.dirname(__file__), ".."))
+OUTPUT_DIR = os.path.abspath(os.path.join(WEBSITE_ROOT, "article"))
+WEBSITE_DATA_PATH = os.path.abspath(os.path.join(WEBSITE_ROOT, "data", "posts.json"))
 
 def clean_field(text):
     if not text: return ""

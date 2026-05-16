@@ -1,3 +1,7 @@
 node_modules/
 .DS_Store
 .vs/
+__pycache__/
+bot/bot_venv/
+scratch/
+bot/output/
