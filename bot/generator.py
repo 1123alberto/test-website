@@ -36,6 +36,13 @@ Analyze the provided dental news and create a concise teaser AND a full blog pos
 
 **Constraints:**
 - Keep it professional, reassuring, and educational.
+- **Formatting (CRITICAL):** The "Why It Matters" section in both languages must follow this exact structure:
+  ### Why It Matters
+  [Introductory sentence]
+  * **[Key Term 1]:** [Detailed explanation]
+  * **[Key Term 2]:** [Detailed explanation]
+  * **[Key Term 3]:** [Detailed explanation]
+- Do NOT run the points together into a single sentence. Use standard Markdown bullet points with proper line breaks.
 - Output ONLY the content using the markers above. Do NOT use **Title:** or other formats.
 """
 
