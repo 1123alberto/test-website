@@ -4,11 +4,8 @@ import json
 from datetime import datetime
 import markdown
 
-# Environment-aware paths
-# Defaults to local structure, but can be overridden in GitHub Actions
-BASE_DIR = os.getenv("WEBSITE_PATH", os.path.expanduser("~/Gemini/dentplant"))
-OUTPUT_DIR = os.path.join(BASE_DIR, "article")
-WEBSITE_DATA_PATH = os.path.join(BASE_DIR, "data", "posts.json")
+OUTPUT_DIR = "/home/angelo/Gemini/dentplant/article"
+WEBSITE_DATA_PATH = "/home/angelo/Gemini/dentplant/data/posts.json"
 
 def clean_field(text):
     if not text: return ""
@@ -24,45 +21,40 @@ def parse_bilingual_content(markdown_content):
         "el": {"title": "", "teaser": "", "content": ""}
     }
 
-    def get_field(marker, text):
-        # Flexible regex: handles [MARKER], **[MARKER]**, [MARKER]: with or without spaces
-        pattern = rf"(?:\*\*|__)?\[{marker}\](?:\*\*|__)?\s*:\s*(.*?)(?=\n\s*(?:---|\*\*|__|\[)|$)"
-        match = re.search(pattern, text, re.IGNORECASE | re.DOTALL)
-        return clean_field(match.group(1)) if match else ""
-
     # Extract Common Fields
-    data["source"] = get_field("SOURCE", markdown_content) or "Dental News"
-    data["date"] = get_field("DATE", markdown_content) or datetime.now().strftime("%B %d, %Y")
-    data["image_url"] = get_field("IMAGE_URL", markdown_content)
+    source_match = re.search(r"\[SOURCE\]:\s*(.*)", markdown_content, re.IGNORECASE)
+    if source_match: data["source"] = clean_field(source_match.group(1))
+
+    date_match = re.search(r"\[DATE\]:\s*(.*)", markdown_content, re.IGNORECASE)
+    if date_match: data["date"] = clean_field(date_match.group(1))
+
+    image_match = re.search(r"\[IMAGE_URL\]:\s*(https?://\S+)", markdown_content, re.IGNORECASE)
+    if image_match: data["image_url"] = image_match.group(1).strip()
 
     # Extract English Fields
-    data["en"]["title"] = get_field("EN_TITLE", markdown_content)
-    data["en"]["teaser"] = get_field("EN_TEASER", markdown_content)
-    data["en"]["content"] = markdown.markdown(get_field("EN_CONTENT", markdown_content))
+    en_title = re.search(r"\[EN_TITLE\]:\s*(.*?)(?=\n\[|$)", markdown_content, re.DOTALL | re.IGNORECASE)
+    if en_title: data["en"]["title"] = clean_field(en_title.group(1))
+
+    en_teaser = re.search(r"\[EN_TEASER\]:\s*(.*?)(?=\n\[|$)", markdown_content, re.DOTALL | re.IGNORECASE)
+    if en_teaser: data["en"]["teaser"] = clean_field(en_teaser.group(1))
+
+    en_content = re.search(r"\[EN_CONTENT\]:\s*(.*?)(?=\n\[|---|$)", markdown_content, re.DOTALL | re.IGNORECASE)
+    if en_content: data["en"]["content"] = markdown.markdown(en_content.group(1).strip())
 
     # Extract Greek Fields
-    data["el"]["title"] = get_field("EL_TITLE", markdown_content)
-    data["el"]["teaser"] = get_field("EL_TEASER", markdown_content)
-    data["el"]["content"] = markdown.markdown(get_field("EL_CONTENT", markdown_content))
+    el_title = re.search(r"\[EL_TITLE\]:\s*(.*?)(?=\n\[|$)", markdown_content, re.DOTALL | re.IGNORECASE)
+    if el_title: data["el"]["title"] = clean_field(el_title.group(1))
+
+    el_teaser = re.search(r"\[EL_TEASER\]:\s*(.*?)(?=\n\[|$)", markdown_content, re.DOTALL | re.IGNORECASE)
+    if el_teaser: data["el"]["teaser"] = clean_field(el_teaser.group(1))
+
+    el_content = re.search(r"\[EL_CONTENT\]:\s*(.*?)(?=\n\[|---|$)", markdown_content, re.DOTALL | re.IGNORECASE)
+    if el_content: data["el"]["content"] = markdown.markdown(el_content.group(1).strip())
 
     return data
 
 def publish_blog_post(markdown_content):
     data = parse_bilingual_content(markdown_content)
-    
-    # CRITICAL: Prevent publishing empty files if parsing failed
-    if not data["en"]["title"] and not data["el"]["title"]:
-        print("❌ ERROR: No content could be parsed from AI output.")
-        print("--- START OF AI OUTPUT ---")
-        print(markdown_content)
-        print("--- END OF AI OUTPUT ---")
-        
-        # Save a debug file of the failed output
-        debug_path = os.path.join(OUTPUT_DIR, f"debug-failed-{datetime.now().strftime('%Y%m%d-%H%M%S')}.md")
-        with open(debug_path, "w") as f:
-            f.write(markdown_content)
-        print(f"Failed output saved to {debug_path} for debugging.")
-        return None
     
     # Generate Standalone Filename
     date_str = datetime.now().strftime("%Y-%m-%d")
@@ -76,10 +68,7 @@ def publish_blog_post(markdown_content):
         file_name = f"{base_name}-{counter}.html"
         file_path = os.path.join(OUTPUT_DIR, file_name)
 
-    # Use selected image or fallback for OG/Twitter
-    seo_image = data["image_url"] if data["image_url"] else "https://www.dentplant.gr/images/dental-implant-circle-256-torqued.webp"
-    
-    # On-page display fallback (gradient div as per original bot logic)
+    # Use selected image or fallback
     image_html = f'<img src="{data["image_url"]}" alt="Dental News" class="w-full h-full object-cover">' if data["image_url"] else \
                  '<div class="h-full w-full bg-gradient-to-r from-cyan-500 to-blue-600"></div>'
 
@@ -90,22 +79,6 @@ def publish_blog_post(markdown_content):
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{data['el']['title']} | {data['en']['title']}</title>
-    <meta name="description" content="{data['el']['teaser']} | {data['en']['teaser']}">
-    <link rel="canonical" href="https://www.dentplant.gr/article/{file_name}">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://www.dentplant.gr/article/{file_name}">
-    <meta property="og:title" content="{data['el']['title']} | {data['en']['title']}">
-    <meta property="og:description" content="{data['el']['teaser']} | {data['en']['teaser']}">
-    <meta property="og:image" content="{seo_image}">
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{data['el']['title']} | {data['en']['title']}">
-    <meta name="twitter:description" content="{data['el']['teaser']} | {data['en']['teaser']}">
-    <meta name="twitter:image" content="{seo_image}">
-
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
